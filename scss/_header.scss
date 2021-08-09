@@ -1,0 +1,23 @@
+header {
+  margin-top: 5rem;
+  height: 100vh;
+  width: 95vw;
+  border-radius: 7px;
+
+  //background-image: url(/img/abstrBG.jpg);
+  h1 {
+    font-size: 5rem;
+    font-family: "Style Script", cursive;
+  }
+  i {
+    color: chocolate;
+  }
+}
+
+#main-txt {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    text-align: center;
+  }
+}
