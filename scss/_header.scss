@@ -17,14 +17,14 @@ header {
 #main-txt {
   display: flex;
   flex-direction: column;
-  h2 {
+  h3 {
     text-align: center;
   }
   a{
     margin-left: 1rem;
     padding: 0.5%;
     text-decoration: none;
-    border: solid 2px;
+    // border: solid 1px;
     border-radius: 5px;
   }
 }

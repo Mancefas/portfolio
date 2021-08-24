@@ -13,13 +13,11 @@ body {
     to right,
     #96c93d,
     #00b09b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
 }
 
 @import "header";
 @import "utilities";
-@import "my-work";
-@import "languages";
 @import "contact";
-@import "project-info";
+@import "static";
 @import "apie-mane";
