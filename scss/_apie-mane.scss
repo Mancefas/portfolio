@@ -1,9 +1,10 @@
 .apie-mane {
-    height: 95vh;
+    min-height: 95vh;
+    max-height: fit-content;
     background: rgba(245, 245, 245, 0.205);
     text-align: center;
     p{
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: 600;
     }
     
