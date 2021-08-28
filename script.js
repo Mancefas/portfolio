@@ -1,34 +1,16 @@
-const moreInfoBTN = document.querySelectorAll('.info');
-const projInf = document.querySelectorAll('.project-info');
-
-
-console.log(moreInfoBTN)
-console.log(projInf)
-putHidden()
-
-for (let i = 0; i < moreInfoBTN.length; i++) {
-    moreInfoBTN[i].addEventListener('click', () => {
-        projInf[i].classList.toggle('hidden');
-        
-    });
+const allSections = document.querySelectorAll('.section');
+const revealSection = function(entries, observer) {
+    const [entry] = entries;
+    if(!entry.isIntersecting) return;
+    entry.target.classList.remove('section-hidden')
+    observer.unobserve(entry.target)
 };
+const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.25,
+});
 
-function putHidden() {
-    projInf.forEach(elm => {
-        elm.classList.add('hidden')
-    })
-}
-
-
-
-
-// moreInfoBTN.addEventListener('click', ( ) => {
-//     projInf.forEach((el,i) => {
-//         el[i].classList.toggle('hidden')
-//     })
-// })
-
-// moreInfoBTN.addEventListener('click', () => {
-//     projInf.forEach(el => el.classList.toggle('hidden'))
-    
-// }) 
+allSections.forEach(section => {
+    sectionObserver.observe(section);
+    section.classList.add('section-hidden')
+})
