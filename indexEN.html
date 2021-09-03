@@ -19,25 +19,47 @@
 </head>
 
 <body>
+
+  <header>
+    <div class="d-flex justify-content-center mt-2 ">
+    <nav class="navbar navbar-light rounded-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#about-me">
+          <i class="far fa-address-card d-flex justify-content-center "></i>
+          <p>About me</p>
+        </a>
+        <a class="navbar-brand" href="#samples">
+          <i class="fas fa-briefcase d-flex justify-content-center"></i>
+          <p>My work</p>
+        </a>
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-laptop d-flex justify-content-center"></i>
+          <p>Contact me</p>
+        </a>
+      </div>
+    </nav>
+  </div>
+  </header>
+
     <div class="center" id="land">
-        <header class="center">
+        <section class="center landing">
             <div id="main-txt">
                 <h1>Mantvydas made websites and work samples</h1>
                 <h3>Front end website development</h3>
                 <div class="">
                 <div class="d-flex justify-content-center mt-5">
-                <!-- <a href="tel:+37060848811" class="link-light"> <i class="fas fa-mobile-alt fa-2x"></i> Tel.nr. +370 608 48811</a> -->
-                <a href="mailto:mantvydas.liobe@gmail.com" class="link-light ml-3"><i class="far fa-envelope fa-2x"></i> mantvydas.liobe@gmail.com</a>
+                
+                <a href="mailto:mantvydasdev@gmail.com" class="link-light ml-3"><i class="far fa-envelope fa-2x"></i> mantvydasdev@gmail.com</a>
                 
               </div>
               </div>
             </div>
-        </header>
+          </section>
     </div>
 
 
     <!--About me-->
-    <section class="section">
+    <section class="section" id="about-me">
     <div class="container apie-mane rounded-3" id="apie-mane">
       <div class="container d-flex justify-content-center ">
       <h2 class="mb-5 mt-3">About me </h2>
@@ -74,10 +96,10 @@
           
         </div>
 
-        <div class="d-flex justify-content-center m-3 ">
-          <h3 class="">We can chat what needs do you have and what can be done.</h3> <br>   
+        <!-- <div class="d-flex justify-content-center m-3 ">
+          <h3 class="">We can chat a what needs do you have and what can be done.</h3> <br>   
           <a href="#land" class="link-light ps-3"></i><i class="far fa-envelope fa-2x ps-s"></i></a>
-        </div>
+        </div> -->
 
     </div>
   </section>
@@ -91,7 +113,7 @@
 
     <!--Static sampl--> 
     
-    <section class="section">
+    <section class="section" id="samples">
       <div class="container mt-5 mb-5">
         <h2>Static web page</h2>
       </div> 
@@ -253,7 +275,7 @@
         <div class="container">
             <div class="row mb-3">
                 <div class=" d-flex justify-content-center col-12">
-                    <button class="btn btn-success me-2 " type="button">Contact me for more</button>
+                  <a href="#land" <button class="btn btn-success me-2 " type="button">Contact me for more</button> </a>
                 </div>
             </div>
         </div>
