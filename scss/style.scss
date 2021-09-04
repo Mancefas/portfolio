@@ -9,11 +9,7 @@ body {
     #96c93d,
     #00b09b
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #96c93d,
-    #00b09b
-  );
+  background: linear-gradient(to right, #96c93d, #00b09b);
 }
 
 @import "header";
@@ -21,4 +17,5 @@ body {
 @import "contact";
 @import "static";
 @import "apie-mane";
-@import "hide-sections"
+@import "hide-sections";
+@import "wp-samples";
