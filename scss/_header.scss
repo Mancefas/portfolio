@@ -1,5 +1,8 @@
 .navbar {
   background: rgba(245, 245, 245, 0.205);
+  button {
+    margin-left: 1rem;
+  }
 }
 
 .landing {
@@ -42,5 +45,10 @@
   .landing {
     height: fit-content;
     padding-bottom: 2rem;
+  }
+
+  .btnTheme {
+    display: flex;
+    flex-direction: column;
   }
 }

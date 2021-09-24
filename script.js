@@ -20,3 +20,17 @@ const audio = document.getElementById("audio");
 micBtn.addEventListener("click", () => {
   audio.play();
 });
+
+const dayBtn = document.getElementById("day");
+const nightBtn = document.getElementById("night");
+const body = document.querySelector("body");
+
+dayBtn.addEventListener("click", () => {
+  body.classList.add("bdLight");
+  console.log("yea");
+});
+
+nightBtn.addEventListener("click", () => {
+  body.classList.remove("bdLight");
+  body.classList.add("bdDark");
+});
