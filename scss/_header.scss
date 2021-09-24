@@ -5,6 +5,7 @@
 .landing {
   margin-top: 5rem;
   height: 85vh;
+  padding-bottom: 2rem;
   width: 95vw;
   border-radius: 7px;
 
@@ -34,5 +35,12 @@
     text-decoration: none;
     // border: solid 1px;
     border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing {
+    height: fit-content;
+    padding-bottom: 2rem;
   }
 }
