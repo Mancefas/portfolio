@@ -30,7 +30,19 @@ dayBtn.addEventListener("click", () => {
   console.log("yea");
 });
 
+dayBtn.addEventListener("touchmove", (event) => {
+  event.preventDefault();
+  body.classList.add("bdLight");
+  console.log("yea");
+});
+
 nightBtn.addEventListener("click", () => {
+  body.classList.remove("bdLight");
+  body.classList.add("bdDark");
+});
+
+nightBtn.addEventListener("touchmove", (event) => {
+  event.preventDefault();
   body.classList.remove("bdLight");
   body.classList.add("bdDark");
 });
