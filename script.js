@@ -24,25 +24,41 @@ micBtn.addEventListener("click", () => {
 const dayBtn = document.getElementById("day");
 const nightBtn = document.getElementById("night");
 const body = document.querySelector("body");
+const card = document.querySelectorAll(".card");
+const link = document.querySelectorAll("a");
+const borderAroundLang = document.querySelectorAll(".border");
+
+console.log(link);
 
 dayBtn.addEventListener("click", () => {
   body.classList.add("bdLight");
-  console.log("yea");
+  card.forEach((el) => el.classList.remove("text-white-50"));
+  card.forEach((el) => el.classList.remove("bg-dark"));
+  link.forEach((el) => el.classList.remove("text-white-50"));
 });
 
 dayBtn.addEventListener("touchmove", (event) => {
   event.preventDefault();
   body.classList.add("bdLight");
-  console.log("yea");
+  card.forEach((el) => el.classList.remove("text-white-50"));
+  card.forEach((el) => el.classList.remove("bg-dark"));
+  link.forEach((el) => el.classList.remove("text-white-50"));
 });
 
 nightBtn.addEventListener("click", () => {
   body.classList.remove("bdLight");
   body.classList.add("bdDark");
+  card.forEach((el) => el.classList.add("text-white-50"));
+  card.forEach((el) => el.classList.add("bg-dark"));
+  link.forEach((el) => el.classList.add("text-white-50"));
+  borderAroundLang.forEach((el) => el.classList.add("border-dark"));
 });
 
 nightBtn.addEventListener("touchmove", (event) => {
   event.preventDefault();
   body.classList.remove("bdLight");
   body.classList.add("bdDark");
+  card.forEach((el) => el.classList.add("text-white-50"));
+  card.forEach((el) => el.classList.add("bg-dark"));
+  link.forEach((el) => el.classList.add("text-white-50"));
 });

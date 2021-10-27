@@ -56,7 +56,7 @@
                 <audio src="./audio/Mantvydas.mp3" id="audio"></audio>
                 <div>
                 <a href="mailto:mantvydasdev@gmail.com" class="link-light ml-3"><i class="far fa-envelope fa-2x"></i> mantvydasdev@gmail.com</a>
-                <h4><i class="fab fa-viber "></i>Viber - +37060848811</h4>
+                
               </div>
               </div>
               </div>
@@ -111,7 +111,7 @@
 
 
         <!--Sertificate carousel-->
-     <div class="mt-5 mb-5">
+     <!-- <div class="mt-5 mb-5">
        <div id="carouselExampleFade" class="carousel slide slide" data-bs-ride="carousel">
          <div class="carousel-inner">
            <div class="carousel-item active">
@@ -142,7 +142,7 @@
            <span class="visually-hidden">Next</span>
          </button>
        </div>
-      </div>
+      </div> -->
     
      
     </div>
@@ -157,40 +157,74 @@
 </section>
 
 <!--REACT app sampl--> 
-<section class="section"> 
+<section class="section react-samples"> 
   <div class="container mt-5 mb-5">
     <h2>React web app</h2>
   </div> 
-  <div class="container mb-5 d-flex justify-content-center">
-    <div class="row">
-      <div class="col-6">
-        <div class="card" style="width: 18rem;">
+
+  <div class="container static" >
+    <div class="row ">
+      <div class="col-md-4 mb-3 d-flex justify-content-center ">
+        <div class="card" id="card" style="width: 18rem;">
+          <div class="d-flex justify-content-center mt-1"><img class="img" src="/img/balticNews.png" alt=""></div>              
+          <div class="card-body">
+            <h5 class="card-title">Baltic covid news </h5>
+            <p class="card-text">Dynamic web app that shows statistics about Covid for Baltic states (Europe). The website uses 2 APIs to get the newest data. </p>
+          </div>
+
+          <div class="grid justify-content-center">
+            <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+            <div class="g-col-12 d-flex justify-content-center border m-1">CSS <i class="fab fa-css3-alt"></i></div>
+            <div class="g-col-12 d-flex justify-content-center border m-1">React <i class="fab fa-react"></i></div>
+            <div class="g-col-12 d-flex justify-content-center border m-1">Styling - material UI <i class="fas fa-book-open"></i></div>
+          </div>
+
+
+          <!-- <ul class="list-group list-group-flush ">
+            <li class="list-group-item list-group-item-dark">HTML 5 <i class="fab fa-html5"></i></li>
+            <li class="list-group-item">CSS <i class="fab fa-css3-alt"></i></li>
+            <li class="list-group-item">React <i class="fab fa-react"></i>
+            <li class="list-group-item">Styling - material UI <i class="fas fa-book-open"></i></i>    
+          </ul> -->
+          <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
+            <a href="https://baltic-covid-news.netlify.app/"  class="card-link text-white-50" target="_blank" >Link to website</a>
+          </div>
+          <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
+            <a href="https://github.com/Mancefas/covid-news"  class="card-link text-white-50" target="_blank" >Link to code</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 d-flex justify-content-center">
+       
+          <div class="card" style="width: 18rem;">
             <div class="d-flex justify-content-center mt-1"><img src="/img/coffeeLogo.png" alt=""></div>              
             <div class="card-body">
               <h5 class="card-title">React coffee place website </h5>
               <p class="card-text">E-commerce website made using react. 
                 On pressed navbar links - merchandise is sorted on-page.
-               The dynamic cart shows items added, price and how many items are placed.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">HTML 5 <i class="fab fa-html5"></i></li>
-              <li class="list-group-item">CSS <i class="fab fa-css3-alt"></i></li>
-              <li class="list-group-item">React <i class="fab fa-react"></i>
-              
-              
-            </ul>
-            <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
-              <a href="https://coffee-place-e-comm.netlify.app"  class="card-link" target="_blank" >Link to website</a>
-            </div>
-            <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
-              <a href="https://github.com/Mancefas/react-e-commerce"  class="card-link" target="_blank" >Link to code</a>
-            </div>
+                The dynamic cart shows items added, price and how many items are placed.</p>
+              </div>
 
-          </div>
+              <div class="grid justify-content-center">
+                <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+                <div class="g-col-12 d-flex justify-content-center border m-1">CSS <i class="fab fa-css3-alt"></i></div>
+                <div class="g-col-12 d-flex justify-content-center border m-1">React <i class="fab fa-react"></i></div>
+              </div>
+
+                <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
+                  <a href="https://coffee-place-e-comm.netlify.app"  class="card-link" target="_blank" >Link to website</a>
+                </div>
+                <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
+                  <a href="https://github.com/Mancefas/react-e-commerce"  class="card-link" target="_blank" >Link to code</a>
+                </div>
+                
+              </div>
+            </div>
+                     
       </div>
 
-    </div>
-  </div>
 </section>
 
  <!--Web app sampl--> 
@@ -208,13 +242,13 @@
               <p class="card-text">It gets inventory weight, then calculates weight for this load. Prices are calculated and custom codes ar added.<br>
                 This web app is used for customs purpose with different program. </p>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">HTML 5 <i class="fab fa-html5"></i></li>
-              <li class="list-group-item">SCSS <i class="fab fa-sass"></i></li>
-              <li class="list-group-item">Vanilla JavaScript <i class="fab fa-js-square"></i></li>
-              
-              
-            </ul>
+
+            <div class="grid justify-content-center">
+              <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+              <div class="g-col-12 d-flex justify-content-center border m-1">SCSS <i class="fab fa-css3-alt"></i></div>
+              <div class="g-col-12 d-flex justify-content-center border m-1">Vanilla JavaScript <i class="fab fa-js-square"></i></div>
+            </div>
+
             <div class=" d-flex justify-content-center embed-responsive embed-responsive-1by1">
                 <iframe width="200" height="200" class="embed-responsive-item" src="/vid/webApp.mp4"></iframe>
               </div>
@@ -237,19 +271,19 @@
       <div class="container static">
         <div class="row ">
           <div class="col-md-4 mb-3 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; height: fit-content;">
                 <img src="/img/Nordcarrier.png" class="card-img-top mt-1" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Nordcarrier.lt forwarders website</h5>
                   <p class="card-text">Website from scratch. Landing page,  contact page, services page. SEO was optimized.</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">HTML 5 <i class="fab fa-html5"></i></li>
-                  <li class="list-group-item">CSS 3 <i class="fab fa-css3-alt"></i></li>
-                  <li class="list-group-item">Vanilla JavaScript <i class="fab fa-js-square"></i></li>
-                  
-                  
-                </ul>
+
+                <div class="grid justify-content-center">
+                  <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">CSS 3 <i class="fab fa-css3-alt"></i></div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Vanilla JavaScript <i class="fab fa-js-square"></i></div>
+                </div>
+                
                 <div class="card-body">
                   <a href="https://nordcarrier.netlify.app/" target="_blank" class="card-link">Link to website</a>
                   
@@ -272,11 +306,13 @@
                     Contact form. <br>
                     Footer with useful links</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">HTML 5 <i class="fab fa-html5"></i></li>
-                  <li class="list-group-item">CSS 3 <i class="fab fa-css3-alt"></i></li>
-                  
-                </ul>
+
+                <div class="grid justify-content-center">
+                  <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">CSS 3 <i class="fab fa-css3-alt"></i></div>
+        
+                </div>
+
                 <div class="card-body">
                   <a href="https://techrent.netlify.app/" class="card-link" target="_blank">Link to website</a>
                  
@@ -292,23 +328,25 @@
                   <h5 class="card-title">dviratis.info</h5>
                   <p class="card-text">Blog style website. With needed articles about bicycles for beginners. SEO optimized. All content is in Lithuanian language.</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">HTML 5 <i class="fab fa-html5"></i></li>
-                  <li class="list-group-item">CSS 3 <i class="fab fa-css3-alt"></i></li>
-                  <li class="list-group-item">Vanilla JavaScript <i class="fab fa-js-square"></i></li>
-                </ul>
+
+                <div class="grid justify-content-center">
+                  <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">CSS 3 <i class="fab fa-css3-alt"></i></div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Vanilla JavaScript <i class="fab fa-js-square"></i></div>
+                </div>
+
                 <div class="card-body">
                   <a href="https://dviratis.info/" class="card-link" target="_blank">Link to website</a>
                  
                 </div>
-                <p class="text-center">desktop speed </p>
+                <!-- <p class="text-center">desktop speed </p>
                 <img src="/img/dviratis.info-speed.png" class="card-img-top" alt="dviratis.info speed">
                 <p class="text-center">mobile speed</p>
-                <img src="/img/dviratis.info-speed-mob.png" class="card-img-top" alt="dviratis.info speed">
+                <img src="/img/dviratis.info-speed-mob.png" class="card-img-top" alt="dviratis.info speed"> -->
               </div>              
           </div>
 
-          <div class="col-md-4 mb-3 d-flex justify-content-center">
+          <!-- <div class="col-md-4 mb-3 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
               <div class="d-flex justify-content-center mt-5 mb-5">
                 <h1>dviratis.CLUB</h1>
@@ -330,7 +368,7 @@
                 <img src="/img/dviratis.club-speed.png" class="card-img-top" alt="dviratis.club speed">
                 <p class="text-center">mobile speed</p>
                 <img src="/img/dviratis.club-speed-mob.png" class="card-img-top" alt="dviratis.club speed">
-              </div>
+              </div> -->
           </div>
       </section>
 
@@ -349,49 +387,28 @@
                 <img src="/img/minant.lt.png" class="card-img-top mt-1" alt="minant.lt  Logos">
                 <div class="card-body">
                   <h5 class="card-title">Minant.lt</h5>
-                  <p class="card-text"> This website was build from the start (scratch) using Wordpress with Elementor. It has SEO optimized </p>
+                  <p class="card-text"> This website was build from the start (scratch) using Wordpress with Elementor. It has SEO optimized content. </p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Wordpress</li>
-                  <li class="list-group-item">Elementor</li>
-                  <li class="list-group-item">Logo was made using Canva</li>
-                  <li class="list-group-item">Custom color pallet was created </li>                 
-                  
-                </ul>
+
+                <div class="grid justify-content-center">
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Wordpress</div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Elementor</div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Logo was made using Canva</div>
+                  <div class="g-col-12 d-flex justify-content-center border m-1">Custom color pallet was created </div>
+                </div>
+
                 <div class="card-body">
                   <a href="https://minant.lt/"  class="card-link" target="_blank" >Link to website</a>                  
                 </div>
-                <p class="text-center">desktop speed </p>
+                <!-- <p class="text-center">desktop speed </p>
                 
                 <img src="/img/minant.lt-speed.png" class="card-img-top speed-img justify-content-center" alt="minant.lt speed">
                 
                 <p class="text-center">mobile speed</p>
-                <img src="/img/minant.lt-speed-mob.png" class="card-img-top speed-img" alt="minant.lt speed">
+                <img src="/img/minant.lt-speed-mob.png" class="card-img-top speed-img" alt="minant.lt speed"> -->
               </div>
           </div>
 
-          
-
-
-          <div class="col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem; max-height: 20rem;">
-              <div class="d-flex justify-content-center mt-1">
-              <!-- <i class="fas fa-wrench fa-5x"></i> -->
-              <img src="/img/custom.png" alt="">
-              </div>
-                <div class="card-body">
-                  <h5 class="card-title">Wp custom theme</h5>
-                  <p class="card-text">Custom Wordpress theme.<br> When your needs are very specific custom theme is needed.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Wordpress</li>
-                  <li class="list-group-item">HTML,CSS, JS</li>
-                  <li class="list-group-item">PHP</li>
-                  <li class="list-group-item">Bootstrap</li>
-                </ul>
-                
-              </div>
-          </div>
         </div>
       </div>
     </section>
