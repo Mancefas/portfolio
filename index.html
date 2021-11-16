@@ -28,10 +28,18 @@
           <i class="far fa-address-card d-flex justify-content-center "></i>
           <p>About me</p>
         </a>
-        <a class="navbar-brand" href="#samples">
-          <i class="fas fa-briefcase d-flex justify-content-center"></i>
-          <p>My work</p>
-        </a>
+        <div class="dropdown">
+          <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-briefcase d-flex justify-content-center "></i>
+            <p >My work</p>
+          </a>
+          <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item card" href="#react">React</a></li>
+            <li><a class="dropdown-item card" href="#static">Static Landing pages</a></li>
+            <li><a class="dropdown-item card" href="#wordpress">Wordpress</a></li>
+          </ul>
+
+        </div>
         <div class="btnTheme">        
         <button id="night" type="button" class="btn btn-outline-secondary"><i class="far fa-moon"></i></button>
         <button id="day" type="button" class="btn btn-outline-warning"><i class="fas fa-sun"></i></button>
@@ -157,7 +165,7 @@
 </section>
 
 <!--REACT app sampl--> 
-<section class="section react-samples"> 
+<section class="section react-samples" id="react"> 
   <div class="container mt-5 mb-5">
     <h2>React web app</h2>
   </div> 
@@ -227,6 +235,56 @@
 
 </section>
 
+
+<section class="section" id="redesign"> 
+  <div class="container mt-5 mb-5">
+    <h2>Website redesign</h2>
+  </div> 
+  <div class="container mb-5 d-flex justify-content-center">
+    <div class="row">
+      <div class="col-6">
+        <div class="card" style="width: 18rem;">
+            <div class="d-flex justify-content-center mt-1"><i class="fas fa-truck fa-3x"></i></i></div>              
+            <div class="card-body">
+              <h5 class="card-title">Old transport company page redesign </h5>
+              <p class="card-text">The old website was built on PHP(don't know version...) and after hosting provider decided to update their system - website crashed. After some consideration, we had decided to renew the website. For time limitation I have used Bootstrap to make a new website with old content.  </p>
+            </div>
+
+            <div class="grid justify-content-center">
+              <div class="g-col-12 d-flex justify-content-center border m-1">HTML 5 <i class="fab fa-html5"></i></div>
+              <div class="g-col-12 d-flex justify-content-center border m-1">Css <i class="fab fa-css3-alt"></i></div>
+              <div class="g-col-12 d-flex justify-content-center border m-1">Bootstrap <i class="fab fa-bootstrap"></i></div>
+              <div class="g-col-12 d-flex justify-content-center border m-1">Vanilla JavaScript <i class="fab fa-js-square"></i></div>
+            </div>
+            <div class="text-center">
+              <p>
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Before / After</button>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                     <img src="/img/BeforePC.png" alt="" srcset="">
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                      <img src="/img/AfterPC.png" alt="" srcset="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
  <!--Web app sampl--> 
  <section class="section"> 
   <div class="container mt-5 mb-5">
@@ -254,8 +312,9 @@
               </div>
           </div>
       </div>
-
+      
     </div>
+    
   </div>
 </section>
 
@@ -263,7 +322,7 @@
 
     <!--Static sampl--> 
     
-    <section class="section" id="samples">
+    <section class="section" id="static">
       <div class="container mt-5 mb-5">
         <h2>Static web page</h2>
       </div> 
@@ -376,7 +435,7 @@
     <section class="section wp-samples">
       
 
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5 mb-5" id="wordpress">
         <h2>Wordpress <i class="fab fa-wordpress fa-2x"></i></h2>
       </div> 
       <div class="container wp-cont ">
