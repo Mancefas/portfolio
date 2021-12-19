@@ -38,7 +38,13 @@ const CardToShowSample = (props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader title={props.title} />
-      <CardMedia component="img" height="100" image={props.img} alt="" />
+      <CardMedia
+        component="img"
+        height="100"
+        image={props.img ? props.img : "/img/noPicture.jpg"}
+        alt=""
+        sx={{ objectFit: "contain" }}
+      />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           {props.description}
@@ -63,18 +69,22 @@ const CardToShowSample = (props) => {
             </Typography>
             <CodeOffIcon color="primary" size="small" />
           </Box>
-          {props.stack.map((stack) => (
-            <Typography variant="h6" sx={{ textAlign: "center" }}>
+          {props.stack.map((stack, index) => (
+            <Typography key={index} variant="h6" sx={{ textAlign: "center" }}>
               {stack}
             </Typography>
           ))}
           <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <Link href={props.linkWebsite} target="_blank">
-              Link to website
-            </Link>
-            <Link href={props.linkCode} target="_blank">
-              Link to code
-            </Link>
+            {props.linkWebsite && (
+              <Link href={props.linkWebsite} target="_blank">
+                Link to website
+              </Link>
+            )}
+            {props.linkCode && (
+              <Link href={props.linkCode} target="_blank">
+                Link to code
+              </Link>
+            )}
           </Box>
           <Typography></Typography>
         </CardContent>
