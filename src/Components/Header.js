@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Button,
-  Typography,
-  Grid,
-  Box,
-  Avatar,
-} from "@mui/material";
+import { Button, Typography, Grid, Box } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
