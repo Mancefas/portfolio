@@ -1,42 +1,86 @@
 import React from "react";
-import { Container, Box, Typography } from "@mui/material";
-import DevicesIcon from "@mui/icons-material/Devices";
-import MouseIcon from "@mui/icons-material/Mouse";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { Box, Typography, Grid } from "@mui/material";
+import CodeIcon from "@mui/icons-material/Code";
+import CodeOffIcon from "@mui/icons-material/CodeOff";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3,
+  faJs,
+  faSass,
+  faBootstrap,
+  faReact,
+  faMaxcdn,
+} from "@fortawesome/free-brands-svg-icons";
+
+import ContainerBox from "../Components/ContainerBox";
 
 const Landing = () => {
   return (
-    <Container
-      className="container-background"
-      maxWidth="large"
-      sx={{
-        margin: "auto",
-        height: "80vh",
-        width: "95vw",
-        marginTop: "2vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        textAlign: "center",
-        borderRadius: "9px",
-      }}
-    >
-      <Typography variant="h3">
-        Mantvydas made websites and work samples
+    <ContainerBox>
+      <h2 className="landing-heading-text">Hello and welcome !</h2>
+      <Typography variant="h5">
+        I can help you with your website needs. I can build you a fast and
+        stable website in a manageable time frame. Specializing in react.js, but
+        like to code in HTML,CSS, Bootstrap as well.
       </Typography>
       <Typography variant="h5">
-        Front end website developer based in EU
+        I can build websites SEO optimized and content optimized(for speed). And
+        all websites I build are mobile-friendly (responsive).
       </Typography>
-      <Box>
-        <DevicesIcon fontSize="large" color="success" />
-        <MouseIcon fontSize="medium" color="success" />
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1rem",
+        }}
+      >
+        <CodeIcon fontSize="large" color="primary" />
+        <Typography variant="h4">Coding languages</Typography>
+        <CodeOffIcon fontSize="large" color="primary" />
       </Box>
-      <Container maxWidth="large" sx={{ margin: "0", textAlign: "center" }}>
-        <MailOutlineIcon sx={{ color: "#D2691E" }} />
-        <Typography>mantvydasdev@gmail.com</Typography>
-      </Container>
-    </Container>
+
+      <Grid container spacing={1} sx={{ justifyContent: "space-evenly" }}>
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faHtml5} size="4x" color="red" />
+          <Typography>HTML</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faCss3} size="4x" color="blue" />
+          <Typography>CSS</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faJs} size="4x" color="#F7DF1E" />
+          <Typography>JavaScript</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faSass} size="4x" color="#CE679A" />
+          <Typography>SASS</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faBootstrap} size="4x" color="#7410F0" />
+          <Typography>Bootstrap</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faReact} size="4x" color="#61DAFB" />
+          <Typography>React</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faMaxcdn} size="4x" color="#007FFF" />
+          <Typography>Material UI</Typography>
+        </Grid>
+      </Grid>
+    </ContainerBox>
   );
 };
 
