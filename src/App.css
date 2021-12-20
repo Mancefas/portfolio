@@ -1,3 +1,30 @@
 body {
-  background-color: rgba(21, 136, 6, 0.63);
+  background-color: #7dc54c;
+}
+
+.container-background {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.text-color {
+  color: #d3ac2b;
+}
+
+.text-color-secondary {
+  color: #333d51;
+}
+
+.background-color-secondary {
+  color: #f4f3ea;
+}
+
+.landing-heading-text {
+  font-size: xx-large;
+  font-family: "Pacifico", cursive;
+  color: #333d51;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333d51;
 }

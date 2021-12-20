@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography, Grid, Avatar, Link } from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import PanToolIcon from "@mui/icons-material/PanTool";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
@@ -11,12 +10,14 @@ const Footer = () => {
     <Grid
       container
       sx={{
-        width: "90vw",
+        width: "100%",
         height: "fit-content",
         minHeight: "10vh",
         margin: "auto",
-        borderTop: "2",
+        borderRadius: "9px",
+        borderColor: "#fff",
       }}
+      borderTop={1}
     >
       <Grid
         item

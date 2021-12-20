@@ -1,15 +1,11 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import { Button, Typography, Grid, Box } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 const Header = () => {
   return (
-    // <Container
-    //   width="false"
-    //   className="container-background"
-    //   sx={{ minHeight: "12vh", height: "fit-contetn", width: "100vw" }}
-    // >
     <Grid
       container
       sx={{
@@ -18,8 +14,9 @@ const Header = () => {
         width: "100%",
         borderRadius: "9px",
         margin: 0,
+        borderColor: "#fff",
       }}
-      borderBottom={2}
+      borderBottom={1}
     >
       <Grid item xs={12} md={4}>
         <Box
@@ -29,12 +26,9 @@ const Header = () => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
+            gap: "3rem",
           }}
-        >
-          <BusinessCenterIcon />
-          <Typography className="text-color">MY WORK</Typography>
-          <BusinessCenterIcon />
-        </Box>
+        ></Box>
         <Box
           sx={{
             display: "flex",
@@ -45,9 +39,45 @@ const Header = () => {
             margin: "0",
           }}
         >
-          <Button variant="text">React</Button>
-          <Button variant="text">HTML</Button>
-          <Button variant="text">Wordpress</Button>
+          <NavLink
+            className="nav-link"
+            style={({ isActive }) => {
+              return {
+                display: "block",
+                margin: "1rem 0",
+                color: isActive ? "#d3602bb2" : "",
+              };
+            }}
+            to={`/react-websites`}
+          >
+            REACT
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            style={({ isActive }) => {
+              return {
+                display: "block",
+                margin: "1rem 0",
+                color: isActive ? "#d3602bb2" : "",
+              };
+            }}
+            to={`/html-websites`}
+          >
+            HTML
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            style={({ isActive }) => {
+              return {
+                display: "block",
+                margin: "1rem 0",
+                color: isActive ? "#d3602bb2" : "",
+              };
+            }}
+            to={`/wordpress-websites`}
+          >
+            Wordpress
+          </NavLink>
         </Box>
       </Grid>
       <Grid
@@ -61,7 +91,9 @@ const Header = () => {
           gap: "1rem",
         }}
       >
-        <Typography variant="h3">Mantvydas </Typography>
+        <Link to={"/"} style={{ textDecoration: "none", color: "#333d51" }}>
+          <Typography variant="h3">Mantvydas </Typography>
+        </Link>
       </Grid>
       <Grid
         item

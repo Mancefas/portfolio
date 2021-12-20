@@ -8,8 +8,12 @@ const ContainerBox = (props) => {
       maxWidth="xl"
       sx={{
         padding: "1rem",
-        marginTop: "5vh",
+        marginTop: "3vh",
         height: "fit-content",
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
         minHeight: "80vh",
         width: "85vw",
         borderRadius: "9px",
