@@ -1,7 +1,8 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Button, Typography, Grid, Box } from "@mui/material";
+import { NavLink } from "react-router-dom";
+import { Typography, Grid, Box, Link } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 const Header = () => {
   return (
@@ -39,38 +40,47 @@ const Header = () => {
           }}
         >
           <NavLink
-            className="nav-link"
             style={({ isActive }) => {
               return {
                 display: "block",
                 margin: "1rem 0",
-                color: isActive ? "#d3602bb2" : "",
+                color: "#333d51",
+                backgroundColor: isActive ? "" : "#ffffffce",
+                padding: "0.3rem 0.5rem",
+                borderRadius: "10PX",
+                textDecoration: "none",
               };
             }}
             to={`/react-websites`}
           >
-            REACT
+            React
           </NavLink>
           <NavLink
-            className="nav-link"
             style={({ isActive }) => {
               return {
                 display: "block",
                 margin: "1rem 0",
-                color: isActive ? "#d3602bb2" : "",
+                color: "#333d51",
+                backgroundColor: isActive ? "" : "#ffffffce",
+                padding: "0.3rem 0.5rem",
+                borderRadius: "10PX",
+                textDecoration: "none",
               };
             }}
             to={`/html-websites`}
           >
-            HTML
+            Html
           </NavLink>
           <NavLink
-            className="nav-link"
             style={({ isActive }) => {
               return {
                 display: "block",
                 margin: "1rem 0",
-                color: isActive ? "#d3602bb2" : "",
+                color: "#333d51",
+                backgroundColor: isActive ? "" : "#ffffffce",
+                padding: "0.3rem 0.5rem",
+                borderRadius: "10PX",
+                textDecoration: "none",
               };
             }}
             to={`/wordpress-websites`}
@@ -90,9 +100,18 @@ const Header = () => {
           gap: "1rem",
         }}
       >
-        <Link to={"/"} style={{ textDecoration: "none", color: "#333d51" }}>
-          <Typography variant="h3">Mantvydas </Typography>
-        </Link>
+        <NavLink
+          to={"/"}
+          style={{
+            textDecoration: "none",
+            color: "#333d51",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <Typography variant="h3">Mantvydas </Typography>
+            <BusinessCenterIcon fontSize="large" />
+          </Box>
+        </NavLink>
       </Grid>
       <Grid
         item
@@ -104,9 +123,19 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <Button size="small" variant="outlined" color="primary">
-          <MailOutlineIcon /> Contact me
-        </Button>
+        <Link
+          href="mailto:mantvydasdev@gmail.com"
+          underline="none"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#333d51",
+          }}
+        >
+          <MailOutlineIcon sx={{ color: "#ffffffce" }} />
+          mantvydasdev@gmail.com
+        </Link>
       </Grid>
     </Grid>
   );
