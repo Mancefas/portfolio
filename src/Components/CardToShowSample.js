@@ -36,7 +36,7 @@ const CardToShowSample = (props) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}>
       <CardHeader title={props.title} />
       <CardMedia
         component="img"
