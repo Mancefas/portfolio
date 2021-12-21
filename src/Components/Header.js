@@ -18,76 +18,63 @@ const Header = () => {
       }}
       borderBottom={1}
     >
-      <Grid item xs={12} md={4}>
-        <Box
-          sx={{
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "3rem",
+      <Grid
+        item
+        xs={12}
+        md={4}
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+
+          gap: "1rem",
+        }}
+      >
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              color: "#333d51",
+              backgroundColor: isActive ? "" : "#ffffffce",
+              padding: "0.3rem 0.5rem",
+              borderRadius: "10PX",
+              textDecoration: "none",
+            };
           }}
-        ></Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            gap: "1rem",
-            margin: "0",
-          }}
+          to={`/react-websites`}
         >
-          <NavLink
-            style={({ isActive }) => {
-              return {
-                display: "block",
-                margin: "1rem 0",
-                color: "#333d51",
-                backgroundColor: isActive ? "" : "#ffffffce",
-                padding: "0.3rem 0.5rem",
-                borderRadius: "10PX",
-                textDecoration: "none",
-              };
-            }}
-            to={`/react-websites`}
-          >
-            React
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => {
-              return {
-                display: "block",
-                margin: "1rem 0",
-                color: "#333d51",
-                backgroundColor: isActive ? "" : "#ffffffce",
-                padding: "0.3rem 0.5rem",
-                borderRadius: "10PX",
-                textDecoration: "none",
-              };
-            }}
-            to={`/html-websites`}
-          >
-            Html
-          </NavLink>
-          <NavLink
-            style={({ isActive }) => {
-              return {
-                display: "block",
-                margin: "1rem 0",
-                color: "#333d51",
-                backgroundColor: isActive ? "" : "#ffffffce",
-                padding: "0.3rem 0.5rem",
-                borderRadius: "10PX",
-                textDecoration: "none",
-              };
-            }}
-            to={`/wordpress-websites`}
-          >
-            Wordpress
-          </NavLink>
-        </Box>
+          React
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              color: "#333d51",
+              backgroundColor: isActive ? "" : "#ffffffce",
+              padding: "0.3rem 0.5rem",
+              borderRadius: "10PX",
+              textDecoration: "none",
+            };
+          }}
+          to={`/html-websites`}
+        >
+          Html
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              display: "block",
+              color: "#333d51",
+              backgroundColor: isActive ? "" : "#ffffffce",
+              padding: "0.3rem 0.5rem",
+              borderRadius: "10PX",
+              textDecoration: "none",
+            };
+          }}
+          to={`/wordpress-websites`}
+        >
+          Wordpress
+        </NavLink>
       </Grid>
       <Grid
         item
