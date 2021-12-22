@@ -5,41 +5,9 @@ import ContainerBox from "../Components/ContainerBox";
 import CardToShowSampleShort from "../Components/CardToShowSampleShort";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
+import dataReactWeb from "../store/dataReactWeb";
 
 const ReactWebsites = () => {
-  const data = [
-    {
-      id: 1,
-      title: "baltic-covid-news",
-      img: "/img/balticNews.png",
-      description:
-        "Dynamic web app that shows statistics about Covid for Baltic states (Europe). The website uses 2 APIs to get the newest data.",
-      stack: ["HTML", "CSS", "React", "Material UI"],
-      linkToWebsite: "https://baltic-covid-news.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/covid-news",
-    },
-    {
-      id: 2,
-      title: "website-using-api",
-      img: "",
-      description:
-        "Just a simple website for using mock/sample API data.Form has validation if no data is entered with a hint with what's needed. Submit button can be pressed only if the form is validated.",
-      stack: ["HTML", "CSS", "React", "React-router", "Material UI"],
-      linkToWebsite: "https://antra-ver.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/qualification-task",
-    },
-    {
-      id: 3,
-      title: "coffee-place-website",
-      img: "/img/coffeeLogo.png",
-      description:
-        "E-commerce website made using react. On pressed navbar links - merchandise is sorted on-page. The dynamic cart shows items added, price and how many items are placed.",
-      stack: ["HTML", "CSS", "React", "Material UI"],
-      linkToWebsite: "https://coffee-place-e-comm.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/react-e-commerce",
-    },
-  ];
-
   return (
     <ContainerBox>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
@@ -49,20 +17,27 @@ const ReactWebsites = () => {
       </Box>
 
       <Grid container gap={2} sx={{ justifyContent: "center" }}>
-        {data.map((sample) => (
-          <Grid item xs={12} md={3}>
-            <Link
-              to={`/react-websites/${sample.title}`}
-              key={sample.id}
-              style={{ textDecoration: "none" }}
-            >
-              <CardToShowSampleShort
+        {dataReactWeb.map((sample) => (
+          <Grid
+            item
+            xs={12}
+            md={3}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Box>
+              <Link
+                to={`/react-websites/${sample.title}`}
                 key={sample.id}
-                title={sample.title}
-                description={sample.description}
-                img={sample.img}
-              />
-            </Link>
+                style={{ textDecoration: "none" }}
+              >
+                <CardToShowSampleShort
+                  key={sample.id}
+                  title={sample.title}
+                  description={sample.shortDescription}
+                  img={sample.img}
+                />
+              </Link>
+            </Box>
           </Grid>
         ))}
       </Grid>

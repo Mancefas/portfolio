@@ -10,7 +10,7 @@ const Header = () => {
       container
       sx={{
         minHeight: "12vh",
-        height: "fit-contetn",
+        height: "fit-content",
         width: "100%",
         borderRadius: "9px",
         margin: 0,
@@ -26,7 +26,7 @@ const Header = () => {
           display: "flex",
           justifyContent: "space-evenly",
           alignItems: "center",
-
+          marginTop: "1rem",
           gap: "1rem",
         }}
       >

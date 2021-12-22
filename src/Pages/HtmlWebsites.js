@@ -55,16 +55,23 @@ const HtmlWebsites = () => {
 
       <Grid container gap={2} sx={{ justifyContent: "center" }}>
         {data.map((sample) => (
-          <Grid item xs={12} md={3}>
-            <CardToShowSample
-              key={sample.id}
-              title={sample.title}
-              description={sample.description}
-              stack={sample.stack}
-              linkWebsite={sample.linkToWebsite}
-              linkCode={sample.linkToCode}
-              img={sample.img}
-            />
+          <Grid
+            item
+            xs={12}
+            md={3}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <Box>
+              <CardToShowSample
+                key={sample.id}
+                title={sample.title}
+                description={sample.description}
+                stack={sample.stack}
+                linkWebsite={sample.linkToWebsite}
+                linkCode={sample.linkToCode}
+                img={sample.img}
+              />
+            </Box>
           </Grid>
         ))}
       </Grid>
