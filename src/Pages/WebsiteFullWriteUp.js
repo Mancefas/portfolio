@@ -103,6 +103,7 @@ const WebsiteFullWriteUp = () => {
           <a
             href={website.linkToWebsite}
             target="_blank"
+            rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
           >
             Link to website
@@ -112,6 +113,7 @@ const WebsiteFullWriteUp = () => {
           <a
             href={website.linkToCode}
             target="_blank"
+            rel="noopener noreferrer"
             style={{ textDecoration: "none" }}
           >
             Link to code
