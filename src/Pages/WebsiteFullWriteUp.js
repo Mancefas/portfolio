@@ -6,44 +6,14 @@ import CodeIcon from "@mui/icons-material/Code";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import CancelIcon from "@mui/icons-material/Cancel";
+import dataReactWeb from "../store/dataReactWeb";
 
 const WebsiteFullWriteUp = () => {
   let params = useParams();
-  const data = [
-    {
-      id: 1,
-      title: "baltic-covid-news",
-      img: "/img/balticNews.png",
-      description:
-        "Dynamic web app that shows statistics about Covid for Baltic states (Europe). The website uses 2 APIs to get the newest data.",
-      stack: ["HTML", "CSS", "React", "Material UI"],
-      linkToWebsite: "https://baltic-covid-news.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/covid-news",
-    },
-    {
-      id: 2,
-      title: "website-using-api",
-      img: "",
-      description:
-        "Just a simple website for using mock/sample API data.Form has validation if no data is entered with a hint with what's needed. Submit button can be pressed only if the form is validated.",
-      stack: ["HTML", "CSS", "React", "React-router", "Material UI"],
-      linkToWebsite: "https://antra-ver.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/qualification-task",
-    },
-    {
-      id: 3,
-      title: "coffee-place-website",
-      img: "/img/coffeeLogo.png",
-      description:
-        "E-commerce website made using react. On pressed navbar links - merchandise is sorted on-page. The dynamic cart shows items added, price and how many items are placed.",
-      stack: ["HTML", "CSS", "React", "Material UI"],
-      linkToWebsite: "https://coffee-place-e-comm.netlify.app/",
-      linkToCode: "https://github.com/Mancefas/react-e-commerce",
-    },
-  ];
 
-  const website = data.find((el) => el.title === params.websiteName);
+  const website = dataReactWeb.find((el) => el.title === params.websiteName);
 
   return (
     <ContainerBox>
@@ -89,6 +59,10 @@ const WebsiteFullWriteUp = () => {
               />
             </Grid>
           ))}
+          <Grid item xs={4} md={1} sx={{ display: "flex", gap: "0.3rem" }}>
+            <Typography>Coffee</Typography>
+            <FontAwesomeIcon icon={faCoffee} />
+          </Grid>
         </Grid>
       )}
       <Box
@@ -121,10 +95,8 @@ const WebsiteFullWriteUp = () => {
         )}
       </Box>
 
-      <Typography variant="h6">Some detailed text about project</Typography>
-      <Typography variant="h6">
-        Some more detailed text about project
-      </Typography>
+      <Typography variant="h5">{website.longerTitle}</Typography>
+      <Typography variant="subtitle1">{website.fullDescription}</Typography>
     </ContainerBox>
   );
 };
