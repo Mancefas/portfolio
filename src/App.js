@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import ReactWebsites from "./Pages/ReactWebsites";
 import HtmlWebsites from "./Pages/HtmlWebsites";
 import NoPage from "./Pages/NoPage";
+import WebsiteFullWriteUp from "./Pages/WebsiteFullWriteUp";
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/react-websites" element={<ReactWebsites />} />
+        <Route path="/react-websites" element={<ReactWebsites />}></Route>
+        <Route
+          path="/react-websites/:websiteName"
+          element={<WebsiteFullWriteUp />}
+        />
         <Route path="/html-websites" element={<HtmlWebsites />} />
         <Route path="/wordpress-websites" element={<WordPressWebsites />} />
         <Route path="*" element={<NoPage />} />

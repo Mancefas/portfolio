@@ -1,7 +1,8 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import { Box, Grid, Typography } from "@mui/material";
 import ContainerBox from "../Components/ContainerBox";
-import CardToShowSample from "../Components/CardToShowSample";
+import CardToShowSampleShort from "../Components/CardToShowSampleShort";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 
@@ -9,7 +10,7 @@ const ReactWebsites = () => {
   const data = [
     {
       id: 1,
-      title: "Baltic Covid news",
+      title: "baltic-covid-news",
       img: "/img/balticNews.png",
       description:
         "Dynamic web app that shows statistics about Covid for Baltic states (Europe). The website uses 2 APIs to get the newest data.",
@@ -19,7 +20,7 @@ const ReactWebsites = () => {
     },
     {
       id: 2,
-      title: "Website using API",
+      title: "website-using-api",
       img: "",
       description:
         "Just a simple website for using mock/sample API data.Form has validation if no data is entered with a hint with what's needed. Submit button can be pressed only if the form is validated.",
@@ -29,7 +30,7 @@ const ReactWebsites = () => {
     },
     {
       id: 3,
-      title: "Coffee place website",
+      title: "coffee-place-website",
       img: "/img/coffeeLogo.png",
       description:
         "E-commerce website made using react. On pressed navbar links - merchandise is sorted on-page. The dynamic cart shows items added, price and how many items are placed.",
@@ -50,18 +51,22 @@ const ReactWebsites = () => {
       <Grid container gap={2} sx={{ justifyContent: "center" }}>
         {data.map((sample) => (
           <Grid item xs={12} md={3}>
-            <CardToShowSample
+            <Link
+              to={`/react-websites/${sample.title}`}
               key={sample.id}
-              title={sample.title}
-              description={sample.description}
-              stack={sample.stack}
-              linkWebsite={sample.linkToWebsite}
-              linkCode={sample.linkToCode}
-              img={sample.img}
-            />
+              style={{ textDecoration: "none" }}
+            >
+              <CardToShowSampleShort
+                key={sample.id}
+                title={sample.title}
+                description={sample.description}
+                img={sample.img}
+              />
+            </Link>
           </Grid>
         ))}
       </Grid>
+      <Outlet />
     </ContainerBox>
   );
 };
