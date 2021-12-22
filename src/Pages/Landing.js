@@ -12,6 +12,7 @@ import {
   faBootstrap,
   faReact,
   faMaxcdn,
+  faFontAwesome,
 } from "@fortawesome/free-brands-svg-icons";
 
 import ContainerBox from "../Components/ContainerBox";
@@ -78,6 +79,11 @@ const Landing = () => {
         <Grid item xs={4} md={1}>
           <FontAwesomeIcon icon={faMaxcdn} size="3x" color="#007FFF" />
           <Typography>Material UI</Typography>
+        </Grid>
+
+        <Grid item xs={4} md={1}>
+          <FontAwesomeIcon icon={faFontAwesome} size="3x" color="#007FFF" />
+          <Typography>Font awesome</Typography>
         </Grid>
       </Grid>
     </ContainerBox>
