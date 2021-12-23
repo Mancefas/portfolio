@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ContainerBox from "../Components/ContainerBox";
+import ContainerSimple from "../Components/ContainerSimple";
 import CardToShowSample from "../Components/CardToShowSample";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWordpress } from "@fortawesome/free-brands-svg-icons";
@@ -24,7 +24,7 @@ const WordPressWebsites = () => {
   ];
 
   return (
-    <ContainerBox>
+    <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3" className="text-font-secondary">
           Wordpress sites <FontAwesomeIcon icon={faWordpress} color="#21759b" />
@@ -53,7 +53,7 @@ const WordPressWebsites = () => {
           </Grid>
         ))}
       </Grid>
-    </ContainerBox>
+    </ContainerSimple>
   );
 };
 

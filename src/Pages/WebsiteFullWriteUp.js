@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import React from "react";
-import ContainerBox from "../Components/ContainerBox";
 import { Typography, Box, Grid } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
@@ -9,6 +8,7 @@ import { faHtml5, faCss3, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import CancelIcon from "@mui/icons-material/Cancel";
 import dataReactWeb from "../store/dataReactWeb";
+import ContainerBox from "../Components/ContainerBox";
 
 const WebsiteFullWriteUp = () => {
   let params = useParams();
@@ -36,7 +36,16 @@ const WebsiteFullWriteUp = () => {
       {website && (
         <Grid container sx={{ justifyContent: "space-evenly" }}>
           {website.stack.map((stack, index) => (
-            <Grid item xs={4} md={1}>
+            <Grid
+              item
+              xs={4}
+              md={1}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <Typography
                 key={index}
                 variant="p"

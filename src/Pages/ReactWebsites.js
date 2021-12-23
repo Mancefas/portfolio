@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Box, Grid, Typography } from "@mui/material";
-import ContainerBox from "../Components/ContainerBox";
+import ContainerSimple from "../Components/ContainerSimple";
 import CardToShowSampleShort from "../Components/CardToShowSampleShort";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
@@ -9,7 +9,7 @@ import dataReactWeb from "../store/dataReactWeb";
 
 const ReactWebsites = () => {
   return (
-    <ContainerBox>
+    <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3">
           React web apps <FontAwesomeIcon icon={faReact} color="#61DBFB" />
@@ -42,7 +42,7 @@ const ReactWebsites = () => {
         ))}
       </Grid>
       <Outlet />
-    </ContainerBox>
+    </ContainerSimple>
   );
 };
 

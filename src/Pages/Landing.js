@@ -67,13 +67,13 @@ const Landing = () => {
         </Grid>
 
         <Grid item xs={4} md={1}>
-          <FontAwesomeIcon icon={faBootstrap} size="3x" color="#7410F0" />
-          <Typography>Bootstrap</Typography>
+          <FontAwesomeIcon icon={faReact} size="3x" color="#61DAFB" />
+          <Typography>React</Typography>
         </Grid>
 
         <Grid item xs={4} md={1}>
-          <FontAwesomeIcon icon={faReact} size="3x" color="#61DAFB" />
-          <Typography>React</Typography>
+          <FontAwesomeIcon icon={faBootstrap} size="3x" color="#7410F0" />
+          <Typography>Bootstrap</Typography>
         </Grid>
 
         <Grid item xs={4} md={1}>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ContainerBox from "../Components/ContainerBox";
+import ContainerSimple from "../Components/ContainerSimple";
 import CardToShowSample from "../Components/CardToShowSample";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
@@ -46,7 +46,7 @@ const HtmlWebsites = () => {
     },
   ];
   return (
-    <ContainerBox>
+    <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3">
           HTML websites <FontAwesomeIcon icon={faHtml5} color="#f06529" />
@@ -75,7 +75,7 @@ const HtmlWebsites = () => {
           </Grid>
         ))}
       </Grid>
-    </ContainerBox>
+    </ContainerSimple>
   );
 };
 

@@ -30,9 +30,9 @@ const dataReactWeb = [
     id: 3,
     title: "coffee-place-website",
     img: "/img/coffeeLogo.png",
-    shortDescription: "E-commerce website made using react.",
+    shortDescription: "E-commerce website made using react-hooks.",
     stack: ["React", "Material UI"],
-    longerTitle: "E-commerce website for coffee shop",
+    longerTitle: "E-commerce website for coffee shop using react.",
     fullDescription:
       "On pressed navbar links - merchandise is sorted on-page. The dynamic cart shows items added, price and how many items are placed. All is done by using react hooks. There is no back-end",
     linkToWebsite: "https://coffee-place-e-comm.netlify.app/",
