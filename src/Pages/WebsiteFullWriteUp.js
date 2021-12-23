@@ -103,6 +103,16 @@ const WebsiteFullWriteUp = () => {
           </a>
         )}
       </Box>
+      {website.imgBigger && (
+        <img
+          height="300"
+          width="auto"
+          src={website.imgBigger}
+          alt=""
+          loading="lazy"
+          style={{ objectFit: "contain" }}
+        />
+      )}
 
       <Typography variant="h5">{website.longerTitle}</Typography>
       <Typography variant="subtitle1">{website.fullDescription}</Typography>

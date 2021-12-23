@@ -3,6 +3,7 @@ const dataReactWeb = [
     id: 1,
     title: "baltic-covid-news",
     img: "/img/balticNews.png",
+    imgBigger: "/img/balticCovidNews.png",
     shortDescription:
       "Dynamic web app that shows statistics about Covid for Baltic states (Europe).",
     stack: ["React", "Material UI", "Font awesome"],
@@ -17,6 +18,7 @@ const dataReactWeb = [
     id: 2,
     title: "website-using-api",
     img: "",
+    imgBigger: "/img/qualTask.png",
     shortDescription:
       "Just a simple website for using mock/sample API data.Form has validation if no data is entered with a hint with what's needed. Submit button can be pressed only if the form is validated.",
     stack: ["React", "React-router", "Material UI"],
@@ -30,6 +32,7 @@ const dataReactWeb = [
     id: 3,
     title: "coffee-place-website",
     img: "/img/coffeeLogo.png",
+    imgBigger: "/img/coffeePlace.png",
     shortDescription: "E-commerce website made using react-hooks.",
     stack: ["React", "Material UI"],
     longerTitle: "E-commerce website for coffee shop using react.",
