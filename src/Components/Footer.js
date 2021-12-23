@@ -34,6 +34,7 @@ const Footer = () => {
           href="https://github.com/Mancefas"
           target="_blank"
           underline="none"
+          rel="noreferrer"
         >
           <GitHubIcon fontSize="large" />
         </Link>
@@ -42,6 +43,7 @@ const Footer = () => {
           href="https://www.upwork.com/freelancers/~01d7e2eaf46aca380b?viewMode=1&s=1110580755057594368"
           target="_blank"
           underline="none"
+          rel="noreferrer"
         >
           <Avatar sx={{ bgcolor: "green" }}>Up</Avatar>
         </Link>

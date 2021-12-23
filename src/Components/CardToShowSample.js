@@ -76,12 +76,12 @@ const CardToShowSample = (props) => {
           ))}
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             {props.linkWebsite && (
-              <Link href={props.linkWebsite} target="_blank">
+              <Link href={props.linkWebsite} target="_blank" rel="noreferrer">
                 Link to website
               </Link>
             )}
             {props.linkCode && (
-              <Link href={props.linkCode} target="_blank">
+              <Link href={props.linkCode} target="_blank" rel="noreferrer">
                 Link to code
               </Link>
             )}
