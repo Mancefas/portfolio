@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Typography, Grid, Box, Link, Button } from "@mui/material";
+import { Grid, Box, Link, Button } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
