@@ -64,3 +64,8 @@ body a {
   font-family: "Pacifico", cursive;
   color: #333d51;
 }
+
+.logo {
+  font-size: 2rem;
+  font-family: "Pushster", cursive;
+}

@@ -107,10 +107,9 @@ const Header = (props) => {
               textDecoration: "none",
             }}
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <Typography variant="h3">Mantvydas </Typography>
-              <BusinessCenterIcon fontSize="large" />
-            </Box>
+            <h2 className="logo">
+              Mantvydas <BusinessCenterIcon fontSize="medium" />{" "}
+            </h2>
           </NavLink>
         </Grid>
         <Grid

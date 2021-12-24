@@ -26,7 +26,7 @@ const WebsiteFullWriteUp = () => {
         {params.websiteName.replaceAll("-", " ")}
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", margin: "0.5rem" }}>
         <CodeIcon color="primary" size="small" />
         <Typography variant="p" color="primary">
           Languages used :
@@ -34,7 +34,10 @@ const WebsiteFullWriteUp = () => {
         <CodeOffIcon color="primary" size="small" />
       </Box>
       {website && (
-        <Grid container sx={{ justifyContent: "space-evenly" }}>
+        <Grid
+          container
+          sx={{ justifyContent: "space-evenly", border: " solid 2px" }}
+        >
           {website.stack.map((stack, index) => (
             <Grid
               item
@@ -68,7 +71,17 @@ const WebsiteFullWriteUp = () => {
               />
             </Grid>
           ))}
-          <Grid item xs={4} md={1} sx={{ display: "flex", gap: "0.3rem" }}>
+          <Grid
+            item
+            xs={4}
+            md={1}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.3rem",
+            }}
+          >
             <Typography>Coffee</Typography>
             <FontAwesomeIcon icon={faCoffee} />
           </Grid>
