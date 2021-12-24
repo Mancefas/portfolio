@@ -2,8 +2,40 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --light: #7dc54c;
+  --dark: #174417;
+  --text-light-theme: #333d51;
+  --text-dark-theme: rgb(192, 189, 189);
+  --link-light-theme: blue;
+  --link-dark-theme: rgb(70, 112, 204);
+}
+
+body .dark {
+  background-color: var(--dark);
+  color: var(--text-dark-theme);
+}
+
+body .dark .text-primary {
+  color: var(--text-dark-theme);
+}
+
+body .dark img {
+  opacity: 0.8;
+}
+
+body .dark a {
+  color: var(--link-dark-theme);
+}
+
 body {
-  background-color: #7dc54c;
+  background-color: var(--light);
+}
+body .text-primary {
+  color: var(--text-light-theme);
+}
+body a {
+  color: var(--link-light-theme);
 }
 
 .container-background {
