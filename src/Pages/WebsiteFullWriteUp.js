@@ -80,6 +80,7 @@ const WebsiteFullWriteUp = () => {
           flexDirection: "row",
           justifyContent: "center",
           gap: "1rem",
+          margin: "1rem",
         }}
       >
         {website && website.linkToWebsite && (
@@ -110,7 +111,7 @@ const WebsiteFullWriteUp = () => {
           src={website.imgBigger}
           alt=""
           loading="lazy"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "contain", marginBottom: "0.5rem" }}
         />
       )}
 
