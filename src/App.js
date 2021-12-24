@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
@@ -16,9 +16,15 @@ const NoPage = lazy(() => import("./Pages/NoPage"));
 const WebsiteFullWriteUp = lazy(() => import("./Pages/WebsiteFullWriteUp"));
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const themeColorHandler = () => {
+    setDarkTheme(!darkTheme);
+  };
+
   return (
-    <>
-      <Header />
+    <div className={darkTheme ? "dark" : ""}>
+      <Header themeColorHandler={themeColorHandler} darkTheme={darkTheme} />
       <Suspense
         fallback={
           <Box
@@ -47,7 +53,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
-    </>
+    </div>
   );
 }
 
