@@ -4,15 +4,15 @@ html {
 
 :root {
   --light: #7dc54c;
-  --dark: #174417;
+  --dark: #121212;
   --text-light-theme: #333d51;
-  --text-dark-theme: rgb(192, 189, 189);
-  --link-light-theme: blue;
-  --link-dark-theme: rgb(70, 112, 204);
+  --text-dark-theme: #c4c4c4;
+  --link-light-theme: #6200ee;
+  --link-dark-theme: #c38fff;
 }
 
 body .dark {
-  background-color: var(--dark);
+  background: var(--dark);
   color: var(--text-dark-theme);
 }
 
@@ -29,7 +29,8 @@ body .dark a {
 }
 
 body {
-  background-color: var(--light);
+  background: #00b09b;
+  background: linear-gradient(to right, #96c93d, #00b09b);
 }
 body .text-primary {
   color: var(--text-light-theme);
@@ -47,22 +48,9 @@ body a {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.text-color {
-  color: #d3ac2b;
-}
-
-.text-color-secondary {
-  color: #333d51;
-}
-
-.background-color-secondary {
-  color: #f4f3ea;
-}
-
 .landing-heading-text {
   font-size: xx-large;
   font-family: "Pacifico", cursive;
-  color: #333d51;
 }
 
 .logo {

@@ -129,10 +129,9 @@ const Header = (props) => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "#333d51",
             }}
           >
-            <MailOutlineIcon sx={{ color: "#ffffffce" }} />
+            <MailOutlineIcon />
             mantvydasdev@gmail.com
           </Link>
         </Grid>

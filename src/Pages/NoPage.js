@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlushed } from "@fortawesome/free-solid-svg-icons";
+import { faGhost } from "@fortawesome/free-solid-svg-icons";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ const NoPage = () => {
       }}
     >
       <Typography variant="h1">404</Typography>
-      <FontAwesomeIcon icon={faFlushed} color="#df464675" size="4x" />
+      <FontAwesomeIcon icon={faGhost} color="#df464675" size="4x" />
       <Typography variant="h3">No page like that</Typography>
       <Typography variant="h4">
         Contact me and I can make it
