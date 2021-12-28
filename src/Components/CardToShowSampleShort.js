@@ -1,18 +1,15 @@
 import React from "react";
 
-import {
-  Card,
-  CardHeader,
-  CardMedia,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Card, CardMedia, CardContent, Typography } from "@mui/material";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 
 const CardToShowSampleShort = (props) => {
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}>
-      <CardHeader title={props.title.replaceAll("-", " ")} />
+    <Card
+      className={"text-primary"}
+      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}
+    >
+      <Typography variant="h5">{props.title.replaceAll("-", " ")}</Typography>
       <CardMedia
         component="img"
         height="100"
@@ -21,7 +18,11 @@ const CardToShowSampleShort = (props) => {
         sx={{ objectFit: "contain" }}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          className={"text-primary"}
+          variant="body2"
+          color="text.secondary"
+        >
           {props.description}
         </Typography>
         <Typography variant="paragraph">

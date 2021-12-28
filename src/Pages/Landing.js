@@ -20,7 +20,7 @@ import ContainerBox from "../Components/ContainerBox";
 const Landing = () => {
   return (
     <ContainerBox>
-      <h2 className="landing-heading-text">Hello and welcome !</h2>
+      <Typography variant="h3">Hello and welcome !</Typography>
       <Typography variant="h5">
         I am Front-end developer from EU. I can build you a fast and stable
         website in a manageable time frame. Specializing in react.js, but like

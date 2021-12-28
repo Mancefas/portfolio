@@ -12,7 +12,7 @@ const Header = (props) => {
       <Box
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Button onClick={props.themeColorHandler}>
+        <Button className="link-color" onClick={props.themeColorHandler}>
           {props.darkTheme ? <LightModeIcon /> : <DarkModeIcon />}
         </Button>
       </Box>
@@ -41,7 +41,7 @@ const Header = (props) => {
           }}
         >
           <NavLink
-            className={"text-primary"}
+            className="link-color"
             style={({ isActive }) => {
               return {
                 display: "block",
@@ -57,7 +57,7 @@ const Header = (props) => {
             React
           </NavLink>
           <NavLink
-            className={"text-primary"}
+            className="link-color"
             style={({ isActive }) => {
               return {
                 display: "block",
@@ -73,7 +73,7 @@ const Header = (props) => {
             Html
           </NavLink>
           <NavLink
-            className={"text-primary"}
+            className="link-color"
             style={({ isActive }) => {
               return {
                 display: "block",
@@ -108,7 +108,8 @@ const Header = (props) => {
             }}
           >
             <h2 className="logo">
-              Mantvydas <BusinessCenterIcon fontSize="medium" />{" "}
+              Mantvydas{" "}
+              <BusinessCenterIcon className="link-color" fontSize="medium" />{" "}
             </h2>
           </NavLink>
         </Grid>

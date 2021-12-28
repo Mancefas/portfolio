@@ -12,7 +12,8 @@ const HtmlWebsites = () => {
     <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3">
-          HTML websites <FontAwesomeIcon icon={faHtml5} color="#f06529" />
+          HTML websites{" "}
+          <FontAwesomeIcon icon={faHtml5} className="link-color" />
         </Typography>
       </Box>
 

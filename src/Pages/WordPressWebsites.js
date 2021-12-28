@@ -27,7 +27,8 @@ const WordPressWebsites = () => {
     <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3" className="text-font-secondary">
-          Wordpress sites <FontAwesomeIcon icon={faWordpress} color="#21759b" />
+          Wordpress sites{" "}
+          <FontAwesomeIcon icon={faWordpress} className="link-color" />
         </Typography>
       </Box>
 

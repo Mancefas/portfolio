@@ -10,7 +10,6 @@ import {
   CardActions,
   IconButton,
   Collapse,
-  Link,
   Box,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -36,7 +35,10 @@ const CardToShowSample = (props) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}>
+    <Card
+      className={"text-primary"}
+      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}
+    >
       <CardHeader title={props.title} />
       <CardMedia
         component="img"
@@ -46,7 +48,11 @@ const CardToShowSample = (props) => {
         sx={{ objectFit: "contain" }}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          className={"text-primary"}
+          variant="body2"
+          color="text.secondary"
+        >
           {props.description}
         </Typography>
       </CardContent>
@@ -76,24 +82,24 @@ const CardToShowSample = (props) => {
           ))}
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             {props.linkWebsite && (
-              <Link
+              <a
+                rel="noopener noreferrer"
                 href={props.linkWebsite}
                 target="_blank"
-                rel="noreferrer"
                 style={{ textDecoration: "none" }}
               >
                 Link to website
-              </Link>
+              </a>
             )}
             {props.linkCode && (
-              <Link
+              <a
+                rel="noopener noreferrer"
                 href={props.linkCode}
                 target="_blank"
-                rel="noreferrer"
                 style={{ textDecoration: "none" }}
               >
                 Link to code
-              </Link>
+              </a>
             )}
           </Box>
           <Typography></Typography>

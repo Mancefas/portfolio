@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-  --light: #7dc54c;
+  --light: #eaeef3;
   --dark: #121212;
   --text-light-theme: #333d51;
   --text-dark-theme: #c4c4c4;
@@ -11,6 +11,22 @@ html {
   --link-dark-theme: #c38fff;
 }
 
+/* Light theme */
+body {
+  background: var(--light);
+}
+body .text-primary {
+  color: var(--text-light-theme);
+}
+body a {
+  color: var(--link-light-theme);
+}
+
+body .link-color {
+  color: var(--link-light-theme);
+}
+
+/* dark theme */
 body .dark {
   background: var(--dark);
   color: var(--text-dark-theme);
@@ -28,15 +44,8 @@ body .dark a {
   color: var(--link-dark-theme);
 }
 
-body {
-  background: #00b09b;
-  background: linear-gradient(to right, #96c93d, #00b09b);
-}
-body .text-primary {
-  color: var(--text-light-theme);
-}
-body a {
-  color: var(--link-light-theme);
+body .dark .link-color {
+  color: var(--link-dark-theme);
 }
 
 .container-background {
@@ -46,11 +55,6 @@ body a {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.landing-heading-text {
-  font-size: xx-large;
-  font-family: "Pacifico", cursive;
 }
 
 .logo {

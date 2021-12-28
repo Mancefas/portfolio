@@ -12,7 +12,8 @@ const ReactWebsites = () => {
     <ContainerSimple>
       <Box sx={{ display: "flex", justifyContent: "start", margin: "1rem" }}>
         <Typography variant="h3">
-          React web apps <FontAwesomeIcon icon={faReact} color="#61DBFB" />
+          React web apps{" "}
+          <FontAwesomeIcon className="link-color" icon={faReact} />
         </Typography>
       </Box>
 
