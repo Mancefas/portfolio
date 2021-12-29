@@ -10,10 +10,15 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import dataReactWeb from "../store/dataReactWeb";
 import ContainerBox from "../Components/ContainerBox";
 
+import NoPage from "./NoPage";
+
 const WebsiteFullWriteUp = () => {
   let params = useParams();
 
   const website = dataReactWeb.find((el) => el.title === params.websiteName);
+  if (!website) {
+    return <NoPage />;
+  }
 
   return (
     <ContainerBox>
