@@ -7,7 +7,7 @@ const CardToShowSampleShort = (props) => {
   return (
     <Card
       className={"text-primary"}
-      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}
+      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c", padding: "1rem" }}
     >
       <Typography variant="h5">{props.title.replaceAll("-", " ")}</Typography>
       <CardMedia
