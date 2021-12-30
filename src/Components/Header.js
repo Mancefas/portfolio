@@ -124,6 +124,7 @@ const Header = (props) => {
           }}
         >
           <Link
+            className="link-color"
             href="mailto:mantvydasdev@gmail.com"
             underline="none"
             sx={{
