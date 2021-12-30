@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Grid, Box, Link, Button } from "@mui/material";
+import { Grid, Box, Link, Button, Switch } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -9,13 +9,6 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 const Header = (props) => {
   return (
     <>
-      <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <Button className="link-color" onClick={props.themeColorHandler}>
-          {props.darkTheme ? <LightModeIcon /> : <DarkModeIcon />}
-        </Button>
-      </Box>
       <Grid
         container
         sx={{
@@ -119,10 +112,27 @@ const Header = (props) => {
           md={4}
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-around",
             alignItems: "center",
           }}
         >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {" "}
+            <DarkModeIcon className="link-color" />
+            <Switch
+              defaultChecked
+              label="Label"
+              onChange={props.themeColorHandler}
+              color="success"
+            />{" "}
+            <LightModeIcon className="link-color" />
+          </Box>
           <Link
             className="link-color"
             href="mailto:mantvydasdev@gmail.com"

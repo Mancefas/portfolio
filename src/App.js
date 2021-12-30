@@ -8,6 +8,7 @@ import { Box, CircularProgress } from "@mui/material";
 import Landing from "./Pages/Landing";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import NewSample from "./Pages/NewSample";
 
 const ReactWebsites = lazy(() => import("./Pages/ReactWebsites"));
 const HtmlWebsites = lazy(() => import("./Pages/HtmlWebsites"));
@@ -49,6 +50,7 @@ function App() {
           />
           <Route path="/html-websites" element={<HtmlWebsites />} />
           <Route path="/wordpress-websites" element={<WordPressWebsites />} />
+          <Route path="/admin" element={<NewSample />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Suspense>
