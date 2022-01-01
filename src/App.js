@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 
 import { Box, CircularProgress } from "@mui/material";
 
+import CookieConsent from "react-cookie-consent";
+
 import Landing from "./Pages/Landing";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -55,6 +57,9 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
+      <CookieConsent>
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
     </div>
   );
 }
