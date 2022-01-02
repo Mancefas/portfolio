@@ -116,36 +116,40 @@ const Header = (props) => {
             alignItems: "center",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {" "}
-            <DarkModeIcon className="link-color" />
-            <Switch
-              defaultChecked
-              label="Label"
-              onChange={props.themeColorHandler}
-              color="success"
-            />{" "}
-            <LightModeIcon className="link-color" />
+          <Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {" "}
+              <DarkModeIcon className="link-color" />
+              <Switch
+                defaultChecked
+                label="Label"
+                onChange={props.themeColorHandler}
+                color="success"
+              />{" "}
+              <LightModeIcon className="link-color" />
+            </Box>
+            <Box>
+              <Link
+                className="link-color"
+                href="mailto:mantvydasdev@gmail.com"
+                underline="none"
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <MailOutlineIcon />
+                mantvydasdev@gmail.com
+              </Link>
+            </Box>
           </Box>
-          <Link
-            className="link-color"
-            href="mailto:mantvydasdev@gmail.com"
-            underline="none"
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <MailOutlineIcon />
-            mantvydasdev@gmail.com
-          </Link>
         </Grid>
       </Grid>
     </>
