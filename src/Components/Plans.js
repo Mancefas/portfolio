@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography, Paper, Button, Box } from "@mui/material";
+import { Container, Grid, Typography, Button, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -41,11 +41,11 @@ const Plans = () => {
             sx={{
               minHeight: "50vh",
               height: "fit-content",
+              maxWidth: "50vw",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-around",
-              backgroundColor: "#ffffff9c",
               borderRadius: "9px",
               border: "3px",
             }}
@@ -95,11 +95,11 @@ const Plans = () => {
             sx={{
               minHeight: "50vh",
               height: "fit-content",
+              maxWidth: "50vw",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-around",
-              backgroundColor: "#ffffff9c",
               borderRadius: "9px",
               border: "3px",
             }}
@@ -151,11 +151,11 @@ const Plans = () => {
             sx={{
               minHeight: "50vh",
               height: "fit-content",
+              maxWidth: "50vw",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-around",
-              backgroundColor: "#ffffff9c",
               borderRadius: "9px",
               border: "3px",
             }}

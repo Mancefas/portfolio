@@ -59,8 +59,8 @@ body .dark .container-background {
 }
 
 /*End theme colors */
-
-.container-background {
+/* Unused*/
+.container-background-glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -68,6 +68,7 @@ body .dark .container-background {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+/*unused*/
 
 .logo {
   font-size: 2rem;
