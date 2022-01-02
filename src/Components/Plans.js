@@ -1,13 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography, Button, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3Alt,
-  faBootstrap,
-  faReact,
-  faMaxcdn,
-} from "@fortawesome/free-brands-svg-icons";
+
 import {
   faBookReader,
   faQuestionCircle,
@@ -15,6 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
+
+import dataPlans from "../store/dataPlans";
 
 const Plans = () => {
   return (
@@ -36,116 +32,40 @@ const Plans = () => {
         What can I do for you <FontAwesomeIcon icon={faQuestionCircle} />
       </Typography>
       <Grid container gap={1} sx={{ justifyContent: "center" }}>
-        <Grid item xs={12} md={3}>
-          <Container
-            sx={{
-              minHeight: "50vh",
-              height: "fit-content",
-              maxWidth: "50vw",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-around",
-              borderRadius: "9px",
-              border: "3px",
-            }}
-            className="shadow-for-box container-background"
-          >
-            <Typography variant="h5">Static website</Typography>
-            <Typography>Static web pages for you bussiness. </Typography>
-            <Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faHtml5}
-                  color="red"
-                />
-                <Typography>HTML</Typography>
+        {dataPlans.map((item) => (
+          <Grid item xs={12} md={3}>
+            <Container
+              sx={{
+                minHeight: "50vh",
+                height: "fit-content",
+                maxWidth: "50vw",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-around",
+                borderRadius: "9px",
+                border: "3px",
+              }}
+              className="shadow-for-box container-background"
+            >
+              <Typography variant="h5">{item.id}</Typography>
+              <Typography>{item.description}</Typography>
+              <Box>
+                {item.iconsText.map((text) => (
+                  <Box sx={{ display: "flex" }}>
+                    <Typography>{text}</Typography>
+                  </Box>
+                ))}
               </Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faCss3Alt}
-                  color="red"
-                />
-                <Typography>CSS</Typography>
-              </Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faBootstrap}
-                  color="red"
-                />
-                <Typography>Bootstrap</Typography>
-              </Box>
-            </Box>
+              <Link to={item.btnLink} style={{ textDecoration: "none" }}>
+                <Button variant="contained" sx={{ margin: "1rem" }}>
+                  Samples
+                </Button>
+              </Link>
+            </Container>
+          </Grid>
+        ))}
 
-            <Link to={`/html-websites`} style={{ textDecoration: "none" }}>
-              <Button variant="contained" sx={{ margin: "1rem" }}>
-                Samples
-              </Button>
-            </Link>
-          </Container>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Container
-            sx={{
-              minHeight: "50vh",
-              height: "fit-content",
-              maxWidth: "50vw",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-around",
-              borderRadius: "9px",
-              border: "3px",
-            }}
-            className="shadow-for-box container-background"
-          >
-            <Typography variant="h5">Dynamic website</Typography>
-            <Typography>
-              Dynamic website or web app that reacts to user input.{" "}
-            </Typography>
-
-            <Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faReact}
-                  color="red"
-                />
-                <Typography>React.js</Typography>
-              </Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faCss3Alt}
-                  color="red"
-                />
-                <Typography>CSS</Typography>
-              </Box>
-              <Box sx={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  size="2x"
-                  className="link-color"
-                  icon={faMaxcdn}
-                  color="red"
-                />
-                <Typography>Material UI</Typography>
-              </Box>
-            </Box>
-            <Link to={`/react-websites`} style={{ textDecoration: "none" }}>
-              <Button variant="contained" sx={{ margin: "1rem" }}>
-                Samples
-              </Button>
-            </Link>
-          </Container>
-        </Grid>
         <Grid item xs={12} md={3}>
           <Container
             sx={{
