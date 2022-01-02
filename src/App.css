@@ -5,6 +5,8 @@ html {
 :root {
   --light: #eaeef3;
   --dark: #121212;
+  --container-light: #fff;
+  --container-dark: rgb(104, 102, 102);
   --text-light-theme: #333d51;
   --text-dark-theme: #c4c4c4;
   --link-light-theme: #4caf50;
@@ -24,6 +26,10 @@ body a {
 
 body .link-color {
   color: var(--link-light-theme);
+}
+
+body .container-background {
+  background-color: var(--container-light);
 }
 
 /* dark theme */
@@ -47,6 +53,12 @@ body .dark a {
 body .dark .link-color {
   color: var(--link-dark-theme);
 }
+body .dark .container-background {
+  background-color: var(--container-dark);
+  opacity: 0.9;
+}
+
+/*End theme colors */
 
 .container-background {
   background: rgba(255, 255, 255, 0.2);
@@ -60,4 +72,10 @@ body .dark .link-color {
 .logo {
   font-size: 2rem;
   font-family: "Pushster", cursive;
+}
+
+.shadow-for-box {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
