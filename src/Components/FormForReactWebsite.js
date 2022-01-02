@@ -66,15 +66,17 @@ const FormForReactWebsite = () => {
         />
         <TextField
           id="img"
-          label="Img url"
+          label="Img url "
           variant="standard"
           inputRef={imgRef}
+          defaultValue="/img/{imgName}.png"
         />
         <TextField
           id="imgBigger"
           label="Img Bigger url"
           variant="standard"
           inputRef={imgBiggerReg}
+          defaultValue="/img/{imgName}.png"
         />
         <TextField
           id="shortDescription"
