@@ -22,13 +22,15 @@ const Landing = () => {
   return (
     <>
       <ContainerBox>
-        <Typography variant="h3">Hello and welcome !</Typography>
-        <Typography variant="h5">
+        <Typography variant="h3" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+          Hello and welcome !
+        </Typography>
+        <Typography variant="h5" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
           I am Front-end developer from EU. I can build you a fast and stable
           website in a manageable time frame. Specializing in react.js, but like
           to code in HTML,CSS, Bootstrap as well.
         </Typography>
-        <Typography variant="h5">
+        <Typography variant="h5" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
           I can build websites SEO optimized and content optimized(for speed).
           And all websites I build are mobile-friendly (responsive).
         </Typography>
@@ -43,7 +45,9 @@ const Landing = () => {
           }}
         >
           <CodeIcon fontSize="large" color="primary" />
-          <Typography variant="h4">Coding languages</Typography>
+          <Typography variant="h4" sx={{ fontFamily: "Lora" }}>
+            Coding languages
+          </Typography>
           <CodeOffIcon fontSize="large" color="primary" />
         </Box>
 

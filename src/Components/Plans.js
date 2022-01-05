@@ -48,12 +48,19 @@ const Plans = () => {
               }}
               className="shadow-for-box container-background"
             >
-              <Typography variant="h5">{item.id}</Typography>
+              <Typography
+                variant="h5"
+                sx={{ fontFamily: "Lora", fontWeight: "500" }}
+              >
+                {item.id}
+              </Typography>
               <Typography>{item.description}</Typography>
               <Box>
                 {item.iconsText.map((text) => (
                   <Box sx={{ display: "flex" }}>
-                    <Typography>{text}</Typography>
+                    <Typography sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+                      {text}
+                    </Typography>
                   </Box>
                 ))}
               </Box>
@@ -81,7 +88,12 @@ const Plans = () => {
             }}
             className="shadow-for-box container-background"
           >
-            <Typography variant="h5">Full stack website</Typography>
+            <Typography
+              variant="h5"
+              sx={{ fontFamily: "Lora", fontWeight: "500" }}
+            >
+              Full stack website
+            </Typography>
             <Typography>
               Dynamic website that reacts to user input, has its own API{" "}
             </Typography>
