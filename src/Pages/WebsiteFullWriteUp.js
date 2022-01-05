@@ -45,6 +45,7 @@ const WebsiteFullWriteUp = () => {
         >
           {website.stack.map((stack, index) => (
             <Grid
+              key={index}
               item
               xs={4}
               md={1}
@@ -135,6 +136,16 @@ const WebsiteFullWriteUp = () => {
 
       <Typography variant="h5">{website.longerTitle}</Typography>
       <Typography variant="subtitle1">{website.fullDescription}</Typography>
+      {website.anotherBiggerImg && (
+        <img
+          height="300"
+          width="auto"
+          src={website.anotherBiggerImg}
+          alt=""
+          loading="lazy"
+          style={{ objectFit: "contain", marginBottom: "0.5rem" }}
+        />
+      )}
     </ContainerBox>
   );
 };

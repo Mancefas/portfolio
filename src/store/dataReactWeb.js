@@ -1,6 +1,21 @@
 const dataReactWeb = [
   {
     id: 1,
+    title: "race-results",
+    img: "/img/RaceResults.png",
+    imgBigger: "/img/raceResults1.png",
+    anotherBiggerImg: "/img/raceResults2.png",
+    shortDescription: "Website for race results and finishing places.",
+    stack: ["React", "Material UI", "Font awesome", "Firebase"],
+    longerTitle:
+      "Website was built to show race rasults and finishing places in real-time",
+    fullDescription:
+      "It has a different page (admin app) to get finishing time, to add new racers and to fix data if needed.The website uses firebase real-time database, authentication",
+    linkToWebsite: "https://rezultatai.netlify.app/",
+    linkToCode: "",
+  },
+  {
+    id: 2,
     title: "baltic-covid-news",
     img: "/img/balticNews.png",
     imgBigger: "/img/balticCovidNews.png",
@@ -15,12 +30,12 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/covid-news",
   },
   {
-    id: 2,
+    id: 3,
     title: "website-using-api",
     img: "",
     imgBigger: "/img/qualTask.png",
     shortDescription:
-      "Just a simple website for using mock/sample API data.Form has validation if no data is entered with a hint with what's needed. Submit button can be pressed only if the form is validated.",
+      "Just a simple website for using mock/sample API data.Form with validation and a hint with what's needed.",
     stack: ["React", "React-router", "Material UI"],
     longerTitle: "Qualification task",
     fullDescription:
@@ -29,7 +44,7 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/qualification-task",
   },
   {
-    id: 3,
+    id: 4,
     title: "coffee-place-website",
     img: "/img/coffeeLogo.png",
     imgBigger: "/img/coffeePlace.png",
