@@ -58,7 +58,15 @@ function App() {
       </Suspense>
       <Footer />
       <CookieConsent>
-        This website uses cookies to enhance the user experience.
+        This website uses cookies to enhance the user experience. More about it
+        -{" "}
+        <a
+          href="https://policies.google.com/technologies/cookies"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google policy
+        </a>
       </CookieConsent>
     </div>
   );
