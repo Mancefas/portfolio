@@ -45,7 +45,6 @@ const Contact = () => {
       sx={{
         minHeight: "10vh",
         marginBottom: "2rem",
-        marginBottom: "2rem",
         padding: "1rem",
         width: "fit-content",
       }}
@@ -108,13 +107,13 @@ const Contact = () => {
             <TextField
               label={"Your Name"}
               margin="normal"
-              name="userName"
+              name="user_name"
               required
             ></TextField>
             <TextField
               label={"Your email"}
               margin="normal"
-              name="userEmail"
+              name="user_email"
               type="email"
               required
             ></TextField>
