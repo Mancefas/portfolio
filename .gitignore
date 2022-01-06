@@ -21,6 +21,7 @@
 logo192.png
 logo512.png
 /public/img
+config.json
 
 npm-debug.log*
 yarn-debug.log*
