@@ -35,7 +35,7 @@ const Plans = () => {
         </Typography>
         <Grid container gap={1} sx={{ justifyContent: "center" }}>
           {dataPlans.map((item) => (
-            <Grid item xs={12} md={3}>
+            <Grid key={item.id} item xs={12} md={3}>
               <Container
                 sx={{
                   minHeight: "50vh",
@@ -58,8 +58,8 @@ const Plans = () => {
                 </Typography>
                 <Typography>{item.description}</Typography>
                 <Box>
-                  {item.iconsText.map((text) => (
-                    <Box sx={{ display: "flex" }}>
+                  {item.iconsText.map((text, index) => (
+                    <Box key={index} sx={{ display: "flex" }}>
                       <Typography
                         sx={{ fontFamily: "Lora", fontWeight: "500" }}
                       >
