@@ -100,3 +100,9 @@ body .dark .container-background {
 .custom-shape-divider-top-1641752419 .shape-fill {
   fill: var(--text-dark-theme);
 }
+
+@media screen and (max-width: 900px) {
+  .header-links {
+    padding-top: 5vh;
+  }
+}

@@ -22,6 +22,7 @@ const Header = (props) => {
         borderBottom={1}
       >
         <Grid
+          className="header-links"
           item
           xs={12}
           md={4}
