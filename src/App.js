@@ -11,6 +11,7 @@ import Landing from "./Pages/Landing";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import NewSample from "./Pages/NewSample";
+import CurvedShape from "./Components/CurvedShape";
 
 const ReactWebsites = lazy(() => import("./Pages/ReactWebsites"));
 const HtmlWebsites = lazy(() => import("./Pages/HtmlWebsites"));
@@ -20,14 +21,22 @@ const WebsiteFullWriteUp = lazy(() => import("./Pages/WebsiteFullWriteUp"));
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
+  const [adminPage, setAdminPage] = useState(false);
 
   const themeColorHandler = () => {
     setDarkTheme(!darkTheme);
   };
 
+  const adminPageShowHandler = () => {
+    setAdminPage(true);
+  };
+
   return (
     <div className={darkTheme ? "dark" : ""}>
-      <Header themeColorHandler={themeColorHandler} darkTheme={darkTheme} />
+      <CurvedShape />
+      {!adminPage && (
+        <Header themeColorHandler={themeColorHandler} darkTheme={darkTheme} />
+      )}
       <Suspense
         fallback={
           <Box
@@ -52,11 +61,14 @@ function App() {
           />
           <Route path="/html-websites" element={<HtmlWebsites />} />
           <Route path="/wordpress-websites" element={<WordPressWebsites />} />
-          <Route path="/admin" element={<NewSample />} />
+          <Route
+            path="/admin"
+            element={<NewSample adminPageShowHandler={adminPageShowHandler} />}
+          />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Suspense>
-      <Footer />
+      {!adminPage && <Footer />}
       <CookieConsent>
         This website uses cookies to enhance the user experience. More about it
         -{" "}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Drawer,
@@ -19,7 +19,7 @@ import FormForHtmlWebsite from "../Components/FormForHtmlWebsite";
 
 const drawerWidth = 240;
 
-export default function NewSample() {
+export default function NewSample(props) {
   const [showReactFrom, setShowReactForm] = useState(false);
   const [showHtmlFrom, setShowhtmlForm] = useState(false);
 
@@ -31,6 +31,10 @@ export default function NewSample() {
     setShowhtmlForm(true);
     setShowReactForm(false);
   };
+
+  useEffect(() => {
+    props.adminPageShowHandler();
+  }, []);
 
   return (
     <Box sx={{ display: "flex" }}>
