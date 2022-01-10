@@ -73,7 +73,14 @@ const FormForReactWebsite = () => {
   }, [newReactWebsite]);
 
   return (
-    <Container sx={{ display: "flex", flexDirection: "column", width: "40vw" }}>
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "40vw",
+        marginTop: "10vh",
+      }}
+    >
       {success && <Alert severity="success">Sample sent successfully!</Alert>}
       {error && (
         <Alert severity="error">This is an error alert — {errorMessage}</Alert>

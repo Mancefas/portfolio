@@ -17,7 +17,7 @@ import { faHtml5, faReact } from "@fortawesome/free-brands-svg-icons";
 import FormForReactWebsite from "../Components/FormForReactWebsite";
 import FormForHtmlWebsite from "../Components/FormForHtmlWebsite";
 
-const drawerWidth = 240;
+const drawerWidth = 170;
 
 export default function NewSample(props) {
   const [showReactFrom, setShowReactForm] = useState(false);

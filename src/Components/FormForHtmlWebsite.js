@@ -80,7 +80,7 @@ const FormForHtmlWebsite = () => {
   }, [objectToSend]);
 
   return (
-    <Container sx={{ width: "40vw" }}>
+    <Container sx={{ width: "40vw", marginTop: "10vh" }}>
       {success && <Alert severity="success">Sample sent successfully!</Alert>}
       {error && (
         <Alert severity="error">This is an error alert — {errorMessage}</Alert>
