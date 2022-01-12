@@ -8,7 +8,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 
 const Header = (props) => {
   return (
-    <>
+    <header>
       <Grid
         container
         sx={{
@@ -153,7 +153,7 @@ const Header = (props) => {
           </Box>
         </Grid>
       </Grid>
-    </>
+    </header>
   );
 };
 
