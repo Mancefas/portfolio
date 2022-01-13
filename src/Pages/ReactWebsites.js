@@ -5,7 +5,7 @@ import ContainerSimple from "../Components/ContainerSimple";
 import CardToShowSampleShort from "../Components/CardToShowSampleShort";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
-import dataReactWeb from "../store/dataReactWeb";
+import dataReactWeb from "../data/dataReactWeb";
 
 const ReactWebsites = () => {
   return (

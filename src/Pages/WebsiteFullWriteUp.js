@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faCss3, faReact } from "@fortawesome/free-brands-svg-icons";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import CancelIcon from "@mui/icons-material/Cancel";
-import dataReactWeb from "../store/dataReactWeb";
+import dataReactWeb from "../data/dataReactWeb";
 import ContainerBox from "../Components/ContainerBox";
 
 import NoPage from "./NoPage";

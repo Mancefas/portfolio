@@ -10,7 +10,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import dataPlans from "../store/dataPlans";
+import dataPlans from "../data/dataPlans";
 import Contact from "./Contact";
 
 const Plans = () => {
