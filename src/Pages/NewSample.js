@@ -16,12 +16,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faReact } from "@fortawesome/free-brands-svg-icons";
 import FormForReactWebsite from "../Components/FormForReactWebsite";
 import FormForHtmlWebsite from "../Components/FormForHtmlWebsite";
+import LoginWindow from "../Components/LoginWindow";
 
 const drawerWidth = 170;
 
 export default function NewSample(props) {
   const [showReactFrom, setShowReactForm] = useState(false);
   const [showHtmlFrom, setShowhtmlForm] = useState(false);
+  const [loggedInn, setLoggedInn] = useState(false);
 
   const reactPresshandler = () => {
     setShowReactForm(true);
@@ -31,61 +33,72 @@ export default function NewSample(props) {
     setShowhtmlForm(true);
     setShowReactForm(false);
   };
+  const loginHandler = () => {
+    setLoggedInn(true);
+  };
 
   useEffect(() => {
     props.adminPageShowHandler();
   }, []);
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
-      >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Add new website sample
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      >
-        <Toolbar />
-        <Divider />
-        <List>
-          <ListItem button onClick={reactPresshandler}>
-            <ListItemIcon>
-              <FontAwesomeIcon icon={faReact} />
-            </ListItemIcon>
-            <ListItemText>React</ListItemText>
-          </ListItem>
+    <>
+      {!loggedInn && <LoginWindow loginHandler={loginHandler} />}
+      {loggedInn && (
+        <Box sx={{ display: "flex" }}>
+          <CssBaseline />
+          <AppBar
+            position="fixed"
+            sx={{
+              width: `calc(100% - ${drawerWidth}px)`,
+              ml: `${drawerWidth}px`,
+            }}
+          >
+            <Toolbar>
+              <Typography variant="h6" noWrap component="div">
+                Add new website sample
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            sx={{
+              width: drawerWidth,
+              flexShrink: 0,
+              "& .MuiDrawer-paper": {
+                width: drawerWidth,
+                boxSizing: "border-box",
+              },
+            }}
+            variant="permanent"
+            anchor="left"
+          >
+            <Toolbar />
+            <Divider />
+            <List>
+              <ListItem button onClick={reactPresshandler}>
+                <ListItemIcon>
+                  <FontAwesomeIcon icon={faReact} />
+                </ListItemIcon>
+                <ListItemText>React</ListItemText>
+              </ListItem>
 
-          <ListItem button onClick={htmlPressHandler}>
-            <ListItemIcon>
-              <FontAwesomeIcon icon={faHtml5} />
-            </ListItemIcon>
-            <ListItemText>Html</ListItemText>
-          </ListItem>
-        </List>
-      </Drawer>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
-      >
-        {showReactFrom && <FormForReactWebsite />}
-        {showHtmlFrom && <FormForHtmlWebsite />}
-      </Box>
-    </Box>
+              <ListItem button onClick={htmlPressHandler}>
+                <ListItemIcon>
+                  <FontAwesomeIcon icon={faHtml5} />
+                </ListItemIcon>
+                <ListItemText>Html</ListItemText>
+              </ListItem>
+            </List>
+          </Drawer>
+          <Box
+            component="main"
+            sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+          >
+            {showReactFrom && <FormForReactWebsite />}
+            {showHtmlFrom && <FormForHtmlWebsite />}
+          </Box>
+        </Box>
+      )}
+    </>
   );
 }
