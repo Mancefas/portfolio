@@ -58,11 +58,12 @@ const Footer = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
+          gap: "0.3rem",
         }}
       >
         <CopyrightIcon />
-        <Typography variant="h6">{year}</Typography>
-        <Typography> All rights reserved</Typography>
+        <Typography variant="body2">{year}</Typography>
+        <Typography variant="body2"> All rights reserved</Typography>
       </Grid>
     </Grid>
   );

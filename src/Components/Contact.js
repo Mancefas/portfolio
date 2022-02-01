@@ -8,6 +8,8 @@ import {
   Modal,
 } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import config from "../config.json";
 
 import emailjs from "@emailjs/browser";
@@ -60,22 +62,42 @@ const Contact = () => {
           gap: "2rem",
         }}
       >
-        <Button variant="outlined" onClick={handleOpen} className="link-color">
-          Contact Form
-        </Button>
-        <Button
-          href="mailto:mantvydasdev@gmail.com"
-          variant="outlined"
+        <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
+            flexDirection: "column",
             alignItems: "center",
           }}
-          className="link-color"
         >
-          <MailOutlineIcon />
-          Write email
-        </Button>
+          <ArrowDownwardIcon />
+          <Button variant="text" onClick={handleOpen} className="link-color">
+            <MailOutlineIcon />
+            Form
+          </Button>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <ArrowDownwardIcon />
+          <Button
+            href="mailto:mantvydasdev@gmail.com"
+            variant="text"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className="link-color"
+          >
+            <AlternateEmailIcon />
+            Email
+          </Button>
+        </Box>
       </Box>
 
       <Modal

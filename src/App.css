@@ -32,6 +32,10 @@ body .container-background {
   background-color: var(--container-light);
 }
 
+body .btn-bg {
+  background-color: var(--link-light-theme);
+}
+
 /* dark theme */
 body .dark {
   background: var(--dark);
@@ -56,6 +60,10 @@ body .dark .link-color {
 body .dark .container-background {
   background-color: var(--container-dark);
   opacity: 0.9;
+}
+
+body .dark .btn-bg {
+  background-color: var(--link-dark-theme);
 }
 
 /*End theme colors */

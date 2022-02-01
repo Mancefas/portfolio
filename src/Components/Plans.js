@@ -31,7 +31,11 @@ const Plans = () => {
         className="text-primary"
       >
         <Typography variant="h3" sx={{ marginBottom: "1rem" }}>
-          What can I do for you <FontAwesomeIcon icon={faQuestionCircle} />
+          What can I do for you{" "}
+          <FontAwesomeIcon
+            icon={faQuestionCircle}
+            style={{ fontSize: "2.5rem" }}
+          />
         </Typography>
         <Grid container gap={1} sx={{ justifyContent: "center" }}>
           {dataPlans.map((item) => (
@@ -68,8 +72,16 @@ const Plans = () => {
                     </Box>
                   ))}
                 </Box>
-                <Link to={item.btnLink} style={{ textDecoration: "none" }}>
-                  <Button variant="contained" sx={{ margin: "1rem" }}>
+                <Link
+                  to={item.btnLink}
+                  style={{ textDecoration: "none" }}
+                  className="link-color"
+                >
+                  <Button
+                    variant="contained"
+                    sx={{ margin: "1rem" }}
+                    className="btn-bg"
+                  >
                     Samples
                   </Button>
                 </Link>
