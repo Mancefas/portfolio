@@ -1,12 +1,12 @@
 const dataHtmlWeb = [
   {
     id: 1,
-    title: "Nordcarrier.lt forwarders website",
-    img: "/img/Nordcarrier.png",
+    title: "Veterinary website",
+    img: "/img/vet.png",
     description:
-      "Website from scratch. Landing page, contact page, services page. SEO was optimized.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    linkToWebsite: "https://nordcarrier.netlify.app/",
+      "The website was built with Bootstrap. Hamburger menu, images carousel, contact form.",
+    stack: ["HTML", "Bootstrap", "CSS", "JavaScript"],
+    linkToWebsite: "https://pet-service.netlify.app/",
   },
   {
     id: 2,
@@ -35,6 +35,15 @@ const dataHtmlWeb = [
       "Blog style website. With needed articles about bicycles for beginners. SEO optimized. All content is in Lithuanian language.",
     stack: ["HTML", "CSS", "JavaScript"],
     linkToWebsite: "http://sample.devportfolio.eu/",
+  },
+  {
+    id: 5,
+    title: "Nordcarrier.lt forwarders website",
+    img: "/img/Nordcarrier.png",
+    description:
+      "Website from scratch. Landing page, contact page, services page. SEO was optimized.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    linkToWebsite: "https://nordcarrier.netlify.app/",
   },
 ];
 
