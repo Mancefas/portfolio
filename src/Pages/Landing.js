@@ -17,12 +17,14 @@ import {
 
 import ContainerBox from "../Components/ContainerBox";
 import Plans from "../Components/Plans";
+import { UAcard } from "../Components/UAcard";
 
 const Landing = () => {
   return (
     <>
+      <UAcard />
       <ContainerBox>
-        <Typography variant="h3" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+        <Typography variant="h4" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
           Hello and welcome !
         </Typography>
         <Typography variant="h5" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
@@ -45,7 +47,7 @@ const Landing = () => {
           }}
         >
           <CodeIcon fontSize="large" color="primary" />
-          <Typography variant="h4" sx={{ fontFamily: "Lora" }}>
+          <Typography variant="h5" sx={{ fontFamily: "Lora" }}>
             Coding languages
           </Typography>
           <CodeOffIcon fontSize="large" color="primary" />
