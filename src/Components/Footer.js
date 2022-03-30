@@ -35,6 +35,7 @@ const Footer = () => {
           target="_blank"
           underline="none"
           rel="noreferrer"
+          aria-label="github link"
         >
           <GitHubIcon fontSize="large" />
         </Link>
@@ -44,6 +45,7 @@ const Footer = () => {
           target="_blank"
           underline="none"
           rel="noreferrer"
+          aria-label="upwork link"
         >
           <Avatar sx={{ bgcolor: "green" }}>Up</Avatar>
         </Link>
