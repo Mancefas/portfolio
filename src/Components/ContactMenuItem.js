@@ -3,7 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Link } from "@mui/material";
 import ContactModal from "./ContactModal";
 
 const WorkSamplesMenu = () => {
@@ -42,6 +42,8 @@ const WorkSamplesMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        variant="contained"
+        className="btn-bg"
       >
         <MailOutlineIcon />
         Contact me <ArrowDropDownIcon />
@@ -58,15 +60,16 @@ const WorkSamplesMenu = () => {
         <MenuItem onClick={handleClosePopupMenu} className="link-color">
           Contact Form
         </MenuItem>
-        <a
+        <Link
           href="mailto:mantvydasdev@gmail.com"
           variant="text"
           style={{ textDecoration: "none" }}
+          className="link-color"
         >
           <MenuItem onClick={handleClose}>
             Email - mantvydasdev@gmail.com{" "}
           </MenuItem>
-        </a>
+        </Link>
       </Menu>
       <ContactModal open={openModal} close={closeModal} />
     </Box>

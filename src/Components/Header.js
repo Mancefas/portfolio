@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Grid, Box, Link, Switch, MenuItem } from "@mui/material";
+import { Grid, Box, Switch, MenuItem } from "@mui/material";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -21,6 +21,7 @@ const Header = (props) => {
           borderColor: "#fff",
           justifyContent: "center",
           alignItems: "center",
+          paddingBottom: "0.5rem",
         }}
         borderBottom={1}
       >
@@ -84,6 +85,7 @@ const Header = (props) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            gap: "0.5rem",
             flexDirection: { xs: "column", md: "row" },
           }}
         >

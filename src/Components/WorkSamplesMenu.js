@@ -31,6 +31,8 @@ const WorkSamplesMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        variant="contained"
+        className="btn-bg"
       >
         Website samples <ArrowDropDownIcon />
       </Button>
