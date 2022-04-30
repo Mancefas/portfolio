@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Container } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 
@@ -15,7 +15,6 @@ import {
   faFontAwesome,
 } from "@fortawesome/free-brands-svg-icons";
 
-import ContainerBox from "../Components/ContainerBox";
 import Plans from "../Components/Plans";
 import { UAcard } from "../Components/UAcard";
 
@@ -23,16 +22,30 @@ const Landing = () => {
   return (
     <>
       <UAcard />
-      <ContainerBox>
-        <Typography variant="h4" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+      <Container maxWidth="md" sx={{ marginTop: "1rem" }}>
+        <Typography
+          variant="h4"
+          sx={{ fontFamily: "Lora", fontWeight: "500", textAlign: "center" }}
+        >
           Hello and welcome !
         </Typography>
-        <Typography variant="h5" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "Lora",
+            fontWeight: "500",
+            textAlign: "center",
+            my: "1rem",
+          }}
+        >
           I am Front-end developer from EU. I can build you a fast and stable
           website in a manageable time frame. Specializing in react.js, but like
           to code in HTML,CSS, Bootstrap as well.
         </Typography>
-        <Typography variant="h5" sx={{ fontFamily: "Lora", fontWeight: "500" }}>
+        <Typography
+          variant="h5"
+          sx={{ fontFamily: "Lora", fontWeight: "500", textAlign: "center" }}
+        >
           I can build websites SEO optimized and content optimized(for speed).
           And all websites I build are mobile-friendly (responsive).
         </Typography>
@@ -47,13 +60,17 @@ const Landing = () => {
           }}
         >
           <CodeIcon fontSize="large" color="primary" />
-          <Typography variant="h5" sx={{ fontFamily: "Lora" }}>
+          <Typography variant="h5" sx={{ fontFamily: "Lora", my: "1rem" }}>
             Coding languages
           </Typography>
           <CodeOffIcon fontSize="large" color="primary" />
         </Box>
 
-        <Grid container spacing={1} sx={{ justifyContent: "space-evenly" }}>
+        <Grid
+          container
+          spacing={1}
+          sx={{ justifyContent: "space-evenly", margin: "auto" }}
+        >
           <Grid item xs={4} md={1}>
             <FontAwesomeIcon icon={faHtml5} size="3x" color="red" />
             <Typography>HTML</Typography>
@@ -94,7 +111,7 @@ const Landing = () => {
             <Typography>Font awesome</Typography>
           </Grid>
         </Grid>
-      </ContainerBox>
+      </Container>
 
       <Plans />
     </>
