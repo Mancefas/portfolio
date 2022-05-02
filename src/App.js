@@ -5,6 +5,17 @@ import { Routes, Route } from "react-router-dom";
 
 import { Box, CircularProgress } from "@mui/material";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faM,
+  faFontAwesome,
+  faN,
+  faBookReader,
+  faQuestionCircle,
+  faWindowClose,
+} from "@fortawesome/free-solid-svg-icons";
+
 import CookieConsent from "react-cookie-consent";
 
 import Landing from "./Pages/Landing";
@@ -20,6 +31,16 @@ const NoPage = lazy(() => import("./Pages/NoPage"));
 const WebsiteFullWriteUp = lazy(() => import("./Pages/WebsiteFullWriteUp"));
 
 function App() {
+  library.add(
+    fab,
+    faM,
+    faFontAwesome,
+    faN,
+    faBookReader,
+    faQuestionCircle,
+    faWindowClose
+  );
+
   const [darkTheme, setDarkTheme] = useState(false);
   const [adminPage, setAdminPage] = useState(false);
 

@@ -4,19 +4,25 @@ import CodeIcon from "@mui/icons-material/Code";
 import CodeOffIcon from "@mui/icons-material/CodeOff";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3,
-  faJs,
-  faSass,
-  faBootstrap,
-  faReact,
-  faMaxcdn,
-  faFontAwesome,
-} from "@fortawesome/free-brands-svg-icons";
 
 import Plans from "../Components/Plans";
 import { UAcard } from "../Components/UAcard";
+
+const language = [
+  { icon: "fa-brands fa-html5", language: "HTML", color: "red" },
+  { icon: "fa-brands fa-css3-alt", language: "CSS", color: "blue" },
+  { icon: "fa-brands fa-js", language: "JavaScript", color: "#F7DF1E" },
+  { icon: "fa-brands fa-sass", language: "SASS", color: "#CE679A" },
+  { icon: "fa-brands fa-bootstrap", language: "Bootstrap", color: "#7410F0" },
+  { icon: "fa-brands fa-react", language: "React.js", color: "#61DAFB" },
+  { icon: "fa-solid fa-n", language: "Next.js", color: "#3F3F3F" },
+  { icon: "fa-solid fa-m", language: "Material UI", color: "#007FFF" },
+  {
+    icon: "fa-solid fa-font-awesome",
+    language: "Font Awesome",
+    color: "#007FFF",
+  },
+];
 
 const Landing = () => {
   return (
@@ -61,7 +67,7 @@ const Landing = () => {
         >
           <CodeIcon fontSize="large" color="primary" />
           <Typography variant="h5" sx={{ fontFamily: "Lora", my: "1rem" }}>
-            Coding languages
+            Coding with
           </Typography>
           <CodeOffIcon fontSize="large" color="primary" />
         </Box>
@@ -71,45 +77,22 @@ const Landing = () => {
           spacing={1}
           sx={{ justifyContent: "space-evenly", margin: "auto" }}
         >
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faHtml5} size="3x" color="red" />
-            <Typography>HTML</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faCss3} size="3x" color="blue" />
-            <Typography>CSS</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faJs} size="3x" color="#F7DF1E" />
-            <Typography>JavaScript</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faSass} size="3x" color="#CE679A" />
-            <Typography>SASS</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faReact} size="3x" color="#61DAFB" />
-            <Typography>React</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faBootstrap} size="3x" color="#7410F0" />
-            <Typography>Bootstrap</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faMaxcdn} size="3x" color="#007FFF" />
-            <Typography>Material UI</Typography>
-          </Grid>
-
-          <Grid item xs={4} md={1}>
-            <FontAwesomeIcon icon={faFontAwesome} size="3x" color="#007FFF" />
-            <Typography>Font awesome</Typography>
-          </Grid>
+          {language.map((e) => (
+            <Grid
+              item
+              xs={4}
+              md={3}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <FontAwesomeIcon icon={e.icon} size="3x" color={e.color} />
+              <Typography>{e.language}</Typography>
+            </Grid>
+          ))}
         </Grid>
       </Container>
 

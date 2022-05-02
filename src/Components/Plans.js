@@ -2,12 +2,6 @@ import React from "react";
 import { Container, Grid, Typography, Button, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faBookReader,
-  faQuestionCircle,
-  faWindowClose,
-} from "@fortawesome/free-solid-svg-icons";
-
 import { Link } from "react-router-dom";
 
 import dataPlans from "../data/dataPlans";
@@ -33,7 +27,7 @@ const Plans = () => {
         <Typography variant="h3" sx={{ marginBottom: "1rem" }}>
           What can I do for you{" "}
           <FontAwesomeIcon
-            icon={faQuestionCircle}
+            icon="faQuestionCircle"
             style={{ fontSize: "2.5rem" }}
           />
         </Typography>
@@ -117,13 +111,13 @@ const Plans = () => {
                 <FontAwesomeIcon
                   className="link-color"
                   style={{ margin: "1rem" }}
-                  icon={faWindowClose}
+                  icon="faWindowClose"
                   size="2x"
                 />
                 <FontAwesomeIcon
                   className="link-color"
                   style={{ margin: "1rem" }}
-                  icon={faBookReader}
+                  icon="faBookReader"
                   size="2x"
                 />
               </Box>
