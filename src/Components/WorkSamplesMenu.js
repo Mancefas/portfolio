@@ -56,10 +56,11 @@ const WorkSamplesMenu = () => {
           {" "}
           <MenuItem onClick={handleClose}>HTML</MenuItem>{" "}
         </NavLink>
+        {/* No more wordpress sites
         <NavLink to="/wordpress-websites" style={{ textDecoration: "none" }}>
           {" "}
           <MenuItem onClick={handleClose}>Wordpress</MenuItem>{" "}
-        </NavLink>
+        </NavLink> */}
       </Menu>
     </Box>
   );

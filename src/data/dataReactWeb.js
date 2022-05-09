@@ -16,6 +16,19 @@ const dataReactWeb = [
   },
   {
     id: 2,
+    title: "minant.lt",
+    img: "/img/minant.lt.png",
+    imgBigger: "/img/minant-blog.jpg",
+    shortDescription: "Next.js website for blogging.",
+    stack: ["Next.js", "Material UI", "Font awesome"],
+    longerTitle: "Website to display blog posts about cycling. ",
+    fullDescription:
+      "Website is made with Next.js. Blog website that uses Markdown language to write new posts. The website is written in Lithuanian language. ",
+    linkToWebsite: "https://minant.lt/",
+    linkToCode: "https://github.com/Mancefas/minant.lt-next.js",
+  },
+  {
+    id: 3,
     title: "baltic-covid-news",
     img: "/img/balticNews.png",
     imgBigger: "/img/balticCovidNews.png",
@@ -30,7 +43,7 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/covid-news",
   },
   {
-    id: 3,
+    id: 4,
     title: "website-using-api",
     img: "",
     imgBigger: "/img/qualTask.png",
@@ -44,7 +57,7 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/qualification-task",
   },
   {
-    id: 4,
+    id: 5,
     title: "coffee-place-website",
     img: "/img/coffeeLogo.png",
     imgBigger: "/img/coffeePlace.png",
