@@ -41,7 +41,12 @@ const WebsiteFullWriteUp = () => {
       {website && (
         <Grid
           container
-          sx={{ justifyContent: "space-evenly", border: " solid 2px" }}
+          sx={{
+            justifyContent: "space-evenly",
+            border: " solid 2px",
+            margin: "auto",
+            width: "70%",
+          }}
         >
           {website.stack.map((stack, index) => (
             <Grid
