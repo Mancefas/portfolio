@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Grid, Box, Switch, MenuItem } from "@mui/material";
+import { Grid, Box, Switch } from "@mui/material";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -49,6 +49,11 @@ const Header = (props) => {
             </h2>
           </NavLink>
         </Grid>
+
+        <Grid item xs={12} md={4}>
+          <WorkSamplesMenu />
+        </Grid>
+
         <Grid
           item
           xs={12}
@@ -63,8 +68,10 @@ const Header = (props) => {
             <Box
               sx={{
                 display: "flex",
+                flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: "0.5rem",
               }}
             >
               {" "}
@@ -76,6 +83,7 @@ const Header = (props) => {
                 color="success"
               />{" "}
               <LightModeIcon className="link-color" />
+              <ContactMenuItem />
             </Box>
           </Box>
         </Grid>
@@ -85,17 +93,21 @@ const Header = (props) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: "0.5rem",
+            gap: "1rem",
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <MenuItem>
-            <NavLink to={"/"} style={{ textDecoration: "none" }}>
-              HOME
+          {/* <MenuItem>
+            <NavLink
+              to={"/"}
+              style={{ textDecoration: "none", display: "flex" }}
+            >
+              <HomeWorkIcon />
+              <Typography variant="paragraph" center>
+                HOME
+              </Typography>
             </NavLink>
-          </MenuItem>
-          <WorkSamplesMenu />
-          <ContactMenuItem />
+          </MenuItem> */}
         </Box>
       </Grid>
     </header>

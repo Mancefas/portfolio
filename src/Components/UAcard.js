@@ -12,7 +12,6 @@ export const UAcard = () => {
           width: "fit-content",
           minHeight: "5vh",
           height: "fit-content",
-          height: "fit-content",
           marginTop: "1.5rem",
           borderRadius: "7px",
           display: "flex",
