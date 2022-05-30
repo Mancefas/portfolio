@@ -8,7 +8,6 @@
 }
 
 .text {
-  font-size: 2rem;
   font-weight: 700;
   color: rgba(255, 215, 0, 0.8);
   margin: 0;
@@ -17,7 +16,6 @@
 }
 
 .text2 {
-  font-size: 2rem;
   font-weight: 700;
   color: rgba(0, 87, 183, 0.8);
   margin: 0;

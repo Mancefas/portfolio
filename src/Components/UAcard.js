@@ -7,9 +7,11 @@ export const UAcard = () => {
     <>
       <Container
         className={styles.container}
-        maxWidth="sm"
         sx={{
-          minHeight: "10vh",
+          minWidth: "15vw",
+          width: "fit-content",
+          minHeight: "5vh",
+          height: "fit-content",
           height: "fit-content",
           marginTop: "1.5rem",
           borderRadius: "7px",
