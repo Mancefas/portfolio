@@ -11,7 +11,7 @@ const dataReactWeb = [
       "Website was built to show race rasults and finishing places in real-time",
     fullDescription:
       "It has a different page (admin app) to get finishing time, to add new racers and to fix data if needed.The website uses firebase real-time database, authentication",
-    linkToWebsite: "https://rezultatai.netlify.app/",
+    linkToWebsite: "https://race-time.netlify.app/",
     linkToCode: "",
   },
   {
