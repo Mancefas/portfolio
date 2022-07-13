@@ -7,6 +7,7 @@ const dataHtmlWeb = [
       "The website was built with Bootstrap. Hamburger menu, images carousel, contact form.",
     stack: ["HTML", "Bootstrap", "CSS", "JavaScript"],
     linkToWebsite: "https://pet-service.netlify.app/",
+    linkToCode: "https://github.com/Mancefas/petService",
   },
   {
     id: 2,
@@ -34,7 +35,8 @@ const dataHtmlWeb = [
     description:
       "Blog style website. With needed articles about bicycles for beginners. SEO optimized. All content is in Lithuanian language.",
     stack: ["HTML", "CSS", "JavaScript"],
-    linkToWebsite: "http://sample.devportfolio.eu/",
+    linkToWebsite: "https://dviratis-info.netlify.app/",
+    linkToCode: "https://github.com/Mancefas/dviratis.info",
   },
   {
     id: 5,
