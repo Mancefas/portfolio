@@ -14,7 +14,7 @@ const CardToShowSampleShort = (props) => {
         component="img"
         height="100"
         image={props.img ? props.img : "/img/noPicture.jpg"}
-        alt=""
+        alt={`${props.title} logo`}
         sx={{ objectFit: "contain" }}
       />
       <CardContent>
