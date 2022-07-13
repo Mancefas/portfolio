@@ -8,7 +8,7 @@ const dataReactWeb = [
     shortDescription: "Website for race results and finishing places.",
     stack: ["React", "Material UI", "Font awesome", "Firebase"],
     longerTitle:
-      "Website was built to show race rasults and finishing places in real-time",
+      "Website was built to show race results and finishing places in real-time",
     fullDescription:
       "It has a different page (admin app) to get finishing time, to add new racers and to fix data if needed.The website uses firebase real-time database, authentication",
     linkToWebsite: "https://race-time.netlify.app/",
