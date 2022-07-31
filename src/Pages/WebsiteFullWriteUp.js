@@ -43,9 +43,12 @@ const WebsiteFullWriteUp = () => {
           container
           sx={{
             justifyContent: "space-evenly",
-            border: " solid 2px",
+            border: " solid 1.5px",
+            borderRadius: "7px",
             margin: "auto",
-            width: "70%",
+            minWidth: "50%",
+            width: "fit-content",
+            padding: "0.5rem",
           }}
         >
           {website.stack.map((stack, index) => (
@@ -112,7 +115,7 @@ const WebsiteFullWriteUp = () => {
             href={website.linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", fontSize: "1.2rem" }}
           >
             Link to website
           </a>
@@ -122,7 +125,7 @@ const WebsiteFullWriteUp = () => {
             href={website.linkToCode}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", fontSize: "1.2rem" }}
           >
             Link to code
           </a>
