@@ -7,7 +7,7 @@ const dataPlans = [
       "faCss3Alt",
       "faBootstrap",
     ],
-    iconsText: ["HTML", "CSS", "Bootstrap"],
+    iconsText: ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
     btnLink: "/html-websites",
   },
   {
@@ -18,7 +18,7 @@ const dataPlans = [
       "faCss3Alt",
       "faBootstrap",
     ],
-    iconsText: ["REACT.js", "CSS", "Material UI"],
+    iconsText: ["REACT.js", "Next.js", "Material UI", "Mantine UI"],
     btnLink: `/react-websites`,
   },
 ];

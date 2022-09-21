@@ -17,6 +17,7 @@ const language = [
   { icon: "fa-brands fa-react", language: "React.js", color: "#61DAFB" },
   { icon: "fa-solid fa-n", language: "Next.js", color: "#3F3F3F" },
   { icon: "fa-solid fa-m", language: "Material UI", color: "#007FFF" },
+  { icon: "fa-solid fa-m", language: "Mantine UI", color: "#339AF0" },
   {
     icon: "fa-solid fa-font-awesome",
     language: "Font Awesome",
