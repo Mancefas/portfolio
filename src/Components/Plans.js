@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 import dataPlans from "../data/dataPlans";
-import Contact from "./Contact";
 
 const Plans = () => {
   return (
@@ -126,7 +125,6 @@ const Plans = () => {
           </Grid>
         </Grid>
       </Container>
-      <Contact />
     </>
   );
 };

@@ -5,7 +5,6 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import WorkSamplesMenu from "./WorkSamplesMenu";
-import ContactMenuItem from "./ContactMenuItem";
 
 const Header = (props) => {
   return (
@@ -83,7 +82,6 @@ const Header = (props) => {
                 color="success"
               />{" "}
               <LightModeIcon className="link-color" />
-              <ContactMenuItem />
             </Box>
           </Box>
         </Grid>
