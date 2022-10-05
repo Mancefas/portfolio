@@ -29,6 +29,19 @@ const dataReactWeb = [
   },
   {
     id: 3,
+    title: "nordcarrier.lt",
+    img: "/img/ncNext.png",
+    imgBigger: "/img/ncNext1.png",
+    anotherBiggerImg: "/img/ncNext2.png",
+    shortDescription: "",
+    stack: ["Next.js", "Mantine UI"],
+    longerTitle: "Nordcarrier - forwarding company website",
+    fullDescription:
+      "Website for forwarding company with Next.js to be faster. There is ENG and LTU languages, all the text is in different file for easier maintenance. It has light and dark theme as well. ",
+    linkToWebsite: "https://www.nordcarrier.lt/",
+  },
+  {
+    id: 4,
     title: "baltic-covid-news",
     img: "/img/balticNews.png",
     imgBigger: "/img/balticCovidNews.png",
@@ -43,7 +56,7 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/covid-news",
   },
   {
-    id: 4,
+    id: 5,
     title: "website-using-api",
     img: "",
     imgBigger: "/img/qualTask.png",
@@ -57,7 +70,7 @@ const dataReactWeb = [
     linkToCode: "https://github.com/Mancefas/qualification-task",
   },
   {
-    id: 5,
+    id: 6,
     title: "coffee-place-website",
     img: "/img/coffeeLogo.png",
     imgBigger: "/img/coffeePlace.png",

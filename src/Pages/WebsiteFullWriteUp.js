@@ -131,6 +131,14 @@ const WebsiteFullWriteUp = () => {
           </a>
         )}
       </Box>
+
+      <Box sx={{ marginBottom: "1rem" }}>
+        <Typography variant="h5">{website.longerTitle}</Typography>
+        <Typography variant="subtitle1" sx={{ width: "75%", margin: "auto" }}>
+          {website.fullDescription}
+        </Typography>
+      </Box>
+
       {website.imgBigger && (
         <img
           height="300"
@@ -142,8 +150,6 @@ const WebsiteFullWriteUp = () => {
         />
       )}
 
-      <Typography variant="h5">{website.longerTitle}</Typography>
-      <Typography variant="subtitle1">{website.fullDescription}</Typography>
       {website.anotherBiggerImg && (
         <img
           height="300"
