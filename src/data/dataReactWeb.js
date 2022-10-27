@@ -24,7 +24,7 @@ const dataReactWeb = [
     longerTitle: "Website to display blog posts about cycling. ",
     fullDescription:
       "Website is made with Next.js. Blog website that uses Markdown language to write new posts. The website is written in Lithuanian language. ",
-    linkToWebsite: "https://minant.lt/",
+    linkToWebsite: "https://minant-lt.netlify.app",
     linkToCode: "https://github.com/Mancefas/minant.lt-next.js-blog",
   },
   {
