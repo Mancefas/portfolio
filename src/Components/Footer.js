@@ -1,21 +1,24 @@
-import React from "react";
-import { Typography, Grid, Avatar, Link } from "@mui/material";
-import CopyrightIcon from "@mui/icons-material/Copyright";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import React from 'react';
 
-const Footer = () => {
+import { Typography, Grid, Avatar, Link } from '@mui/material';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+import config from '../config.json';
+
+export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <Grid
       container
       sx={{
-        width: "100%",
-        height: "fit-content",
-        minHeight: "10vh",
-        margin: "auto",
-        borderRadius: "9px",
-        borderColor: "#fff",
+        width: '100%',
+        height: 'fit-content',
+        minHeight: '10vh',
+        margin: 'auto',
+        borderRadius: '9px',
+        borderColor: '#fff',
       }}
       borderTop={1}
     >
@@ -24,14 +27,14 @@ const Footer = () => {
         xs={12}
         md={6}
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <Link
-          href="https://github.com/Mancefas"
+          href={config.GITHUB_LINK}
           target="_blank"
           underline="none"
           rel="noreferrer"
@@ -41,13 +44,13 @@ const Footer = () => {
         </Link>
 
         <Link
-          href="https://www.upwork.com/freelancers/~01d7e2eaf46aca380b?viewMode=1&s=1110580755057594368"
+          href={config.UPWORK_LINK}
           target="_blank"
           underline="none"
           rel="noreferrer"
           aria-label="upwork link"
         >
-          <Avatar sx={{ bgcolor: "green" }}>Up</Avatar>
+          <Avatar sx={{ bgcolor: 'green' }}>Up</Avatar>
         </Link>
       </Grid>
 
@@ -56,11 +59,11 @@ const Footer = () => {
         xs={12}
         md={6}
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "0.3rem",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '0.3rem',
         }}
       >
         <CopyrightIcon />
@@ -70,5 +73,3 @@ const Footer = () => {
     </Grid>
   );
 };
-
-export default Footer;

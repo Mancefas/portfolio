@@ -1,28 +1,27 @@
-import React from "react";
-import { Container } from "@mui/material";
+import React from 'react';
 
-const ContainerBox = (props) => {
+import { Container } from '@mui/material';
+
+export const ContainerBox = ({ children }) => {
   return (
     <Container
       maxWidth="xl"
       className="container-background"
       sx={{
-        padding: "1rem",
-        marginTop: "3vh",
-        height: "fit-content",
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        minHeight: "80vh",
-        width: "85vw",
-        borderRadius: "9px",
-        marginBottom: "3vh",
+        padding: '1rem',
+        marginTop: '3vh',
+        height: 'fit-content',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        minHeight: '80vh',
+        width: '85vw',
+        borderRadius: '9px',
+        marginBottom: '3vh',
       }}
     >
-      {props.children}
+      {children}
     </Container>
   );
 };
-
-export default ContainerBox;

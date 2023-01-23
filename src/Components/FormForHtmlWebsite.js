@@ -1,42 +1,43 @@
-import React, { useState, useEffect } from "react";
-import { Container, TextField, Button, Alert } from "@mui/material";
+import React, { useState, useEffect } from 'react';
 
-import config from "../config.json";
+import { Container, TextField, Button, Alert } from '@mui/material';
 
-const FormForHtmlWebsite = () => {
+import config from '../config.json';
+
+export const FormForHtmlWebsite = () => {
   const [id, setId] = useState();
   const [title, setTitle] = useState();
-  const [imgUrl, setImgUrl] = useState("/img/{picture name}.png");
+  const [imgUrl, setImgUrl] = useState('/img/{picture name}.png');
   const [description, setDescription] = useState();
-  const [stackUsed, setStackUsed] = useState("HTML CSS JS");
+  const [stackUsed, setStackUsed] = useState('HTML CSS JS');
   const [linkToWebsite, setLinkToWebsite] = useState();
   const [objectToSend, setObjectTosend] = useState();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
 
-  const idChangeHandler = (e) => {
+  const idChangeHandler = e => {
     setId(e.target.value);
   };
-  const titleChangeHandler = (e) => {
+  const titleChangeHandler = e => {
     setTitle(e.target.value);
   };
-  const imgUrlChangeHandler = (e) => {
+  const imgUrlChangeHandler = e => {
     setImgUrl(e.target.value);
   };
-  const descriptionChangeHandler = (e) => {
+  const descriptionChangeHandler = e => {
     setDescription(e.target.value);
   };
-  const stackUsedChangeHandler = (e) => {
+  const stackUsedChangeHandler = e => {
     setStackUsed(e.target.value);
   };
-  const linkChangeHandler = (e) => {
+  const linkChangeHandler = e => {
     setLinkToWebsite(e.target.value);
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
-    const stackUsedToArray = stackUsed.split(" ");
+    const stackUsedToArray = stackUsed.split(' ');
 
     setObjectTosend({
       id: id,
@@ -47,12 +48,12 @@ const FormForHtmlWebsite = () => {
       linkToWebsite: linkToWebsite,
     });
 
-    setId("");
-    setTitle("");
-    setImgUrl("/img/{picture name}.png");
-    setDescription("");
-    setStackUsed("HTML CSS JS");
-    setLinkToWebsite("");
+    setId('');
+    setTitle('');
+    setImgUrl('/img/{picture name}.png');
+    setDescription('');
+    setStackUsed('HTML CSS JS');
+    setLinkToWebsite('');
   };
 
   useEffect(() => {
@@ -62,14 +63,14 @@ const FormForHtmlWebsite = () => {
     async function sendToDB() {
       try {
         const response = await fetch(config.API_URL_HTML, {
-          method: "post",
+          method: 'post',
           body: JSON.stringify(objectToSend),
-          headers: { "Content-Type": "application/json" },
+          headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
           setSuccess(true);
         } else {
-          console.log("not OK");
+          console.log('not OK');
         }
       } catch (error) {
         setErrorMessage(error.message);
@@ -80,13 +81,13 @@ const FormForHtmlWebsite = () => {
   }, [objectToSend]);
 
   return (
-    <Container sx={{ width: "40vw", marginTop: "10vh" }}>
+    <Container sx={{ width: '40vw', marginTop: '10vh' }}>
       {success && <Alert severity="success">Sample sent successfully!</Alert>}
       {error && (
         <Alert severity="error">This is an error alert — {errorMessage}</Alert>
       )}
       <form onSubmit={submitHandler}>
-        <Container sx={{ display: "flex", flexDirection: "column" }}>
+        <Container sx={{ display: 'flex', flexDirection: 'column' }}>
           <TextField
             id="id"
             label="ID"
@@ -136,5 +137,3 @@ const FormForHtmlWebsite = () => {
     </Container>
   );
 };
-
-export default FormForHtmlWebsite;

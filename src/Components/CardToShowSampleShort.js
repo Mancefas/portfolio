@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react';
 
-import { Card, CardMedia, CardContent, Typography } from "@mui/material";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
+import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
 
-const CardToShowSampleShort = (props) => {
+export const CardToShowSampleShort = ({ title, img, description }) => {
   return (
     <Card
-      className={"text-primary"}
-      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c", padding: "1rem" }}
+      className={'text-primary'}
+      sx={{ maxWidth: 345, backgroundColor: '#ffffff9c', padding: '1rem' }}
     >
-      <Typography variant="h5">{props.title.replaceAll("-", " ")}</Typography>
+      <Typography variant="h5">{title.replaceAll('-', ' ')}</Typography>
       <CardMedia
         component="img"
         height="100"
-        image={props.img ? props.img : "/img/noPicture.jpg"}
-        alt={`${props.title} logo`}
-        sx={{ objectFit: "contain" }}
+        image={img ? img : '/img/noPicture.jpg'}
+        alt={`${title} logo`}
+        sx={{ objectFit: 'contain' }}
       />
       <CardContent>
         <Typography
-          className={"text-primary"}
+          className={'text-primary'}
           variant="body2"
           color="text.secondary"
         >
-          {props.description}
+          {description}
         </Typography>
         <Typography variant="paragraph">
           More info <TouchAppIcon color="success" />
@@ -32,5 +32,3 @@ const CardToShowSampleShort = (props) => {
     </Card>
   );
 };
-
-export default CardToShowSampleShort;

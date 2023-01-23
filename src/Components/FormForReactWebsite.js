@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Container, TextField, Button, Alert } from "@mui/material";
+import React, { useState, useRef, useEffect } from 'react';
 
-import config from "../config.json";
+import { Container, TextField, Button, Alert } from '@mui/material';
 
-const FormForReactWebsite = () => {
+import config from '../config.json';
+
+export const FormForReactWebsite = () => {
   const [newReactWebsite, setNewReactWebsite] = useState();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -20,9 +21,9 @@ const FormForReactWebsite = () => {
   const linkToWebsiteRef = useRef();
   const linkToCodeRef = useRef();
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
-    const stackUsed = stackRef.current.value.split(" ");
+    const stackUsed = stackRef.current.value.split(' ');
 
     setNewReactWebsite({
       id: idRef.current.value,
@@ -38,16 +39,16 @@ const FormForReactWebsite = () => {
     });
 
     //not reactish value change...
-    idRef.current.value = "";
-    titleRef.current.value = "";
-    imgRef.current.value = "/img/{imgName}.png";
-    imgBiggerReg.current.value = "/img/{imgName}.png";
-    shortDescriptionRef.current.value = "";
-    stackRef.current.value = "";
-    longerTitleRef.current.value = "";
-    fullDescriptionRef.current.value = "";
-    linkToWebsiteRef.current.value = "";
-    linkToCodeRef.current.value = "";
+    idRef.current.value = '';
+    titleRef.current.value = '';
+    imgRef.current.value = '/img/{imgName}.png';
+    imgBiggerReg.current.value = '/img/{imgName}.png';
+    shortDescriptionRef.current.value = '';
+    stackRef.current.value = '';
+    longerTitleRef.current.value = '';
+    fullDescriptionRef.current.value = '';
+    linkToWebsiteRef.current.value = '';
+    linkToCodeRef.current.value = '';
   };
 
   useEffect(() => {
@@ -57,9 +58,9 @@ const FormForReactWebsite = () => {
     async function sendSample() {
       try {
         const response = await fetch(config.API_URL_REACT, {
-          method: "post",
+          method: 'post',
           body: JSON.stringify(newReactWebsite),
-          headers: { "Content-Type": "application/json" },
+          headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
           setSuccess(true);
@@ -75,10 +76,10 @@ const FormForReactWebsite = () => {
   return (
     <Container
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        width: "40vw",
-        marginTop: "10vh",
+        display: 'flex',
+        flexDirection: 'column',
+        width: '40vw',
+        marginTop: '10vh',
       }}
     >
       {success && <Alert severity="success">Sample sent successfully!</Alert>}
@@ -86,7 +87,7 @@ const FormForReactWebsite = () => {
         <Alert severity="error">This is an error alert — {errorMessage}</Alert>
       )}
       <form
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{ display: 'flex', flexDirection: 'column' }}
         onSubmit={submitHandler}
       >
         <TextField
@@ -157,5 +158,3 @@ const FormForReactWebsite = () => {
     </Container>
   );
 };
-
-export default FormForReactWebsite;

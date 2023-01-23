@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+
 import {
   Box,
   Drawer,
@@ -11,12 +12,13 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-} from "@mui/material/";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faReact } from "@fortawesome/free-brands-svg-icons";
-import FormForReactWebsite from "../Components/FormForReactWebsite";
-import FormForHtmlWebsite from "../Components/FormForHtmlWebsite";
-import LoginWindow from "../Components/LoginWindow";
+} from '@mui/material/';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faReact } from '@fortawesome/free-brands-svg-icons';
+
+import { FormForReactWebsite } from '../Components/FormForReactWebsite';
+import { FormForHtmlWebsite } from '../Components/FormForHtmlWebsite';
+import { LoginWindow } from '../Components/LoginWindow';
 
 const drawerWidth = 170;
 
@@ -45,7 +47,7 @@ export default function NewSample(props) {
     <>
       {!loggedInn && <LoginWindow loginHandler={loginHandler} />}
       {loggedInn && (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: 'flex' }}>
           <CssBaseline />
           <AppBar
             position="fixed"
@@ -64,9 +66,9 @@ export default function NewSample(props) {
             sx={{
               width: drawerWidth,
               flexShrink: 0,
-              "& .MuiDrawer-paper": {
+              '& .MuiDrawer-paper': {
                 width: drawerWidth,
-                boxSizing: "border-box",
+                boxSizing: 'border-box',
               },
             }}
             variant="permanent"
@@ -92,7 +94,7 @@ export default function NewSample(props) {
           </Drawer>
           <Box
             component="main"
-            sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
+            sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
           >
             {showReactFrom && <FormForReactWebsite />}
             {showHtmlFrom && <FormForHtmlWebsite />}

@@ -1,12 +1,9 @@
-import React, { Suspense, lazy, useState } from "react";
-import "./App.css";
+import React, { Suspense, lazy, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import { Routes, Route } from "react-router-dom";
-
-import { Box, CircularProgress } from "@mui/material";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { Box, CircularProgress } from '@mui/material';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
   faM,
   faFontAwesome,
@@ -14,21 +11,22 @@ import {
   faBookReader,
   faQuestionCircle,
   faWindowClose,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import CookieConsent from "react-cookie-consent";
+import CookieConsent from 'react-cookie-consent';
 
-import Landing from "./Pages/Landing";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import NewSample from "./Pages/NewSample";
-import CurvedShape from "./Components/CurvedShape";
+import { Landing } from './Pages/Landing';
+import { Header } from './Components/Header';
+import { Footer } from './Components/Footer';
+import NewSample from './Pages/NewSample';
+import { CurvedShape } from './Components/CurvedShape';
 
-const ReactWebsites = lazy(() => import("./Pages/ReactWebsites"));
-const HtmlWebsites = lazy(() => import("./Pages/HtmlWebsites"));
-const WordPressWebsites = lazy(() => import("./Pages/WordPressWebsites"));
-const NoPage = lazy(() => import("./Pages/NoPage"));
-const WebsiteFullWriteUp = lazy(() => import("./Pages/WebsiteFullWriteUp"));
+import './App.css';
+
+const ReactWebsites = lazy(() => import('./Pages/ReactWebsites'));
+const HtmlWebsites = lazy(() => import('./Pages/HtmlWebsites'));
+const NoPage = lazy(() => import('./Pages/NoPage'));
+const WebsiteFullWriteUp = lazy(() => import('./Pages/WebsiteFullWriteUp'));
 
 function App() {
   library.add(
@@ -53,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className={darkTheme ? "dark" : ""}>
+    <div className={darkTheme ? 'dark' : ''}>
       <CurvedShape />
       {!adminPage && (
         <Header themeColorHandler={themeColorHandler} darkTheme={darkTheme} />
@@ -62,14 +60,14 @@ function App() {
         fallback={
           <Box
             sx={{
-              height: "90vh",
-              width: "auto",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              height: '90vh',
+              width: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
-            <CircularProgress color="primary" />{" "}
+            <CircularProgress color="primary" />{' '}
           </Box>
         }
       >
@@ -81,7 +79,6 @@ function App() {
             element={<WebsiteFullWriteUp />}
           />
           <Route path="/html-websites" element={<HtmlWebsites />} />
-          <Route path="/wordpress-websites" element={<WordPressWebsites />} />
           <Route
             path="/admin"
             element={<NewSample adminPageShowHandler={adminPageShowHandler} />}
@@ -92,7 +89,7 @@ function App() {
       {!adminPage && <Footer />}
       <CookieConsent>
         This website uses cookies to enhance the user experience. More about it
-        -{" "}
+        -{' '}
         <a
           href="https://policies.google.com/technologies/cookies"
           target="_blank"

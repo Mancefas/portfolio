@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const CurvedShape = () => {
+export const CurvedShape = () => {
   return (
     <>
       <div className="custom-shape-divider-top-1641752419">
@@ -29,5 +29,3 @@ const CurvedShape = () => {
     </>
   );
 };
-
-export default CurvedShape;

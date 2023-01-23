@@ -1,37 +1,38 @@
-import { useParams, Link } from "react-router-dom";
-import React from "react";
-import { Typography, Box, Grid } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
-import CodeOffIcon from "@mui/icons-material/CodeOff";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import CancelIcon from "@mui/icons-material/Cancel";
-import dataReactWeb from "../data/dataReactWeb";
-import ContainerBox from "../Components/ContainerBox";
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 
-import NoPage from "./NoPage";
+import { Typography, Box, Grid } from '@mui/material';
+import CodeIcon from '@mui/icons-material/Code';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
+import CancelIcon from '@mui/icons-material/Cancel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHtml5, faCss3, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+import dataReactWeb from '../data/dataReactWeb';
+import { ContainerBox } from '../Components/ContainerBox';
+import NoPage from './NoPage';
 
 const WebsiteFullWriteUp = () => {
   let params = useParams();
 
-  const website = dataReactWeb.find((el) => el.title === params.websiteName);
+  const website = dataReactWeb.find(el => el.title === params.websiteName);
   if (!website) {
     return <NoPage />;
   }
 
   return (
     <ContainerBox>
-      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-        <Link to={"/react-websites"}>
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Link to={'/react-websites'}>
           <CancelIcon />
         </Link>
       </Box>
       <Typography variant="h3">
-        {params.websiteName.replaceAll("-", " ")}
+        {params.websiteName.replaceAll('-', ' ')}
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "center", margin: "0.5rem" }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '0.5rem' }}>
         <CodeIcon color="primary" size="small" />
         <Typography variant="p" color="primary">
           Languages used :
@@ -42,13 +43,13 @@ const WebsiteFullWriteUp = () => {
         <Grid
           container
           sx={{
-            justifyContent: "space-evenly",
-            border: " solid 1.5px",
-            borderRadius: "7px",
-            margin: "auto",
-            minWidth: "50%",
-            width: "fit-content",
-            padding: "0.5rem",
+            justifyContent: 'space-evenly',
+            border: ' solid 1.5px',
+            borderRadius: '7px',
+            margin: 'auto',
+            minWidth: '50%',
+            width: 'fit-content',
+            padding: '0.5rem',
           }}
         >
           {website.stack.map((stack, index) => (
@@ -58,27 +59,27 @@ const WebsiteFullWriteUp = () => {
               xs={4}
               md={1}
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               <Typography
                 key={index}
                 variant="p"
-                sx={{ textAlign: "center", marginRight: "0.3rem" }}
+                sx={{ textAlign: 'center', marginRight: '0.3rem' }}
               >
                 {stack}
               </Typography>
               <FontAwesomeIcon
                 icon={
-                  stack === "HTML"
+                  stack === 'HTML'
                     ? faHtml5
-                    : stack === "CSS"
+                    : stack === 'CSS'
                     ? faCss3
-                    : stack === "React"
+                    : stack === 'React'
                     ? faReact
-                    : ""
+                    : ''
                 }
                 size="2x"
                 color="primary"
@@ -90,10 +91,10 @@ const WebsiteFullWriteUp = () => {
             xs={4}
             md={1}
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "0.3rem",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.3rem',
             }}
           >
             <Typography>Coffee</Typography>
@@ -103,11 +104,11 @@ const WebsiteFullWriteUp = () => {
       )}
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          gap: "1rem",
-          margin: "1rem",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          gap: '1rem',
+          margin: '1rem',
         }}
       >
         {website && website.linkToWebsite && (
@@ -115,7 +116,7 @@ const WebsiteFullWriteUp = () => {
             href={website.linkToWebsite}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
+            style={{ textDecoration: 'none', fontSize: '1.2rem' }}
           >
             Link to website
           </a>
@@ -125,16 +126,16 @@ const WebsiteFullWriteUp = () => {
             href={website.linkToCode}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", fontSize: "1.2rem" }}
+            style={{ textDecoration: 'none', fontSize: '1.2rem' }}
           >
             Link to code
           </a>
         )}
       </Box>
 
-      <Box sx={{ marginBottom: "1rem" }}>
+      <Box sx={{ marginBottom: '1rem' }}>
         <Typography variant="h5">{website.longerTitle}</Typography>
-        <Typography variant="subtitle1" sx={{ width: "75%", margin: "auto" }}>
+        <Typography variant="subtitle1" sx={{ width: '75%', margin: 'auto' }}>
           {website.fullDescription}
         </Typography>
       </Box>
@@ -146,7 +147,7 @@ const WebsiteFullWriteUp = () => {
           src={website.imgBigger}
           alt=""
           loading="lazy"
-          style={{ objectFit: "contain", marginBottom: "0.5rem" }}
+          style={{ objectFit: 'contain', marginBottom: '0.5rem' }}
         />
       )}
 
@@ -157,7 +158,7 @@ const WebsiteFullWriteUp = () => {
           src={website.anotherBiggerImg}
           alt=""
           loading="lazy"
-          style={{ objectFit: "contain", marginBottom: "0.5rem" }}
+          style={{ objectFit: 'contain', marginBottom: '0.5rem' }}
         />
       )}
     </ContainerBox>

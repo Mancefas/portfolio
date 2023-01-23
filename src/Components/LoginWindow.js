@@ -1,22 +1,25 @@
-import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import DoNotTouchIcon from "@mui/icons-material/DoNotTouch";
+import React from 'react';
 
-const LoginWindow = (props) => {
-  const handleSubmit = (event) => {
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  Box,
+  Container,
+} from '@mui/material';
+import DoNotTouchIcon from '@mui/icons-material/DoNotTouch';
+
+export const LoginWindow = ({ loginHandler }) => {
+  const handleSubmit = event => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+      email: data.get('email'),
+      password: data.get('password'),
     });
-    props.loginHandler();
+    loginHandler();
   };
 
   return (
@@ -25,9 +28,9 @@ const LoginWindow = (props) => {
       <Box
         sx={{
           marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         <Avatar sx={{ m: 2, width: 75, height: 75 }}>
@@ -67,5 +70,3 @@ const LoginWindow = (props) => {
     </Container>
   );
 };
-
-export default LoginWindow;

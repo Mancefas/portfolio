@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   Card,
@@ -8,67 +8,74 @@ import {
   Typography,
   Box,
   Link,
-} from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
-import CodeOffIcon from "@mui/icons-material/CodeOff";
+} from '@mui/material';
+import CodeIcon from '@mui/icons-material/Code';
+import CodeOffIcon from '@mui/icons-material/CodeOff';
 
-const CardToShowSample = (props) => {
+export const CardToShowSample = ({
+  title,
+  img,
+  description,
+  stack,
+  linkWebsite,
+  linkCode,
+}) => {
   return (
     <Card
-      className={"text-primary"}
-      sx={{ maxWidth: 345, backgroundColor: "#ffffff9c" }}
+      className={'text-primary'}
+      sx={{ maxWidth: 345, backgroundColor: '#ffffff9c' }}
     >
-      <CardHeader title={props.title} />
+      <CardHeader title={title} />
       <CardMedia
         component="img"
         height="100"
-        image={props.img ? props.img : "/img/noPicture.jpg"}
-        alt={`${props.title} logo`}
-        sx={{ objectFit: "contain" }}
+        image={img ? img : '/img/noPicture.jpg'}
+        alt={`${title} logo`}
+        sx={{ objectFit: 'contain' }}
       />
       <CardContent>
         <Typography
-          className={"text-primary"}
+          className={'text-primary'}
           variant="body2"
           color="text.secondary"
         >
-          {props.description}
+          {description}
         </Typography>
       </CardContent>
 
       <CardContent>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <CodeIcon color="primary" size="small" />
           <Typography variant="p" color="primary">
             Languages used :
           </Typography>
           <CodeOffIcon color="primary" size="small" />
         </Box>
-        {props.stack.map((stack, index) => (
-          <Typography key={index} variant="h6" sx={{ textAlign: "center" }}>
+        {stack.map((stack, index) => (
+          <Typography key={index} variant="h6" sx={{ textAlign: 'center' }}>
             {stack}
           </Typography>
         ))}
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          {props.linkWebsite && (
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          {linkWebsite && (
             <Link
               className="link-color"
               rel="noopener noreferrer"
-              href={props.linkWebsite}
+              href={linkWebsite}
               target="_blank"
               underline="hover"
             >
               Link to website
             </Link>
           )}
-          {props.linkCode && (
+          {linkCode && (
             <Link
               className="link-color"
               rel="noopener noreferrer"
-              href={props.linkCode}
+              href={linkCode}
               target="_blank"
               underline="hover"
-              sx={{ marginTop: "0.5rem" }}
+              sx={{ marginTop: '0.5rem' }}
             >
               Link to code
             </Link>
@@ -78,5 +85,3 @@ const CardToShowSample = (props) => {
     </Card>
   );
 };
-
-export default CardToShowSample;
