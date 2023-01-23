@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Container, Grid, Typography, Button, Box } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import dataPlans from '../data/dataPlans';
 
@@ -24,11 +23,7 @@ export const Plans = () => {
         className="text-primary"
       >
         <Typography variant="h3" sx={{ marginBottom: '1rem' }}>
-          What can I do for you{' '}
-          <FontAwesomeIcon
-            icon="faQuestionCircle"
-            style={{ fontSize: '2.5rem' }}
-          />
+          What can I do for you?
         </Typography>
         <Grid container gap={1} sx={{ justifyContent: 'center' }}>
           {dataPlans.map(item => (
@@ -106,20 +101,6 @@ export const Plans = () => {
               <Typography>
                 Dynamic website that reacts to user input, has its own API{' '}
               </Typography>
-              <Box>
-                <FontAwesomeIcon
-                  className="link-color"
-                  style={{ margin: '1rem' }}
-                  icon="faWindowClose"
-                  size="2x"
-                />
-                <FontAwesomeIcon
-                  className="link-color"
-                  style={{ margin: '1rem' }}
-                  icon="faBookReader"
-                  size="2x"
-                />
-              </Box>
               <Typography variant="h6">Still working on it</Typography>
             </Container>
           </Grid>

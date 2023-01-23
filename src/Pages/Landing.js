@@ -80,6 +80,7 @@ export const Landing = () => {
         >
           {languages.map(language => (
             <Grid
+              key={language.language}
               item
               xs={4}
               md={3}
