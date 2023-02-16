@@ -23,7 +23,14 @@ export const CardToShowSample = ({
   return (
     <Card
       className={'text-primary'}
-      sx={{ width: '100%', backgroundColor: '#ffffff9c' }}
+      sx={{
+        backgroundColor: '#ffffff9c',
+        margin: '0 1rem',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+      }}
     >
       <CardHeader title={title} />
       <CardMedia

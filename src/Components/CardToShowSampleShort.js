@@ -13,6 +13,7 @@ export const CardToShowSampleShort = ({ title, img, description }) => {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-around',
       }}
     >
       <Typography variant="h5" align="center">
@@ -25,22 +26,21 @@ export const CardToShowSampleShort = ({ title, img, description }) => {
         alt={`${title} logo`}
         sx={{ objectFit: 'contain' }}
       />
-      <CardContent sx={{ marginTop: 'auto' }}>
-        <Typography
-          className={'text-primary'}
-          variant="body2"
-          color="text.secondary"
-          align="center"
-        >
-          {description}
+
+      <Typography
+        className={'text-primary'}
+        variant="body2"
+        color="text.secondary"
+        align="center"
+      >
+        {description}
+      </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="paragraph" align="center">
+          More info
         </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Typography variant="paragraph" align="center">
-            More info
-          </Typography>
-          <TouchAppIcon color="success" />
-        </Box>
-      </CardContent>
+        <TouchAppIcon color="success" />
+      </Box>
     </Card>
   );
 };
