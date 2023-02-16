@@ -7,46 +7,36 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 import { CardToShowSampleShort } from '../Components/CardToShowSampleShort';
 import dataReactWeb from '../data/dataReactWeb';
-import { ContainerSimple } from '../Components/ContainerSimple';
+import { CardsContainer } from '../Components/CardsContainer';
 
 const ReactWebsites = () => {
   return (
-    <ContainerSimple>
-      <Box sx={{ display: 'flex', justifyContent: 'start', margin: '1rem' }}>
-        <Typography variant="h3">
-          React web apps{' '}
-          <FontAwesomeIcon className="link-color" icon={faReact} />
-        </Typography>
-      </Box>
+    <>
+      <Typography variant="h3" sx={{ margin: '1rem' }}>
+        React web apps <FontAwesomeIcon className="link-color" icon={faReact} />
+      </Typography>
 
-      <Grid container gap={2} sx={{ justifyContent: 'center' }}>
+      <CardsContainer>
         {dataReactWeb.map(sample => (
-          <Grid
-            key={sample.id}
-            item
-            xs={12}
-            md={3}
-            sx={{ display: 'flex', justifyContent: 'center' }}
-          >
-            <Box>
-              <Link
-                to={`/react-websites/${sample.title}`}
+          <Box>
+            <Link
+              to={`/react-websites/${sample.title}`}
+              key={sample.id}
+              style={{ textDecoration: 'none' }}
+            >
+              <CardToShowSampleShort
                 key={sample.id}
-                style={{ textDecoration: 'none' }}
-              >
-                <CardToShowSampleShort
-                  key={sample.id}
-                  title={sample.title}
-                  description={sample.shortDescription}
-                  img={sample.img}
-                />
-              </Link>
-            </Box>
-          </Grid>
+                title={sample.title}
+                description={sample.shortDescription}
+                img={sample.img}
+              />
+            </Link>
+          </Box>
         ))}
-      </Grid>
+      </CardsContainer>
+
       <Outlet />
-    </ContainerSimple>
+    </>
   );
 };
 

@@ -23,7 +23,7 @@ export const CardToShowSample = ({
   return (
     <Card
       className={'text-primary'}
-      sx={{ maxWidth: 345, backgroundColor: '#ffffff9c' }}
+      sx={{ width: '100%', backgroundColor: '#ffffff9c' }}
     >
       <CardHeader title={title} />
       <CardMedia
@@ -56,7 +56,13 @@ export const CardToShowSample = ({
             {stack}
           </Typography>
         ))}
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
           {linkWebsite && (
             <Link
               className="link-color"

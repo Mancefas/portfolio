@@ -1,47 +1,34 @@
 import React from 'react';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 import dataHtmlWeb from '../data/dataHtmlWeb';
-import { ContainerSimple } from '../Components/ContainerSimple';
+import { CardsContainer } from '../Components/CardsContainer';
 import { CardToShowSample } from '../Components/CardToShowSample';
 
 const HtmlWebsites = () => {
   return (
-    <ContainerSimple>
-      <Box sx={{ display: 'flex', justifyContent: 'start', margin: '1rem' }}>
-        <Typography variant="h3">
-          HTML websites{' '}
-          <FontAwesomeIcon icon={faHtml5} className="link-color" />
-        </Typography>
-      </Box>
+    <>
+      <Typography variant="h3" sx={{ margin: '1rem' }}>
+        HTML websites <FontAwesomeIcon icon={faHtml5} className="link-color" />
+      </Typography>
 
-      <Grid container gap={2} sx={{ justifyContent: 'center' }}>
+      <CardsContainer>
         {dataHtmlWeb.map(sample => (
-          <Grid
+          <CardToShowSample
             key={sample.id}
-            item
-            xs={12}
-            md={3}
-            sx={{ display: 'flex', justifyContent: 'center' }}
-          >
-            <Box>
-              <CardToShowSample
-                key={sample.id}
-                title={sample.title}
-                description={sample.description}
-                stack={sample.stack}
-                linkWebsite={sample.linkToWebsite}
-                linkCode={sample.linkToCode}
-                img={sample.img}
-              />
-            </Box>
-          </Grid>
+            title={sample.title}
+            description={sample.description}
+            stack={sample.stack}
+            linkWebsite={sample.linkToWebsite}
+            linkCode={sample.linkToCode}
+            img={sample.img}
+          />
         ))}
-      </Grid>
-    </ContainerSimple>
+      </CardsContainer>
+    </>
   );
 };
 export default HtmlWebsites;
