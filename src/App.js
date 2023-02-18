@@ -1,19 +1,20 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 
 import { Box, CircularProgress } from '@mui/material';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
-  faM,
   faFontAwesome,
+  faM,
   faN,
+  faT,
+  faS,
   faBookReader,
   faQuestionCircle,
   faWindowClose,
 } from '@fortawesome/free-solid-svg-icons';
-
-import CookieConsent from 'react-cookie-consent';
 
 import { Landing } from './Pages/Landing';
 import { Header } from './Components/Header';
@@ -30,10 +31,12 @@ const WebsiteFullWriteUp = lazy(() => import('./Pages/WebsiteFullWriteUp'));
 
 function App() {
   library.add(
+    faFontAwesome,
     fab,
     faM,
-    faFontAwesome,
     faN,
+    faT,
+    faS,
     faBookReader,
     faQuestionCircle,
     faWindowClose

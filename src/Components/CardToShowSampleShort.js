@@ -35,7 +35,13 @@ export const CardToShowSampleShort = ({ title, img, description }) => {
       >
         {description}
       </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          paddingBottom: '1rem',
+        }}
+      >
         <Typography variant="paragraph" align="center">
           More info
         </Typography>

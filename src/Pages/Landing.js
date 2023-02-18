@@ -8,14 +8,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Plans from '../Components/Plans';
 import { UAcard } from '../Components/UAcard';
 
+//Icons are imported globaly in app.jsx
 const languages = [
   { icon: 'fa-brands fa-html5', language: 'HTML', color: 'red' },
   { icon: 'fa-brands fa-css3-alt', language: 'CSS', color: 'blue' },
   { icon: 'fa-brands fa-js', language: 'JavaScript', color: '#F7DF1E' },
   { icon: 'fa-brands fa-sass', language: 'SASS', color: '#CE679A' },
-  { icon: 'fa-brands fa-bootstrap', language: 'Bootstrap', color: '#7410F0' },
   { icon: 'fa-brands fa-react', language: 'React.js', color: '#61DAFB' },
   { icon: 'fa-solid fa-n', language: 'Next.js', color: '#3F3F3F' },
+  { icon: 'fa-solid fa-t', language: 'Typescript', color: '#0076C6' },
+  { icon: 'fa-solid fa-s', language: 'Storybook', color: '#FF4785' },
+  { icon: 'fa-brands fa-bootstrap', language: 'Bootstrap', color: '#7410F0' },
   { icon: 'fa-solid fa-m', language: 'Material UI', color: '#007FFF' },
   { icon: 'fa-solid fa-m', language: 'Mantine UI', color: '#339AF0' },
   {

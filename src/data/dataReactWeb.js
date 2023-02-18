@@ -1,6 +1,20 @@
 const dataReactWeb = [
   {
     id: 1,
+    title: 'Y-something',
+    img: '',
+    imgBigger: '/img/y-something1.png',
+    anotherBiggerImg: '/img/y-something2.png',
+    shortDescription: 'Website for race results and finishing places.',
+    stack: ['React', 'Typescript', 'Storybook', 'SCSS', 'Firebase'],
+    longerTitle: 'Admin style web-app',
+    fullDescription:
+      'Since a lot of text is redundant and used over and over this is a web app to remember the most used text. Website to write longer text to clipboard. When you press a button - the longer text for that button is written to your clipboard and then you can use it where it is needed. For this website there is a storybook with components.',
+    linkToWebsite: 'https://sample-y.netlify.app/',
+    linkToCode: 'https://github.com/Mancefas/Y-something/tree/eng-version',
+  },
+  {
+    id: 2,
     title: 'race-results',
     img: '/img/RaceResults.png',
     imgBigger: '/img/raceResults1.png',
@@ -15,7 +29,7 @@ const dataReactWeb = [
     linkToCode: '',
   },
   {
-    id: 2,
+    id: 3,
     title: 'minant.lt',
     img: '/img/minant.lt.png',
     imgBigger: '/img/minant-blog.jpg',
@@ -28,7 +42,7 @@ const dataReactWeb = [
     linkToCode: 'https://github.com/Mancefas/minant.lt-next.js-blog',
   },
   {
-    id: 3,
+    id: 4,
     title: 'nordcarrier.lt',
     img: '/img/ncNext.png',
     imgBigger: '/img/ncNext1.png',
@@ -41,7 +55,7 @@ const dataReactWeb = [
     linkToWebsite: 'https://www.nordcarrier.lt/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'baltic-covid-news',
     img: '/img/balticNews.png',
     imgBigger: '/img/balticCovidNews.png',
@@ -56,7 +70,7 @@ const dataReactWeb = [
     linkToCode: 'https://github.com/Mancefas/covid-news',
   },
   {
-    id: 5,
+    id: 6,
     title: 'website-using-api',
     img: '',
     imgBigger: '/img/qualTask.png',
@@ -70,7 +84,7 @@ const dataReactWeb = [
     linkToCode: 'https://github.com/Mancefas/qualification-task',
   },
   {
-    id: 6,
+    id: 7,
     title: 'coffee-place-website',
     img: '/img/coffeeLogo.png',
     imgBigger: '/img/coffeePlace.png',
