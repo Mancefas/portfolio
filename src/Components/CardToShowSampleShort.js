@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
+import { Card, CardMedia, Typography, Box } from '@mui/material';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 
 export const CardToShowSampleShort = ({ title, img, description }) => {
