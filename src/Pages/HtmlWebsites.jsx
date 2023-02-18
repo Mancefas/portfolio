@@ -4,9 +4,9 @@ import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
-import dataHtmlWeb from '../data/dataHtmlWeb';
 import { CardsContainer } from '../Components/CardsContainer';
 import { CardToShowSample } from '../Components/CardToShowSample';
+import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
 const HtmlWebsites = () => {
   return (

@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { Container, Grid, Typography, Button, Box } from '@mui/material';
 
-import dataPlans from '../data/dataPlans';
+import dataPlans from '../data/dataPlans.json';
 
 export const Plans = () => {
+  
   return (
     <>
       <Container
