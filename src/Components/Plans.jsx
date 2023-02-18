@@ -26,8 +26,8 @@ export const Plans = () => {
           What can I do for you?
         </Typography>
         <Grid container gap={1} sx={{ justifyContent: 'center' }}>
-          {dataPlans.map(item => (
-            <Grid key={item.id} item xs={12} md={3}>
+          {dataPlans.map(({id, description, iconsText, btnLink }) => (
+            <Grid key={id} item xs={12} md={3}>
               <Container
                 sx={{
                   minHeight: '50vh',
@@ -46,11 +46,11 @@ export const Plans = () => {
                   variant="h5"
                   sx={{ fontFamily: 'Lora', fontWeight: '500' }}
                 >
-                  {item.id}
+                  {id}
                 </Typography>
-                <Typography>{item.description}</Typography>
+                <Typography>{description}</Typography>
                 <Box>
-                  {item.iconsText.map((text, index) => (
+                  {iconsText.map((text, index) => (
                     <Box key={index} sx={{ display: 'flex' }}>
                       <Typography
                         sx={{ fontFamily: 'Lora', fontWeight: '500' }}
@@ -61,7 +61,7 @@ export const Plans = () => {
                   ))}
                 </Box>
                 <Link
-                  to={item.btnLink}
+                  to={btnLink}
                   style={{ textDecoration: 'none' }}
                   className="link-color"
                 >

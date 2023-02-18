@@ -17,18 +17,18 @@ const ReactWebsites = () => {
       </Typography>
 
       <CardsContainer>
-        {dataReactWeb.map(sample => (
+        {dataReactWeb.map(({title, id, shortDescription, img}) => (
           <Box>
             <Link
-              to={`/react-websites/${sample.title}`}
-              key={sample.id}
+              to={`/react-websites/${title}`}
+              key={id}
               style={{ textDecoration: 'none' }}
             >
               <CardToShowSampleShort
-                key={sample.id}
-                title={sample.title}
-                description={sample.shortDescription}
-                img={sample.img}
+                key={id}
+                title={title}
+                description={shortDescription}
+                img={img}
               />
             </Link>
           </Box>
