@@ -16,17 +16,27 @@ const HtmlWebsites = () => {
       </Typography>
 
       <CardsContainer>
-        {dataHtmlWeb.map(({id, title, description, stack, linkToWebsite, linkToCode, img }) => (
-          <CardToShowSample
-            key={id}
-            title={title}
-            description={description}
-            stack={stack}
-            linkWebsite={linkToWebsite}
-            linkCode={linkToCode}
-            img={img}
-          />
-        ))}
+        {dataHtmlWeb.map(
+          ({
+            id,
+            title,
+            description,
+            stack,
+            linkToWebsite,
+            linkToCode,
+            img,
+          }) => (
+            <CardToShowSample
+              key={id}
+              title={title}
+              description={description}
+              stack={stack}
+              linkWebsite={linkToWebsite}
+              linkCode={linkToCode}
+              img={img}
+            />
+          )
+        )}
       </CardsContainer>
     </>
   );

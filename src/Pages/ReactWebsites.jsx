@@ -17,7 +17,7 @@ const ReactWebsites = () => {
       </Typography>
 
       <CardsContainer>
-        {dataReactWeb.map(({title, id, shortDescription, img}) => (
+        {dataReactWeb.map(({ title, id, shortDescription, img }) => (
           <Box>
             <Link
               to={`/react-websites/${title}`}

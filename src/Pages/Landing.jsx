@@ -81,7 +81,7 @@ export const Landing = () => {
           spacing={1}
           sx={{ justifyContent: 'space-evenly', margin: 'auto' }}
         >
-          {languages.map(({language, icon, color}) => (
+          {languages.map(({ language, icon, color }) => (
             <Grid
               key={language}
               item
@@ -94,11 +94,7 @@ export const Landing = () => {
                 alignItems: 'center',
               }}
             >
-              <FontAwesomeIcon
-                icon={icon}
-                size="3x"
-                color={color}
-              />
+              <FontAwesomeIcon icon={icon} size="3x" color={color} />
               <Typography>{language}</Typography>
             </Grid>
           ))}
