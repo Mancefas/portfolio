@@ -9,9 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-import dataReactWeb from '../data/dataReactWeb';
 import { ContainerBox } from '../Components/ContainerBox';
 import NoPage from './NoPage';
+import dataReactWeb from '../data/dataReactWeb.json';
 
 const WebsiteFullWriteUp = () => {
   let params = useParams();

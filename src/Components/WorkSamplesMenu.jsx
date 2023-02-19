@@ -3,8 +3,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Box, Badge, Typography, Button, ButtonGroup } from '@mui/material';
 
-import dataReactWeb from '../data/dataReactWeb';
-import dataHtmlWeb from '../data/dataHtmlWeb';
+import dataReactWeb from '../data/dataReactWeb.json';
+import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
 export const WorkSamplesMenu = () => {
   return (
