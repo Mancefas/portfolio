@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Container, Grid, Typography, Button, Box } from '@mui/material';
 
-import dataPlans from '../data/dataPlans';
+import dataPlans from '../data/dataPlans.json';
 
 export const Plans = () => {
   return (
@@ -26,7 +26,7 @@ export const Plans = () => {
           What can I do for you?
         </Typography>
         <Grid container gap={1} sx={{ justifyContent: 'center' }}>
-          {dataPlans.map(({id, description, iconsText, btnLink }) => (
+          {dataPlans.map(({ id, description, iconsText, btnLink }) => (
             <Grid key={id} item xs={12} md={3}>
               <Container
                 sx={{
