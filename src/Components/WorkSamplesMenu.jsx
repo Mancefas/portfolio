@@ -6,7 +6,7 @@ import { Box, Badge, Typography, Button, ButtonGroup } from '@mui/material';
 import dataReactWeb from '../data/dataReactWeb.json';
 import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
-export const WorkSamplesMenu = () => {
+export function WorkSamplesMenu() {
   return (
     <Box
       sx={{
@@ -19,7 +19,7 @@ export const WorkSamplesMenu = () => {
       <ButtonGroup variant="text" aria-label="text button group">
         <Button>
           <NavLink
-            to={`/react-websites`}
+            to="/react-websites"
             style={{ textDecoration: 'none', padding: '0.5rem' }}
             className="link-color"
           >
@@ -29,10 +29,7 @@ export const WorkSamplesMenu = () => {
           </NavLink>
         </Button>
         <Button>
-          <NavLink
-            to="/html-websites"
-            style={{ textDecoration: 'none', padding: '0.5rem' }}
-          >
+          <NavLink to="/html-websites" style={{ textDecoration: 'none', padding: '0.5rem' }}>
             {' '}
             <Badge badgeContent={dataHtmlWeb.length} color="success">
               <Typography variant="h6">Html</Typography>
@@ -42,4 +39,6 @@ export const WorkSamplesMenu = () => {
       </ButtonGroup>
     </Box>
   );
-};
+}
+
+export default WorkSamplesMenu;

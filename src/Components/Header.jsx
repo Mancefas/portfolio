@@ -8,7 +8,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { WorkSamplesMenu } from './WorkSamplesMenu';
 
-export const Header = ({ themeColorHandler }) => {
+export function Header({ handleColorTheme }) {
   return (
     <header>
       <Grid
@@ -38,15 +38,14 @@ export const Header = ({ themeColorHandler }) => {
           }}
         >
           <NavLink
-            to={'/'}
-            className={'text-primary'}
+            to="/"
+            className="text-primary"
             style={{
               textDecoration: 'none',
             }}
           >
             <h2 className="logo">
-              Mantvydas{' '}
-              <BusinessCenterIcon className="link-color" fontSize="medium" />{' '}
+              Mantvydas <BusinessCenterIcon className="link-color" fontSize="medium" />{' '}
             </h2>
           </NavLink>
         </Grid>
@@ -80,7 +79,7 @@ export const Header = ({ themeColorHandler }) => {
               <Switch
                 defaultChecked
                 label="Label"
-                onChange={themeColorHandler}
+                onChange={handleColorTheme}
                 color="success"
               />{' '}
               <LightModeIcon className="link-color" />
@@ -96,8 +95,10 @@ export const Header = ({ themeColorHandler }) => {
             gap: '1rem',
             flexDirection: { xs: 'column', md: 'row' },
           }}
-        ></Box>
+        />
       </Grid>
     </header>
   );
-};
+}
+
+export default Header;

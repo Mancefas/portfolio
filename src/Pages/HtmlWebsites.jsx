@@ -4,11 +4,11 @@ import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
-import { CardsContainer } from '../Components/CardsContainer';
-import { CardToShowSample } from '../Components/CardToShowSample';
+import { CardsContainer } from '../Components/CardContainer/CardsContainer';
+import CardToShowSample from '../Components/CardToShowSample';
 import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
-const HtmlWebsites = () => {
+function HtmlWebsites() {
   return (
     <>
       <Typography variant="h3" sx={{ margin: '1rem' }}>
@@ -16,29 +16,19 @@ const HtmlWebsites = () => {
       </Typography>
 
       <CardsContainer>
-        {dataHtmlWeb.map(
-          ({
-            id,
-            title,
-            description,
-            stack,
-            linkToWebsite,
-            linkToCode,
-            img,
-          }) => (
-            <CardToShowSample
-              key={id}
-              title={title}
-              description={description}
-              stack={stack}
-              linkWebsite={linkToWebsite}
-              linkCode={linkToCode}
-              img={img}
-            />
-          )
-        )}
+        {dataHtmlWeb.map(({ id, title, description, stack, linkToWebsite, linkToCode, img }) => (
+          <CardToShowSample
+            key={id}
+            title={title}
+            description={description}
+            stack={stack}
+            linkWebsite={linkToWebsite}
+            linkCode={linkToCode}
+            img={img}
+          />
+        ))}
       </CardsContainer>
     </>
   );
-};
+}
 export default HtmlWebsites;

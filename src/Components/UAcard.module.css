@@ -1,10 +1,6 @@
 .container {
   background: rgb(0, 87, 183);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 87, 183, 0.8) 48%,
-    rgba(255, 215, 0, 0.8) 52%
-  );
+  background: linear-gradient(180deg, rgba(0, 87, 183, 0.8) 48%, rgba(255, 215, 0, 0.8) 52%);
 }
 
 .text {

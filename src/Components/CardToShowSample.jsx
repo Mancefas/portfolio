@@ -1,28 +1,13 @@
 import React from 'react';
 
-import {
-  Card,
-  CardHeader,
-  CardMedia,
-  CardContent,
-  Typography,
-  Box,
-  Link,
-} from '@mui/material';
+import { Card, CardHeader, CardMedia, CardContent, Typography, Box, Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 
-export const CardToShowSample = ({
-  title,
-  img,
-  description,
-  stack,
-  linkWebsite,
-  linkCode,
-}) => {
+function CardToShowSample({ title, img, description, stack, linkWebsite, linkCode }) {
   return (
     <Card
-      className={'text-primary'}
+      className="text-primary"
       sx={{
         backgroundColor: '#ffffff9c',
         margin: '0 1rem',
@@ -36,16 +21,12 @@ export const CardToShowSample = ({
       <CardMedia
         component="img"
         height="100"
-        image={img ? img : '/img/noPicture.jpg'}
+        image={img || '/img/noPicture.jpg'}
         alt={`${title} logo`}
         sx={{ objectFit: 'contain' }}
       />
       <CardContent>
-        <Typography
-          className={'text-primary'}
-          variant="body2"
-          color="text.secondary"
-        >
+        <Typography className="text-primary" variant="body2" color="text.secondary">
           {description}
         </Typography>
       </CardContent>
@@ -58,9 +39,9 @@ export const CardToShowSample = ({
           </Typography>
           <CodeOffIcon color="primary" size="small" />
         </Box>
-        {stack.map((stack, index) => (
-          <Typography key={index} variant="h6" sx={{ textAlign: 'center' }}>
-            {stack}
+        {stack.map((stackItem) => (
+          <Typography key={stackItem} variant="h6" sx={{ textAlign: 'center' }}>
+            {stackItem}
           </Typography>
         ))}
         <Box
@@ -97,4 +78,6 @@ export const CardToShowSample = ({
       </CardContent>
     </Card>
   );
-};
+}
+
+export default CardToShowSample;

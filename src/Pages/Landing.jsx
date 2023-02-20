@@ -5,10 +5,10 @@ import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Plans from '../Components/Plans';
+import { Plans } from '../Components/Plans';
 import { UAcard } from '../Components/UAcard';
 
-//Icons are imported globaly in app.jsx
+// Icons are imported globaly in app.jsx
 const languages = [
   { icon: 'fa-brands fa-html5', language: 'HTML', color: 'red' },
   { icon: 'fa-brands fa-css3-alt', language: 'CSS', color: 'blue' },
@@ -28,7 +28,7 @@ const languages = [
   },
 ];
 
-export const Landing = () => {
+export function Landing() {
   return (
     <>
       <UAcard />
@@ -48,16 +48,16 @@ export const Landing = () => {
             my: '1rem',
           }}
         >
-          I am Front-end developer from EU. I can build you a fast and stable
-          website in a manageable time frame. Specializing in react.js, but like
-          to code in HTML,CSS, Bootstrap as well.
+          I am Front-end developer from EU. I can build you a fast and stable website in a
+          manageable time frame. Specializing in react.js, but like to code in HTML,CSS, Bootstrap
+          as well.
         </Typography>
         <Typography
           variant="h5"
           sx={{ fontFamily: 'Lora', fontWeight: '500', textAlign: 'center' }}
         >
-          I can build websites SEO optimized and content optimized(for speed).
-          And all websites I build are mobile-friendly (responsive).
+          I can build websites SEO optimized and content optimized(for speed). And all websites I
+          build are mobile-friendly (responsive).
         </Typography>
 
         <Box
@@ -76,11 +76,7 @@ export const Landing = () => {
           <CodeOffIcon fontSize="large" color="primary" />
         </Box>
 
-        <Grid
-          container
-          spacing={1}
-          sx={{ justifyContent: 'space-evenly', margin: 'auto' }}
-        >
+        <Grid container spacing={1} sx={{ justifyContent: 'space-evenly', margin: 'auto' }}>
           {languages.map(({ language, icon, color }) => (
             <Grid
               key={language}
@@ -104,4 +100,6 @@ export const Landing = () => {
       <Plans />
     </>
   );
-};
+}
+
+export default Landing;

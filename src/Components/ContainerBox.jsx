@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from '@mui/material';
 
-export const ContainerBox = ({ children }) => {
+export default function ContainerBox({ children }) {
   return (
     <Container
       maxWidth="xl"
@@ -24,4 +24,4 @@ export const ContainerBox = ({ children }) => {
       {children}
     </Container>
   );
-};
+}

@@ -4,10 +4,9 @@ import { Container, TextField, Button, Alert } from '@mui/material';
 
 import config from '../config.json';
 
-export const FormForReactWebsite = () => {
+export function FormForReactWebsite() {
   const [newReactWebsite, setNewReactWebsite] = useState();
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
 
   const idRef = useRef();
@@ -21,7 +20,7 @@ export const FormForReactWebsite = () => {
   const linkToWebsiteRef = useRef();
   const linkToCodeRef = useRef();
 
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
     const stackUsed = stackRef.current.value.split(' ');
 
@@ -38,7 +37,7 @@ export const FormForReactWebsite = () => {
       linkToCode: linkToCodeRef.current.value,
     });
 
-    //not reactish value change...
+    // not reactish value change...
     idRef.current.value = '';
     titleRef.current.value = '';
     imgRef.current.value = '/img/{imgName}.png';
@@ -67,7 +66,6 @@ export const FormForReactWebsite = () => {
         }
       } catch (error) {
         setErrorMessage(error.message);
-        setError(true);
       }
     }
     sendSample(newReactWebsite);
@@ -83,26 +81,10 @@ export const FormForReactWebsite = () => {
       }}
     >
       {success && <Alert severity="success">Sample sent successfully!</Alert>}
-      {error && (
-        <Alert severity="error">This is an error alert — {errorMessage}</Alert>
-      )}
-      <form
-        style={{ display: 'flex', flexDirection: 'column' }}
-        onSubmit={submitHandler}
-      >
-        <TextField
-          id="id"
-          label="ID"
-          variant="standard"
-          type="number"
-          inputRef={idRef}
-        />
-        <TextField
-          id="title"
-          label="Title"
-          variant="standard"
-          inputRef={titleRef}
-        />
+      {errorMessage && <Alert severity="error">This is an error alert —{errorMessage}</Alert>}
+      <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={submitHandler}>
+        <TextField id="id" label="ID" variant="standard" type="number" inputRef={idRef} />
+        <TextField id="title" label="Title" variant="standard" inputRef={titleRef} />
         <TextField
           id="img"
           label="Img url "
@@ -123,12 +105,7 @@ export const FormForReactWebsite = () => {
           variant="standard"
           inputRef={shortDescriptionRef}
         />
-        <TextField
-          id="stack"
-          label="Stack used"
-          variant="standard"
-          inputRef={stackRef}
-        />
+        <TextField id="stack" label="Stack used" variant="standard" inputRef={stackRef} />
         <TextField
           id="longerTitle"
           label="Longer Title"
@@ -157,4 +134,6 @@ export const FormForReactWebsite = () => {
       </form>
     </Container>
   );
-};
+}
+
+export default FormForReactWebsite;

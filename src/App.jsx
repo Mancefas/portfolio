@@ -39,13 +39,13 @@ function App() {
     faS,
     faBookReader,
     faQuestionCircle,
-    faWindowClose
+    faWindowClose,
   );
 
   const [darkTheme, setDarkTheme] = useState(false);
   const [adminPage, setAdminPage] = useState(false);
 
-  const themeColorHandler = () => {
+  const handleColorTheme = () => {
     setDarkTheme(!darkTheme);
   };
 
@@ -56,9 +56,7 @@ function App() {
   return (
     <div className={darkTheme ? 'dark' : ''}>
       <CurvedShape />
-      {!adminPage && (
-        <Header themeColorHandler={themeColorHandler} darkTheme={darkTheme} />
-      )}
+      {!adminPage && <Header handleColorTheme={handleColorTheme} darkTheme={darkTheme} />}
       <Suspense
         fallback={
           <Box
@@ -76,11 +74,8 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/react-websites" element={<ReactWebsites />}></Route>
-          <Route
-            path="/react-websites/:websiteName"
-            element={<WebsiteFullWriteUp />}
-          />
+          <Route path="/react-websites" element={<ReactWebsites />} />
+          <Route path="/react-websites/:websiteName" element={<WebsiteFullWriteUp />} />
           <Route path="/html-websites" element={<HtmlWebsites />} />
           <Route
             path="/admin"
@@ -91,8 +86,7 @@ function App() {
       </Suspense>
       {!adminPage && <Footer />}
       <CookieConsent>
-        This website uses cookies to enhance the user experience. More about it
-        -{' '}
+        This website uses cookies to enhance the user experience. More about it -{' '}
         <a
           href="https://policies.google.com/technologies/cookies"
           target="_blank"
