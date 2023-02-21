@@ -77,8 +77,8 @@ body .dark .btn-bg {
 }
 
 .shadow-for-box {
-  box-shadow: #32325d 0 50px 100px -20px, #000 0 30px 60px -30px, #0a2540 0 -2px 6px 0 inset;
-  opacity: 0.3;
+  box-shadow: #32325d5b 0 50px 100px -20px, #00000067 0 30px 60px -30px,
+    #0a254052 0 -2px 6px 0 inset;
 }
 
 .custom-shape-divider-top-1641752419 {

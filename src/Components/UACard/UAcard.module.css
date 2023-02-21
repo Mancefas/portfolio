@@ -1,6 +1,16 @@
 .container {
   background: #0057b7;
   background: linear-gradient(180deg, #0057b7 48%, #ffd700 52%);
+  min-width: 15vw;
+  width: fit-content;
+  min-height: 5vh;
+  height: fit-content;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto;
 }
 
 .text {
