@@ -6,7 +6,7 @@ import { Box, Badge, Typography, Button, ButtonGroup } from '@mui/material';
 import dataReactWeb from '../data/dataReactWeb.json';
 import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
-export function WorkSamplesMenu() {
+function WorkSamplesMenu() {
   return (
     <Box
       sx={{

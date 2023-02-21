@@ -13,7 +13,7 @@ import ContainerBox from '../Components/ContainerBox';
 import NoPage from './NoPage';
 import dataReactWeb from '../data/dataReactWeb.json';
 
-function WebsiteFullWriteUp() {
+export default function WebsiteFullWriteUp() {
   const params = useParams();
 
   const website = dataReactWeb.find((el) => el.title === params.websiteName);
@@ -24,13 +24,14 @@ function WebsiteFullWriteUp() {
   const getIconForStack = (stack) => {
     if (stack === 'HTML') {
       return faHtml5;
-    } if (stack === 'CSS') {
+    }
+    if (stack === 'CSS') {
       return faCss3;
-    } if (stack === 'React') {
+    }
+    if (stack === 'React') {
       return faReact;
-    } 
-      return '';
-    
+    }
+    return '';
   };
 
   return (
@@ -162,5 +163,3 @@ function WebsiteFullWriteUp() {
     </ContainerBox>
   );
 }
-
-export default WebsiteFullWriteUp;

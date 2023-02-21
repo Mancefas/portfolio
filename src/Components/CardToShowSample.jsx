@@ -1,10 +1,18 @@
 import React from 'react';
+import { string } from 'prop-types';
 
 import { Card, CardHeader, CardMedia, CardContent, Typography, Box, Link } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 
-function CardToShowSample({ title, img, description, stack, linkWebsite, linkCode }) {
+export default function CardToShowSample({
+  title,
+  img,
+  description,
+  stack,
+  linkWebsite,
+  linkCode,
+}) {
   return (
     <Card
       className="text-primary"
@@ -80,4 +88,11 @@ function CardToShowSample({ title, img, description, stack, linkWebsite, linkCod
   );
 }
 
-export default CardToShowSample;
+CardToShowSample.propTypes = {
+  title: string.isRequired,
+  img: string.isRequired,
+  description: string.isRequired,
+  stack: string.isRequired,
+  linkWebsite: string.isRequired,
+  linkCode: string.isRequired,
+};

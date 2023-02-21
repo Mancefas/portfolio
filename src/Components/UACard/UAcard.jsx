@@ -4,7 +4,7 @@ import { Container } from '@mui/material';
 
 import styles from './UAcard.module.css';
 
-export function UAcard() {
+export default function UAcard() {
   return (
     <Container
       className={styles.container}
@@ -30,5 +30,3 @@ export function UAcard() {
     </Container>
   );
 }
-
-export default UAcard;

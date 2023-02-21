@@ -5,8 +5,8 @@ import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Plans } from '../Components/Plans';
-import { UAcard } from '../Components/UAcard';
+import Plans from '../Components/Plans';
+import UAcard from '../Components/UACard/UAcard';
 
 // Icons are imported globaly in app.jsx
 const languages = [
@@ -28,7 +28,7 @@ const languages = [
   },
 ];
 
-export function Landing() {
+function Landing() {
   return (
     <>
       <UAcard />

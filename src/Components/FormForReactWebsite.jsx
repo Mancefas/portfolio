@@ -4,7 +4,7 @@ import { Container, TextField, Button, Alert } from '@mui/material';
 
 import config from '../config.json';
 
-export function FormForReactWebsite() {
+export default function FormForReactWebsite() {
   const [newReactWebsite, setNewReactWebsite] = useState();
   const [success, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
@@ -135,5 +135,3 @@ export function FormForReactWebsite() {
     </Container>
   );
 }
-
-export default FormForReactWebsite;

@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 import config from '../config.json';
 
-export function Footer() {
+export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
@@ -73,5 +73,3 @@ export function Footer() {
     </Grid>
   );
 }
-
-export default Footer;

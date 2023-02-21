@@ -1,9 +1,10 @@
 import React from 'react';
+import { func } from 'prop-types';
 
 import { Avatar, Button, CssBaseline, TextField, Box, Container } from '@mui/material';
 import DoNotTouchIcon from '@mui/icons-material/DoNotTouch';
 
-export function LoginWindow({ handleLogin }) {
+export default function LoginWindow({ handleLogin }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -59,4 +60,6 @@ export function LoginWindow({ handleLogin }) {
   );
 }
 
-export default LoginWindow;
+LoginWindow.propTypes = {
+  handleLogin: func.isRequired,
+};

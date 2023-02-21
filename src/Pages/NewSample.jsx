@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { func } from 'prop-types';
 
 import {
   Box,
@@ -16,9 +17,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faReact } from '@fortawesome/free-brands-svg-icons';
 
-import { FormForReactWebsite } from '../Components/FormForReactWebsite';
-import { FormForHtmlWebsite } from '../Components/FormForHtmlWebsite';
-import { LoginWindow } from '../Components/LoginWindow';
+import FormForReactWebsite from '../Components/FormForReactWebsite';
+import FormForHtmlWebsite from '../Components/FormForHtmlWebsite';
+import LoginWindow from '../Components/LoginWindow';
 
 const drawerWidth = 170;
 
@@ -101,3 +102,7 @@ export default function NewSample({ adminPageShowHandler }) {
     </>
   );
 }
+
+NewSample.propTypes = {
+  adminPageShowHandler: func.isRequired,
+};

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 import CardToShowSampleShort from '../Components/CardToShowSampleShort';
-import { CardsContainer } from '../Components/CardContainer/CardsContainer';
+import CardsContainer from '../Components/CardContainer/CardsContainer';
 import dataReactWeb from '../data/dataReactWeb.json';
 
 function ReactWebsites() {

@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
-import { CardsContainer } from '../Components/CardContainer/CardsContainer';
+import CardsContainer from '../Components/CardContainer/CardsContainer';
 import CardToShowSample from '../Components/CardToShowSample';
 import dataHtmlWeb from '../data/dataHtmlWeb.json';
 

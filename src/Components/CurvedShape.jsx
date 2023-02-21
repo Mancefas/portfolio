@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function CurvedShape() {
+export default function CurvedShape() {
   return (
     <div className="custom-shape-divider-top-1641752419">
       <svg
@@ -27,5 +27,3 @@ export function CurvedShape() {
     </div>
   );
 }
-
-export default CurvedShape;

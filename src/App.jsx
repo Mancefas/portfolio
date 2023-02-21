@@ -16,11 +16,11 @@ import {
   faWindowClose,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { Landing } from './Pages/Landing';
-import { Header } from './Components/Header';
-import { Footer } from './Components/Footer';
+import Landing from './Pages/Landing';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import NewSample from './Pages/NewSample';
-import { CurvedShape } from './Components/CurvedShape';
+import CurvedShape from './Components/CurvedShape';
 
 import './App.css';
 

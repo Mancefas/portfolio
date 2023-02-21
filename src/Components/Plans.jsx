@@ -5,7 +5,7 @@ import { Container, Grid, Typography, Button, Box } from '@mui/material';
 
 import dataPlans from '../data/dataPlans.json';
 
-export function Plans() {
+export default function Plans() {
   return (
     <Container
       sx={{
@@ -87,5 +87,3 @@ export function Plans() {
     </Container>
   );
 }
-
-export default Plans;

@@ -4,7 +4,7 @@ import { Container, TextField, Button, Alert } from '@mui/material';
 
 import config from '../config.json';
 
-export function FormForHtmlWebsite() {
+export default function FormForHtmlWebsite() {
   const [id, setId] = useState();
   const [title, setTitle] = useState();
   const [imgUrl, setImgUrl] = useState('/img/{picture name}.png');
@@ -127,5 +127,3 @@ export function FormForHtmlWebsite() {
     </Container>
   );
 }
-
-export default FormForHtmlWebsite;

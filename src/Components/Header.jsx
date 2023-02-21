@@ -1,14 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { func } from 'prop-types';
 
 import { Grid, Box, Switch } from '@mui/material';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-import { WorkSamplesMenu } from './WorkSamplesMenu';
+import WorkSamplesMenu from './WorkSamplesMenu';
 
-export function Header({ handleColorTheme }) {
+export default function Header({ handleColorTheme }) {
   return (
     <header>
       <Grid
@@ -101,4 +102,6 @@ export function Header({ handleColorTheme }) {
   );
 }
 
-export default Header;
+Header.propTypes = {
+  handleColorTheme: func.isRequired,
+};
