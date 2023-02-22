@@ -1,12 +1,13 @@
 import React from 'react';
+import { string } from 'prop-types';
 
 import { Card, CardMedia, Typography, Box } from '@mui/material';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 
-export const CardToShowSampleShort = ({ title, img, description }) => {
+export default function CardToShowSampleShort({ title, img, description }) {
   return (
     <Card
-      className={'text-primary'}
+      className="text-primary"
       sx={{
         backgroundColor: '#ffffff9c',
         margin: '0 1rem',
@@ -22,17 +23,12 @@ export const CardToShowSampleShort = ({ title, img, description }) => {
       <CardMedia
         component="img"
         height="100"
-        image={img ? img : '/img/noPicture.jpg'}
+        image={img || '/img/noPicture.jpg'}
         alt={`${title} logo`}
         sx={{ objectFit: 'contain' }}
       />
 
-      <Typography
-        className={'text-primary'}
-        variant="body2"
-        color="text.secondary"
-        align="center"
-      >
+      <Typography className="text-primary" variant="body2" color="text.secondary" align="center">
         {description}
       </Typography>
       <Box
@@ -49,4 +45,10 @@ export const CardToShowSampleShort = ({ title, img, description }) => {
       </Box>
     </Card>
   );
+}
+
+CardToShowSampleShort.propTypes = {
+  title: string.isRequired,
+  img: string.isRequired,
+  description: string.isRequired,
 };

@@ -1,17 +1,11 @@
 import React from 'react';
+import { func } from 'prop-types';
 
-import {
-  Avatar,
-  Button,
-  CssBaseline,
-  TextField,
-  Box,
-  Container,
-} from '@mui/material';
+import { Avatar, Button, CssBaseline, TextField, Box, Container } from '@mui/material';
 import DoNotTouchIcon from '@mui/icons-material/DoNotTouch';
 
-export const LoginWindow = ({ loginHandler }) => {
-  const handleSubmit = event => {
+export default function LoginWindow({ handleLogin }) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
@@ -19,7 +13,7 @@ export const LoginWindow = ({ loginHandler }) => {
       email: data.get('email'),
       password: data.get('password'),
     });
-    loginHandler();
+    handleLogin();
   };
 
   return (
@@ -57,16 +51,15 @@ export const LoginWindow = ({ loginHandler }) => {
             id="password"
             autoComplete="current-password"
           />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
+          <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
             Login
           </Button>
         </Box>
       </Box>
     </Container>
   );
+}
+
+LoginWindow.propTypes = {
+  handleLogin: func.isRequired,
 };

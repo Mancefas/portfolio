@@ -5,11 +5,11 @@ import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
-import { CardToShowSampleShort } from '../Components/CardToShowSampleShort';
-import { CardsContainer } from '../Components/CardsContainer';
+import CardToShowSampleShort from '../Components/CardToShowSampleShort';
+import CardsContainer from '../Components/CardContainer/CardsContainer';
 import dataReactWeb from '../data/dataReactWeb.json';
 
-const ReactWebsites = () => {
+function ReactWebsites() {
   return (
     <>
       <Typography variant="h3" sx={{ margin: '1rem' }}>
@@ -19,11 +19,7 @@ const ReactWebsites = () => {
       <CardsContainer>
         {dataReactWeb.map(({ title, id, shortDescription, img }) => (
           <Box>
-            <Link
-              to={`/react-websites/${title}`}
-              key={id}
-              style={{ textDecoration: 'none' }}
-            >
+            <Link to={`/react-websites/${title}`} key={id} style={{ textDecoration: 'none' }}>
               <CardToShowSampleShort
                 key={id}
                 title={title}
@@ -38,6 +34,6 @@ const ReactWebsites = () => {
       <Outlet />
     </>
   );
-};
+}
 
 export default ReactWebsites;

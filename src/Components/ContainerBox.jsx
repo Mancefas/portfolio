@@ -1,8 +1,9 @@
 import React from 'react';
+import { node } from 'prop-types';
 
 import { Container } from '@mui/material';
 
-export const ContainerBox = ({ children }) => {
+export default function ContainerBox({ children }) {
   return (
     <Container
       maxWidth="xl"
@@ -24,4 +25,8 @@ export const ContainerBox = ({ children }) => {
       {children}
     </Container>
   );
+}
+
+ContainerBox.propTypes = {
+  children: node.isRequired,
 };

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGhost } from '@fortawesome/free-solid-svg-icons';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
-const NoPage = () => {
+function NoPage() {
   return (
     <Container
       sx={{
@@ -35,5 +35,5 @@ const NoPage = () => {
       <Link to="/">Or just go to front page</Link>
     </Container>
   );
-};
+}
 export default NoPage;

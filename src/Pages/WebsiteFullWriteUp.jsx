@@ -9,28 +9,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-import { ContainerBox } from '../Components/ContainerBox';
+import ContainerBox from '../Components/ContainerBox';
 import NoPage from './NoPage';
 import dataReactWeb from '../data/dataReactWeb.json';
 
-const WebsiteFullWriteUp = () => {
-  let params = useParams();
+export default function WebsiteFullWriteUp() {
+  const params = useParams();
 
-  const website = dataReactWeb.find(el => el.title === params.websiteName);
+  const website = dataReactWeb.find((el) => el.title === params.websiteName);
   if (!website) {
     return <NoPage />;
   }
 
+  const getIconForStack = (stack) => {
+    if (stack === 'HTML') {
+      return faHtml5;
+    }
+    if (stack === 'CSS') {
+      return faCss3;
+    }
+    if (stack === 'React') {
+      return faReact;
+    }
+    return '';
+  };
+
   return (
     <ContainerBox>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <Link to={'/react-websites'}>
+        <Link to="/react-websites">
           <CancelIcon />
         </Link>
       </Box>
-      <Typography variant="h3">
-        {params.websiteName.replaceAll('-', ' ')}
-      </Typography>
+      <Typography variant="h3">{params.websiteName.replaceAll('-', ' ')}</Typography>
 
       <Box sx={{ display: 'flex', justifyContent: 'center', margin: '0.5rem' }}>
         <CodeIcon color="primary" size="small" />
@@ -52,9 +63,9 @@ const WebsiteFullWriteUp = () => {
             padding: '0.5rem',
           }}
         >
-          {website.stack.map((stack, index) => (
+          {website.stack.map((stack) => (
             <Grid
-              key={index}
+              key={stack}
               item
               xs={4}
               md={1}
@@ -65,25 +76,13 @@ const WebsiteFullWriteUp = () => {
               }}
             >
               <Typography
-                key={index}
+                key={stack}
                 variant="p"
                 sx={{ textAlign: 'center', marginRight: '0.3rem' }}
               >
                 {stack}
               </Typography>
-              <FontAwesomeIcon
-                icon={
-                  stack === 'HTML'
-                    ? faHtml5
-                    : stack === 'CSS'
-                    ? faCss3
-                    : stack === 'React'
-                    ? faReact
-                    : ''
-                }
-                size="2x"
-                color="primary"
-              />
+              <FontAwesomeIcon icon={getIconForStack(stack)} size="2x" color="primary" />
             </Grid>
           ))}
           <Grid
@@ -163,6 +162,4 @@ const WebsiteFullWriteUp = () => {
       )}
     </ContainerBox>
   );
-};
-
-export default WebsiteFullWriteUp;
+}

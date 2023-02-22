@@ -1,14 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { func } from 'prop-types';
 
 import { Grid, Box, Switch } from '@mui/material';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
-import { WorkSamplesMenu } from './WorkSamplesMenu';
+import WorkSamplesMenu from './WorkSamplesMenu';
 
-export const Header = ({ themeColorHandler }) => {
+export default function Header({ handleColorTheme }) {
   return (
     <header>
       <Grid
@@ -38,15 +39,14 @@ export const Header = ({ themeColorHandler }) => {
           }}
         >
           <NavLink
-            to={'/'}
-            className={'text-primary'}
+            to="/"
+            className="text-primary"
             style={{
               textDecoration: 'none',
             }}
           >
             <h2 className="logo">
-              Mantvydas{' '}
-              <BusinessCenterIcon className="link-color" fontSize="medium" />{' '}
+              Mantvydas <BusinessCenterIcon className="link-color" fontSize="medium" />{' '}
             </h2>
           </NavLink>
         </Grid>
@@ -80,7 +80,7 @@ export const Header = ({ themeColorHandler }) => {
               <Switch
                 defaultChecked
                 label="Label"
-                onChange={themeColorHandler}
+                onChange={handleColorTheme}
                 color="success"
               />{' '}
               <LightModeIcon className="link-color" />
@@ -96,8 +96,12 @@ export const Header = ({ themeColorHandler }) => {
             gap: '1rem',
             flexDirection: { xs: 'column', md: 'row' },
           }}
-        ></Box>
+        />
       </Grid>
     </header>
   );
+}
+
+Header.propTypes = {
+  handleColorTheme: func.isRequired,
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { func } from 'prop-types';
 
 import {
   Box,
@@ -16,13 +17,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faReact } from '@fortawesome/free-brands-svg-icons';
 
-import { FormForReactWebsite } from '../Components/FormForReactWebsite';
-import { FormForHtmlWebsite } from '../Components/FormForHtmlWebsite';
-import { LoginWindow } from '../Components/LoginWindow';
+import FormForReactWebsite from '../Components/FormForReactWebsite';
+import FormForHtmlWebsite from '../Components/FormForHtmlWebsite';
+import LoginWindow from '../Components/LoginWindow';
 
 const drawerWidth = 170;
 
-export default function NewSample(props) {
+export default function NewSample({ adminPageShowHandler }) {
   const [showReactFrom, setShowReactForm] = useState(false);
   const [showHtmlFrom, setShowhtmlForm] = useState(false);
   const [loggedInn, setLoggedInn] = useState(false);
@@ -35,17 +36,17 @@ export default function NewSample(props) {
     setShowhtmlForm(true);
     setShowReactForm(false);
   };
-  const loginHandler = () => {
+  const handleLogin = () => {
     setLoggedInn(true);
   };
 
   useEffect(() => {
-    props.adminPageShowHandler();
+    adminPageShowHandler();
   }, []);
 
   return (
     <>
-      {!loggedInn && <LoginWindow loginHandler={loginHandler} />}
+      {!loggedInn && <LoginWindow handleLogin={handleLogin} />}
       {loggedInn && (
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
@@ -92,10 +93,7 @@ export default function NewSample(props) {
               </ListItem>
             </List>
           </Drawer>
-          <Box
-            component="main"
-            sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-          >
+          <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
             {showReactFrom && <FormForReactWebsite />}
             {showHtmlFrom && <FormForHtmlWebsite />}
           </Box>
@@ -104,3 +102,7 @@ export default function NewSample(props) {
     </>
   );
 }
+
+NewSample.propTypes = {
+  adminPageShowHandler: func.isRequired,
+};
