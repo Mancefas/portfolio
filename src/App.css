@@ -6,7 +6,7 @@ html {
   --light: #eaeef3;
   --dark: #121212;
   --container-light: #fff;
-  --container-dark: #686666;
+  --container-dark: #2f2f2f;
   --text-light-theme: #333d51;
   --text-dark-theme: #c4c4c4;
   --link-light-theme: #4caf50;
@@ -38,6 +38,10 @@ body .btn-bg {
   background-color: var(--link-light-theme);
 }
 
+body .sample-card {
+  background-color: var(--container-light);
+}
+
 /* dark theme */
 body .dark {
   background: var(--dark);
@@ -62,11 +66,14 @@ body .dark .link-color {
 
 body .dark .container-background {
   background-color: var(--container-dark);
-  opacity: 0.9;
 }
 
 body .dark .btn-bg {
   background-color: var(--link-dark-theme);
+}
+
+body .dark .sample-card {
+  background-color: var(--container-dark);
 }
 
 /* End theme colors */

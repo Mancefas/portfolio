@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { func } from 'prop-types';
+import { bool, func } from 'prop-types';
 
 import { Grid, Box, Switch } from '@mui/material';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
@@ -9,7 +9,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 
 import WorkSamplesMenu from './WorkSamplesMenu';
 
-export default function Header({ handleColorTheme }) {
+export default function Header({ handleColorTheme, darkTheme }) {
   return (
     <header>
       <Grid
@@ -78,7 +78,7 @@ export default function Header({ handleColorTheme }) {
               {' '}
               <DarkModeIcon className="link-color" />
               <Switch
-                defaultChecked
+                defaultChecked={!darkTheme}
                 label="Label"
                 onChange={handleColorTheme}
                 color="success"
@@ -104,4 +104,5 @@ export default function Header({ handleColorTheme }) {
 
 Header.propTypes = {
   handleColorTheme: func.isRequired,
+  darkTheme: bool.isRequired,
 };

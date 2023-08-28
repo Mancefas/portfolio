@@ -25,7 +25,7 @@ export default function Plans() {
         What can I do for you?
       </Typography>
       <Grid container gap={1} sx={{ justifyContent: 'center' }}>
-        {dataPlans.map(({ id, description, iconsText, btnLink }) => (
+        {dataPlans.map(({ id, description, iconsText, btnLink, textInsteadOfBtn }) => (
           <Grid key={id} item xs={12} md={3}>
             <Container
               sx={{
@@ -52,37 +52,18 @@ export default function Plans() {
                   </Box>
                 ))}
               </Box>
-              <Link to={btnLink} style={{ textDecoration: 'none' }} className="link-color">
-                <Button variant="contained" sx={{ margin: '1rem' }} className="btn-bg">
-                  Samples
-                </Button>
-              </Link>
+              {textInsteadOfBtn ? (
+                <Typography variant="h6">{textInsteadOfBtn}</Typography>
+              ) : (
+                <Link to={btnLink} style={{ textDecoration: 'none' }} className="link-color">
+                  <Button variant="contained" sx={{ margin: '1rem' }} className="btn-bg">
+                    Samples
+                  </Button>
+                </Link>
+              )}
             </Container>
           </Grid>
         ))}
-
-        <Grid item xs={12} md={3}>
-          <Container
-            sx={{
-              minHeight: '50vh',
-              height: 'fit-content',
-              maxWidth: '50vw',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'space-around',
-              borderRadius: '9px',
-              border: '3px',
-            }}
-            className="shadow-for-box container-background"
-          >
-            <Typography variant="h5" sx={{ fontFamily: 'Lora', fontWeight: '500' }}>
-              Full stack website
-            </Typography>
-            <Typography>Dynamic website that reacts to user input, has its own API </Typography>
-            <Typography variant="h6">Still working on it</Typography>
-          </Container>
-        </Grid>
       </Grid>
     </Container>
   );

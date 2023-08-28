@@ -7,9 +7,8 @@ import TouchAppIcon from '@mui/icons-material/TouchApp';
 export default function CardToShowSampleShort({ title, img, description }) {
   return (
     <Card
-      className="text-primary"
+      className="text-primary sample-card"
       sx={{
-        backgroundColor: '#ffffff9c',
         margin: '0 1rem',
         height: '100%',
         display: 'flex',
