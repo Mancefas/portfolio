@@ -27,6 +27,7 @@ import './App.css';
 
 const ReactWebsites = lazy(() => import('./Pages/ReactWebsites'));
 const HtmlWebsites = lazy(() => import('./Pages/HtmlWebsites'));
+const AppsPage = lazy(() => import('./Pages/AppsPage'));
 const NoPage = lazy(() => import('./Pages/NoPage'));
 const WebsiteFullWriteUp = lazy(() => import('./Pages/WebsiteFullWriteUp'));
 
@@ -93,6 +94,7 @@ function App() {
           <Route path="/react-websites" element={<ReactWebsites />} />
           <Route path="/react-websites/:websiteName" element={<WebsiteFullWriteUp />} />
           <Route path="/html-websites" element={<HtmlWebsites />} />
+          <Route path="/apps" element={<AppsPage />} />
           <Route
             path="/admin"
             element={<NewSample adminPageShowHandler={adminPageShowHandler} />}

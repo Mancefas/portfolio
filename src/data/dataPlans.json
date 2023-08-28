@@ -1,18 +1,18 @@
 [
   {
     "id": "Static website",
-    "description": "Static web pages for you bussiness using",
+    "description": "Crafting web pages for your business employing:",
     "icons": [
       "<FontAwesomeIcon size=\"2x\" className=\"link-color\" icon={faHtml5}/>",
       "faCss3Alt",
       "faBootstrap"
     ],
-    "iconsText": ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
+    "iconsText": ["HTML", "CSS", "SCSS", "Bootstrap", "Tailwind CSS"],
     "btnLink": "/html-websites"
   },
   {
     "id": "Dynamic website",
-    "description": "Dynamic websites and web apps using",
+    "description": "Creating dynamic websites and web applications utilizing:",
     "icons": [
       "<FontAwesomeIcon size=\"2x\" className=\"link-color\" icon={faHtml5}/>",
       "faCss3Alt",
@@ -20,5 +20,12 @@
     ],
     "iconsText": ["REACT.js", "Next.js", "Material UI", "Mantine UI"],
     "btnLink": "/react-websites"
+  },
+  {
+    "id": "Backend Functionality",
+    "description": "Developing dynamic websites that respond to user inputs, featuring their own APIs. My focus primarily revolves around Backend-as-a-Service solutions.",
+    "iconsText": ["Firestore", "Supabase", "Mongo DB"],
+    "btnLink": "/react-websites",
+    "textInsteadOfBtn": "Still working on it"
   }
 ]
