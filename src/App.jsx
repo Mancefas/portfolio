@@ -21,6 +21,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import NewSample from './Pages/NewSample';
 import CurvedShape from './Components/CurvedShape';
+import { CookieConsentName, ThemeCookieName } from './utils/constants';
 
 import './App.css';
 
@@ -42,11 +43,26 @@ function App() {
     faWindowClose,
   );
 
-  const [darkTheme, setDarkTheme] = useState(false);
-  const [adminPage, setAdminPage] = useState(false);
+  const isCookieConsentInCookies = Boolean(
+    window.document.cookie.split('; ').find((row) => row.startsWith(CookieConsentName)),
+  );
+  const isDarkThemeCookieInCookies = Boolean(
+    window.document.cookie.split('; ').find((row) => row.startsWith(ThemeCookieName)),
+  );
 
+  const [darkTheme, setDarkTheme] = useState(isDarkThemeCookieInCookies);
+  const [adminPage, setAdminPage] = useState(false);
   const handleColorTheme = () => {
-    setDarkTheme(!darkTheme);
+    if (isCookieConsentInCookies && !isDarkThemeCookieInCookies) {
+      window.document.cookie = `${ThemeCookieName}=true; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+      setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+    } else if (isCookieConsentInCookies && isDarkThemeCookieInCookies) {
+      //  setting max age to 0 so the browser will delete it immediately
+      window.document.cookie = `${ThemeCookieName}=; max-age=0;`;
+      setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+    } else {
+      setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+    }
   };
 
   const adminPageShowHandler = () => {
@@ -85,7 +101,7 @@ function App() {
         </Routes>
       </Suspense>
       {!adminPage && <Footer />}
-      <CookieConsent>
+      <CookieConsent cookieName={CookieConsentName}>
         This website uses cookies to enhance the user experience. More about it -{' '}
         <a
           href="https://policies.google.com/technologies/cookies"
