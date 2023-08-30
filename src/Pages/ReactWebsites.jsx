@@ -11,8 +11,8 @@ import dataReactWeb from '../data/dataReactWeb.json';
 
 function ReactWebsites() {
   return (
-    <>
-      <Typography variant="h3" sx={{ margin: '1rem' }}>
+    <Box sx={{ padding: '1rem 0 1rem 1rem' }}>
+      <Typography variant="h3">
         React web apps <FontAwesomeIcon className="link-color" icon={faReact} />
       </Typography>
 
@@ -32,7 +32,7 @@ function ReactWebsites() {
       </CardsContainer>
 
       <Outlet />
-    </>
+    </Box>
   );
 }
 

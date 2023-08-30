@@ -1,19 +1,45 @@
 [
   {
     "id": 1,
+    "title": "Sourcery academy project",
+    "img": "/img/sourceryThumb.png",
+    "imgBigger": "/img/sourcery1.png",
+    "anotherBiggerImg": "/img/sourcery2.png",
+    "shortDescription": "A group project for sourcery academy",
+    "stack": ["React", "Typescript", "SCSS" ],
+    "longerTitle": "A group project for sourcery academy",
+    "fullDescription": "Crafted by a team of six, this project came to life over a span of around three months, during which the team actively embraced and learned the latest technologies. The project was initiated from a Figma design and implemented using React, with component previews seamlessly presented via Storybook.",
+    "linkToWebsite": "https://lost-and-found-project.netlify.app/",
+    "linkToCode": ""
+  },
+  {
+    "id": 2,
+    "title": "itforces.lt",
+    "img": "/img/itForcesTumb.png",
+    "imgBigger": "/img/itForces.png",
+    "anotherBiggerImg": "/img/itForces2.png",
+    "shortDescription": "A group open-source project",
+    "stack": ["React", "Typescript", "SCSS" ],
+    "longerTitle": "",
+    "fullDescription": "Helped to code and start this project. IT Forces blend work and learning to empower emerging IT talents. Turninng ideas into reality, whether it's websites, systems, or more.",
+    "linkToWebsite": "https://itforces.lt/",
+    "linkToCode": ""
+  },
+  {
+    "id": 3,
     "title": "Y-something",
     "img": "",
     "imgBigger": "/img/y-something1.png",
     "anotherBiggerImg": "/img/y-something2.png",
-    "shortDescription": "Website for race results and finishing places.",
+    "shortDescription": "Website for reglaments and copying them",
     "stack": ["React", "Typescript", "Storybook", "SCSS", "Firebase"],
     "longerTitle": "Admin style web-app",
-    "fullDescription": "Since a lot of text is redundant and used over and over this is a web app to remember the most used text. Website to write longer text to clipboard. When you press a button - the longer text for that button is written to your clipboard and then you can use it where it is needed. For this website there is a storybook with components.",
+    "fullDescription": "Addressing text redundancy, this web application serves as a convenient tool for storing frequently used content. It enables users to save lengthy text segments to their clipboard with ease. Simply click a button to copy the associated text, ready for use wherever needed. The project also features a comprehensive component library in its accompanying storybook.",
     "linkToWebsite": "https://sample-y.netlify.app/",
     "linkToCode": "https://github.com/Mancefas/Y-something/tree/eng-version"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "race-results",
     "img": "/img/RaceResults.png",
     "imgBigger": "/img/raceResults1.png",
@@ -21,24 +47,24 @@
     "shortDescription": "Website for race results and finishing places.",
     "stack": ["React", "Material UI", "Font awesome", "Firebase"],
     "longerTitle": "Website was built to show race results and finishing places in real-time",
-    "fullDescription": "It has a different page (admin app) to get finishing time, to add new racers and to fix data if needed.The website uses firebase real-time database, authentication",
+    "fullDescription": "The project incorporates a separate admin app for tasks such as recording finishing times, adding new racers, and performing data corrections. The website seamlessly integrates Firebase's real-time database and authentication features.",
     "linkToWebsite": "https://race-time.netlify.app/",
     "linkToCode": ""
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "minant.lt",
     "img": "/img/minant.lt.png",
     "imgBigger": "/img/minant-blog.jpg",
     "shortDescription": "Next.js website for blogging.",
     "stack": ["Next.js", "Material UI", "Font awesome"],
     "longerTitle": "Website to display blog posts about cycling. ",
-    "fullDescription": "Website is made with Next.js. Blog website that uses Markdown language to write new posts. The website is written in Lithuanian language. ",
+    "fullDescription": "Developed using Next.js, this website serves as a blog platform, leveraging Markdown for creating new posts. The content is presented in the Lithuanian language.",
     "linkToWebsite": "https://minant-lt.netlify.app",
     "linkToCode": "https://github.com/Mancefas/minant.lt-next.js-blog"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "nordcarrier.lt",
     "img": "/img/ncNext.png",
     "imgBigger": "/img/ncNext1.png",
@@ -50,7 +76,7 @@
     "linkToWebsite": "https://www.nordcarrier.lt/"
   },
   {
-    "id": "5",
+    "id": 7,
     "title": "baltic-covid-news",
     "img": "/img/balticNews.png",
     "imgBigger": "/img/balticCovidNews.png",
@@ -62,7 +88,7 @@
     "linkToCode": "https://github.com/Mancefas/covid-news"
   },
   {
-    "id": 6,
+    "id": 8,
     "title": "website-using-api",
     "img": "",
     "imgBigger": "/img/qualTask.png",
@@ -74,7 +100,7 @@
     "linkToCode": "https://github.com/Mancefas/qualification-task"
   },
   {
-    "id": 7,
+    "id": 9,
     "title": "coffee-place-website",
     "img": "/img/coffeeLogo.png",
     "imgBigger": "/img/coffeePlace.png",

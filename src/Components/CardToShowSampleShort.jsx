@@ -9,7 +9,7 @@ export default function CardToShowSampleShort({ title, img, description }) {
     <Card
       className="text-primary sample-card"
       sx={{
-        margin: '0 1rem',
+        margin: '1rem',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -24,7 +24,7 @@ export default function CardToShowSampleShort({ title, img, description }) {
         height="100"
         image={img || '/img/noPicture.jpg'}
         alt={`${title} logo`}
-        sx={{ objectFit: 'contain' }}
+        sx={{ objectFit: 'contain', padding: '1rem 0' }}
       />
 
       <Typography className="text-primary" variant="body2" color="text.secondary" align="center">
@@ -34,7 +34,7 @@ export default function CardToShowSampleShort({ title, img, description }) {
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          paddingBottom: '1rem',
+          padding: '0.5rem 0',
         }}
       >
         <Typography variant="paragraph" align="center">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
@@ -10,8 +10,8 @@ import dataHtmlWeb from '../data/dataHtmlWeb.json';
 
 function HtmlWebsites() {
   return (
-    <>
-      <Typography variant="h3" sx={{ margin: '1rem' }}>
+    <Box sx={{ padding: '1rem 0 1rem 1rem' }}>
+      <Typography variant="h3">
         HTML websites <FontAwesomeIcon icon={faHtml5} className="link-color" />
       </Typography>
 
@@ -28,7 +28,7 @@ function HtmlWebsites() {
           />
         ))}
       </CardsContainer>
-    </>
+    </Box>
   );
 }
 export default HtmlWebsites;
