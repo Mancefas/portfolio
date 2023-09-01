@@ -1,7 +1,6 @@
 .container {
   background: #0057b7;
   background: linear-gradient(180deg, #0057b7 48%, #ffd700 52%);
-  min-width: 15vw;
   width: fit-content;
   min-height: 5vh;
   height: fit-content;
@@ -11,6 +10,7 @@
   align-items: center;
   justify-content: center;
   margin: 1.5rem auto;
+  padding: 0 1rem;
 }
 
 .text {
@@ -19,7 +19,7 @@
   opacity: 0.8;
   margin: 0;
   padding: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .text2 {
@@ -28,5 +28,5 @@
   opacity: 0.8;
   margin: 0;
   padding: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }

@@ -31,7 +31,7 @@ export default function Plans() {
               sx={{
                 minHeight: '50vh',
                 height: 'fit-content',
-                maxWidth: '50vw',
+                maxWidth: '70vw',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',

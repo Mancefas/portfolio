@@ -31,6 +31,7 @@ export default function Footer() {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
+          gap: '0.3rem',
         }}
       >
         <Link
@@ -50,7 +51,9 @@ export default function Footer() {
           rel="noreferrer"
           aria-label="upwork link"
         >
-          <Avatar sx={{ bgcolor: 'green' }}>Up</Avatar>
+          <Avatar sx={{ bgcolor: 'green', height: '32px', width: '32px', fontSize: '1rem' }}>
+            Up
+          </Avatar>
         </Link>
       </Grid>
 
