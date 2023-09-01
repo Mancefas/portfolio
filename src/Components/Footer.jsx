@@ -4,8 +4,6 @@ import { Typography, Grid, Avatar, Link } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-import config from '../config.json';
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -35,7 +33,7 @@ export default function Footer() {
         }}
       >
         <Link
-          href={config.GITHUB_LINK}
+          href="https://github.com/Mancefas"
           target="_blank"
           underline="none"
           rel="noreferrer"
@@ -45,7 +43,7 @@ export default function Footer() {
         </Link>
 
         <Link
-          href={config.UPWORK_LINK}
+          href="https://www.upwork.com/freelancers/~01d7e2eaf46aca380b?viewMode=1&s=1110580755057594368"
           target="_blank"
           underline="none"
           rel="noreferrer"
