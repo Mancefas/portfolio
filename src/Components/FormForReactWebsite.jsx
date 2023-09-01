@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import { Container, TextField, Button, Alert } from '@mui/material';
 
-import config from '../config.json';
-
 export default function FormForReactWebsite() {
   const [newReactWebsite, setNewReactWebsite] = useState();
   const [success, setSuccess] = useState(false);
@@ -56,7 +54,7 @@ export default function FormForReactWebsite() {
     }
     async function sendSample() {
       try {
-        const response = await fetch(config.API_URL_REACT, {
+        const response = await fetch('change/when/addingDB', {
           method: 'post',
           body: JSON.stringify(newReactWebsite),
           headers: { 'Content-Type': 'application/json' },
