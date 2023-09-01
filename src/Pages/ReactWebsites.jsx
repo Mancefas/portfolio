@@ -11,23 +11,21 @@ import dataReactWeb from '../data/dataReactWeb.json';
 
 function ReactWebsites() {
   return (
-    <Box sx={{ padding: '1rem 0 1rem 1rem' }}>
+    <Box sx={{ padding: '1rem' }}>
       <Typography variant="h3">
         React web apps <FontAwesomeIcon className="link-color" icon={faReact} />
       </Typography>
 
       <CardsContainer>
         {dataReactWeb.map(({ title, id, shortDescription, img }) => (
-          <Box>
-            <Link to={`/react-websites/${title}`} key={id} style={{ textDecoration: 'none' }}>
-              <CardToShowSampleShort
-                key={id}
-                title={title}
-                description={shortDescription}
-                img={img}
-              />
-            </Link>
-          </Box>
+          <Link to={`/react-websites/${title}`} key={id} style={{ textDecoration: 'none' }}>
+            <CardToShowSampleShort
+              key={id}
+              title={title}
+              description={shortDescription}
+              img={img}
+            />
+          </Link>
         ))}
       </CardsContainer>
 
