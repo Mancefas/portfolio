@@ -1,0 +1,15 @@
+[
+  {
+      "id": 1,
+      "title": "Race results logger",
+      "img": "/img/result-app-1.png",
+      "imgBigger": "/img/result-app-2.png",
+      "anotherBiggerImg": "",
+      "shortDescription": "An admin app for race results",
+      "stack": ["React Native (expo, native)", "Typescript", "Redux", "Firebase (database, auth, funct)" ],
+      "longerTitle": "An app to add, edit, start and finish the races.",
+      "fullDescription": "This application leverages Firebase authentication for user login and implements CRUD (Create, Read, Update, Delete) operations for managing a database. Its primary objective is to record the start and finish times of race participants, facilitate the addition of previously unregistered racers, and allow for the modification of racer information stored within the database.",
+      "linkToWebsite": "",
+      "linkToCode": ""
+    }
+]

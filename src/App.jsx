@@ -95,6 +95,7 @@ function App() {
           <Route path="/react-websites/:websiteName" element={<WebsiteFullWriteUp />} />
           <Route path="/html-websites" element={<HtmlWebsites />} />
           <Route path="/apps" element={<AppsPage />} />
+          <Route path="/apps/:websiteName" element={<WebsiteFullWriteUp />} />
           <Route
             path="/admin"
             element={<NewSample adminPageShowHandler={adminPageShowHandler} />}
