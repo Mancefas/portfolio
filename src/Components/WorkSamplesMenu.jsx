@@ -5,11 +5,12 @@ import { Box, Badge, Typography, Button, ButtonGroup } from '@mui/material';
 
 import dataReactWeb from '../data/dataReactWeb.json';
 import dataHtmlWeb from '../data/dataHtmlWeb.json';
+import dataApps from '../data/dataApps.json';
 
 const buttonsData = [
   { name: 'React', linksTo: '/react-websites', amount: `${dataReactWeb.length}` },
   { name: 'Html', linksTo: '/html-websites', amount: `${dataHtmlWeb.length}` },
-  { name: 'Apps', linksTo: '/apps', amount: 0 },
+  { name: 'Apps', linksTo: '/apps', amount: `${dataApps.length}` },
 ];
 
 function WorkSamplesMenu() {
